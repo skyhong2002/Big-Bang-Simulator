@@ -74,6 +74,8 @@ const card CARD_79 = {4, 13, MANCATO};
 const card CARD_80 = {4, 13, REMINGTON};
 
 const card *const CARD[80] = {
+    &CARD_21, &CARD_22, &CARD_23, &CARD_24, &CARD_25,
+    &CARD_26, &CARD_27, &CARD_28, &CARD_29, &CARD_30,
     &CARD_61, &CARD_62, &CARD_63, &CARD_64, &CARD_65,
     &CARD_66, &CARD_67, &CARD_68, &CARD_69, &CARD_70,
     &CARD_71, &CARD_72, &CARD_73, &CARD_74, &CARD_75,
