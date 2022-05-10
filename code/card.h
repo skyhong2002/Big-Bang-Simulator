@@ -31,6 +31,33 @@ typedef struct _card
 #define GATLING "GATLING", "Action: Shoots a BANG! to all the other players"
 #define CATBALOU "CATBALOU", "Action: Force any one player to discard a card"
 
+#define APPALOOSA "APPALOOSA","Facility: Distance from other players minus one"
+#define WINCHESTER "WINCHESTER","Facility: 5-distance gun"
+#define DILIGENZA "DILIGENZA","Facility: Draw 2 cards from the deck"
+#define BARILE "BARILE","Facility: prevent from card heart"
+#define INDIANI "INDIANI","Facility:who played this card, may discard a BANG, or lose one life point"
+
+const card CARD_01 = {1, 1, APPALOOSA};
+const card CARD_02 = {1, 1, BANG};
+const card CARD_03 = {1, 2, MANCATO};
+const card CARD_04 = {1, 3, MANCATO};
+const card CARD_05 = {1, 4, MANCATO};
+const card CARD_06 = {1, 5, MANCATO};
+const card CARD_07 = {1, 6, MANCATO};
+const card CARD_08 = {1, 7, MANCATO};
+const card CARD_09 = {1, 8, MANCATO};
+const card CARD_10 = {1, 8, WINCHESTER};
+const card CARD_11 = {1, 9, DILIGENZA};
+const card CARD_12 = {1, 9, DILIGENZA};
+const card CARD_13 = {1, 10, VOLCANIC};
+const card CARD_14 = {1, 10, PRIGIONE};
+const card CARD_15 = {1, 11, DUELLO};
+const card CARD_16 = {1, 11, PRIGIONE};
+const card CARD_17 = {1, 12, EMPORIO};
+const card CARD_18 = {1, 12, BARILE};
+const card CARD_19 = {1, 13, SCHOFIELD};
+const card CARD_20 = {1, 13, BARILE};
+
 const card CARD_21 = {2, 1, BANG};
 const card CARD_22 = {2, 1, PANICOI};
 const card CARD_23 = {2, 2, DINAMITE};
@@ -51,6 +78,27 @@ const card CARD_37 = {2, 12, BANG};
 const card CARD_38 = {2, 12, PANICOI};
 const card CARD_39 = {2, 13, CATBALOU};
 const card CARD_40 = {2, 13, BANG};
+
+const card CARD_41 = {3, 1, BANG};
+const card CARD_42 = {3, 2, INDIANI};
+const card CARD_43 = {3, 2, BANG};
+const card CARD_44 = {3, 3, BANG};
+const card CARD_45 = {3, 4, BANG};
+const card CARD_46 = {3, 5, BANG};
+const card CARD_47 = {3, 6, BANG};
+const card CARD_48 = {3, 7, BANG};
+const card CARD_49 = {3, 8, PANICOI};
+const card CARD_50 = {3, 8, BANG};
+const card CARD_51 = {3, 9, BANG};
+const card CARD_52 = {3, 9, CATBALOU};
+const card CARD_53 = {3, 10, BANG};
+const card CARD_54 = {3, 10, CATBALOU};
+const card CARD_55 = {3, 11, BANG};
+const card CARD_56 = {3, 11, CATBALOU};
+const card CARD_57 = {3, 12, BANG};
+const card CARD_58 = {3, 12, DUELLO};
+const card CARD_59 = {3, 13, INDIANI};
+const card CARD_60 = {3, 13, BANG};
 
 const card CARD_61 = {4, 1, REV_CARABINE};
 const card CARD_62 = {4, 1, MANCATO};
