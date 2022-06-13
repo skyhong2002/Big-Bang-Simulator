@@ -31,11 +31,11 @@ typedef struct _card
 #define GATLING "GATLING", "Action: Shoots a BANG! to all the other players"
 #define CATBALOU "CATBALOU", "Action: Force any one player to discard a card"
 
-#define APPALOOSA "APPALOOSA","Facility: Distance from other players minus one"
-#define WINCHESTER "WINCHESTER","Facility: 5-distance gun"
-#define DILIGENZA "DILIGENZA","Facility: Draw 2 cards from the deck"
-#define BARILE "BARILE","Facility: prevent from card heart"
-#define INDIANI "INDIANI","Facility:who played this card, may discard a BANG, or lose one life point"
+#define APPALOOSA "APPALOOSA", "Facility: Distance from other players minus one"
+#define WINCHESTER "WINCHESTER", "Facility: 5-distance gun"
+#define DILIGENZA "DILIGENZA", "Facility: Draw 2 cards from the deck"
+#define BARILE "BARILE", "Facility: prevent from card heart"
+#define INDIANI "INDIANI", "Facility:who played this card, may discard a BANG, or lose one life point"
 
 const card CARD_01 = {1, 1, APPALOOSA};
 const card CARD_02 = {1, 1, BANG};
@@ -57,7 +57,6 @@ const card CARD_17 = {1, 12, EMPORIO};
 const card CARD_18 = {1, 12, BARILE};
 const card CARD_19 = {1, 13, SCHOFIELD};
 const card CARD_20 = {1, 13, BARILE};
-
 const card CARD_21 = {2, 1, BANG};
 const card CARD_22 = {2, 1, PANICOI};
 const card CARD_23 = {2, 2, DINAMITE};
@@ -78,7 +77,6 @@ const card CARD_37 = {2, 12, BANG};
 const card CARD_38 = {2, 12, PANICOI};
 const card CARD_39 = {2, 13, CATBALOU};
 const card CARD_40 = {2, 13, BANG};
-
 const card CARD_41 = {3, 1, BANG};
 const card CARD_42 = {3, 2, INDIANI};
 const card CARD_43 = {3, 2, BANG};
@@ -99,7 +97,6 @@ const card CARD_57 = {3, 12, BANG};
 const card CARD_58 = {3, 12, DUELLO};
 const card CARD_59 = {3, 13, INDIANI};
 const card CARD_60 = {3, 13, BANG};
-
 const card CARD_61 = {4, 1, REV_CARABINE};
 const card CARD_62 = {4, 1, MANCATO};
 const card CARD_63 = {4, 2, BANG};
@@ -122,8 +119,18 @@ const card CARD_79 = {4, 13, MANCATO};
 const card CARD_80 = {4, 13, REMINGTON};
 
 const card *const CARD[80] = {
+    &CARD_01, &CARD_02, &CARD_03, &CARD_04, &CARD_05,
+    &CARD_06, &CARD_07, &CARD_08, &CARD_09, &CARD_10,
+    &CARD_11, &CARD_12, &CARD_13, &CARD_14, &CARD_15,
+    &CARD_16, &CARD_17, &CARD_18, &CARD_19, &CARD_20,
     &CARD_21, &CARD_22, &CARD_23, &CARD_24, &CARD_25,
     &CARD_26, &CARD_27, &CARD_28, &CARD_29, &CARD_30,
+    &CARD_31, &CARD_32, &CARD_33, &CARD_34, &CARD_35,
+    &CARD_36, &CARD_37, &CARD_38, &CARD_39, &CARD_40,
+    &CARD_41, &CARD_42, &CARD_43, &CARD_44, &CARD_45,
+    &CARD_46, &CARD_47, &CARD_48, &CARD_49, &CARD_50,
+    &CARD_51, &CARD_52, &CARD_53, &CARD_54, &CARD_55,
+    &CARD_56, &CARD_57, &CARD_58, &CARD_59, &CARD_60,
     &CARD_61, &CARD_62, &CARD_63, &CARD_64, &CARD_65,
     &CARD_66, &CARD_67, &CARD_68, &CARD_69, &CARD_70,
     &CARD_71, &CARD_72, &CARD_73, &CARD_74, &CARD_75,
