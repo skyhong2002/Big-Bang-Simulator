@@ -15,10 +15,10 @@ typedef struct _player
     int8_t _max_hp;  // after checking the role is Sceriffo or not
     int8_t _hp;
     uint8_t _hand_cnt; // must not higher than _hp at the end of round
-    card *_hand;
-    int8_t _gun;       // 0, 1, 2, 3, 4, 5
-    int8_t _horse;     // -1, 0, 1
-    bool _is_jail;     // true, false
-    bool _is_dinamite; // true, false
-    bool _is_barrel;   // true, false
+    card **_hand;
+    card *_gun;   // 0, 1, 2, 3, 4, 5
+    card *_horse; // -1, 0, 1
+    card *_jail;
+    card *_dinamite;
+    card *_barrel;
 } player;
