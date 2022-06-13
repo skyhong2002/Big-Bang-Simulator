@@ -12,10 +12,12 @@ typedef struct _card
     char *_skill;
 } card;
 
-#define VOLCANIC "VOLCANIC", "Equipment: 2-distance gun (unlimited BANG)"
+#define VOLCANIC "VOLCANIC", "Equipment: 1-distance gun (unlimited BANG)"
 #define SCHOFIELD "SCHOFIELD", "Equipment: 2-distance gun"
 #define REMINGTON "REMINGTON", "Equipment: 3-distance gun"
 #define REV_CARABINE "REV. CARABINE", "Equipment: 4-distance gun"
+#define WINCHESTER "WINCHESTER", "Equipment: 5-distance gun"
+
 #define DINAMITE "DINAMITE", "Equipment: When you start your next turn (you have the Dynamite already in play), before the first phase you must \"draw!\":\nif you draw a card showing Spades and a number between 2 and 9, the Dynamite explodes! Discard it and lose 3 life points;\notherwise, pass the Dynamite to the player on your left (who will \"draw!\" on his turn, etc)"
 #define PRIGIONE "PRIGIONE", "Equipment: Play this card in front of any player regardless of the distance: you put him in jail! If you are in jail, you must \"draw!\" before the beginning of your turn:\nif you draw a Heart card, you escape from jail: discard the Jail, and continue your turn as normal;\notherwise discard the Jail and skip your turn."
 #define MUSTANG "MUSTANG", "Equipment: The distance between other players and you is increased by 1(other watch you)"
@@ -32,10 +34,9 @@ typedef struct _card
 #define CATBALOU "CATBALOU", "Action: Force any one player to discard a card"
 
 #define APPALOOSA "APPALOOSA", "Facility: Distance from other players minus one"
-#define WINCHESTER "WINCHESTER", "Facility: 5-distance gun"
 #define DILIGENZA "DILIGENZA", "Facility: Draw 2 cards from the deck"
 #define BARILE "BARILE", "Facility: prevent from card heart"
-#define INDIANI "INDIANI", "Facility:who played this card, may discard a BANG, or lose one life point"
+#define INDIANI "INDIANI", "Facility: who played this card, may discard a BANG, or lose one life point"
 
 const card CARD_01 = {1, 1, APPALOOSA};
 const card CARD_02 = {1, 1, BANG};
@@ -118,7 +119,9 @@ const card CARD_78 = {4, 12, MANCATO};
 const card CARD_79 = {4, 13, MANCATO};
 const card CARD_80 = {4, 13, REMINGTON};
 
-const card *const CARD[80] = {
+#define NO_CARD CARD[0]
+
+const card *const CARD[81] = { NULL, 
     &CARD_01, &CARD_02, &CARD_03, &CARD_04, &CARD_05,
     &CARD_06, &CARD_07, &CARD_08, &CARD_09, &CARD_10,
     &CARD_11, &CARD_12, &CARD_13, &CARD_14, &CARD_15,
