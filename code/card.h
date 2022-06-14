@@ -4,9 +4,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
-#include "player.h"
-#include "role.h"
-#include "game.h"
+#include <string.h>
 
 typedef struct _card
 {
@@ -15,6 +13,10 @@ typedef struct _card
     const char *_name;
     const char *_skill;
 } card;
+
+#include "player.h"
+#include "role.h"
+#include "game.h"
 
 #define VOLCANIC "VOLCANIC", "Equipment: 1-distance gun (unlimited BANG)"
 #define SCHOFIELD "SCHOFIELD", "Equipment: 2-distance gun"
@@ -25,6 +27,8 @@ typedef struct _card
 #define DINAMITE "DINAMITE", "Equipment: When you start your next turn (you have the Dynamite already in play), before the first phase you must \"draw!\":\nif you draw a card showing Spades and a number between 2 and 9, the Dynamite explodes! Discard it and lose 3 life points;\notherwise, pass the Dynamite to the player on your left (who will \"draw!\" on his turn, etc)"
 #define PRIGIONE "PRIGIONE", "Equipment: Play this card in front of any player regardless of the distance: you put him in jail! If you are in jail, you must \"draw!\" before the beginning of your turn:\nif you draw a Heart card, you escape from jail: discard the Jail, and continue your turn as normal;\notherwise discard the Jail and skip your turn."
 #define MUSTANG "MUSTANG", "Equipment: The distance between other players and you is increased by 1(other watch you)"
+#define APPALOOSA "APPALOOSA", "Equipment: Distance from other players minus one"
+#define BARREL "BARREL", "Facility: prevent from card heart"
 
 #define BANG "BANG", "Action: BANG someone within distace"
 #define MANCATO "MANCATO", "Action: prevent from BANGed"
@@ -36,10 +40,8 @@ typedef struct _card
 #define BIRRA "BIRRA", "Action: Regain your one life point"
 #define GATLING "GATLING", "Action: Shoots a BANG! to all the other players"
 #define CATBALOU "CATBALOU", "Action: Force any one player to discard a card"
+#define DILIGENZA "DILIGENZA", "Action: Draw 2 cards from the deck"
 
-#define APPALOOSA "APPALOOSA", "Facility: Distance from other players minus one"
-#define DILIGENZA "DILIGENZA", "Facility: Draw 2 cards from the deck"
-#define BARILE "BARILE", "Facility: prevent from card heart"
 #define INDIANI "INDIANI", "Facility: who played this card, may discard a BANG, or lose one life point"
 
 const card CARD_01 = {1, 1, APPALOOSA};
@@ -59,9 +61,9 @@ const card CARD_14 = {1, 10, PRIGIONE};
 const card CARD_15 = {1, 11, DUELLO};
 const card CARD_16 = {1, 11, PRIGIONE};
 const card CARD_17 = {1, 12, EMPORIO};
-const card CARD_18 = {1, 12, BARILE};
+const card CARD_18 = {1, 12, BARREL};
 const card CARD_19 = {1, 13, SCHOFIELD};
-const card CARD_20 = {1, 13, BARILE};
+const card CARD_20 = {1, 13, BARREL};
 const card CARD_21 = {2, 1, BANG};
 const card CARD_22 = {2, 1, PANICOI};
 const card CARD_23 = {2, 2, DINAMITE};
@@ -143,10 +145,12 @@ const card *const CARD[81] = {NULL,
                               &CARD_71, &CARD_72, &CARD_73, &CARD_74, &CARD_75,
                               &CARD_76, &CARD_77, &CARD_78, &CARD_79, &CARD_80};
 
-bool bang(player *me, card *c, player *target);
-bool panic(player *me, card *c, player *target);
-bool catBalou(player *me, card *c, player *target);
-bool duel(player *me, card *c, player *target);
+card *deckInit(card **discard);
+
+bool bang(player *me, card *c, player *target, game *game);
+bool panic(player *me, card *c, player *target, game *game);
+bool catBalou(player *me, card *c, player *target, game *game);
+bool duel(player *me, card *c, player *target, game *game);
 
 bool missed(player *me, card *c);
 bool beer(player *me, card *c);
@@ -157,5 +161,8 @@ bool wellsFargo(player *me, card *c);
 bool generalStore(player *me, card *c, game *game);
 bool gatling(player *me, card *c, game *game);
 bool indians(player *me, card *c, game *game);
+
+void checkDistance(int32_t *between, int32_t *cD, player *me, player *target, game *game);
+bool drawplayer(player *me, player *target, int8_t choice);
 
 #endif
