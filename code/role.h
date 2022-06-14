@@ -1,15 +1,9 @@
-#pragma once
+#ifndef _ROLE_H_
+#define _ROLE_H_
 
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
-
-typedef struct _role
-{
-    char *_name;     //名稱
-    char *_skill;    //功能
-    uint8_t _lvalue; //生命值
-} role;
 
 #define WillyTheKid "WillyTheKid", "During his turn, he can play any number of \"Bang!\" cards."
 #define Jourdonnais "Jourdonnais", "He is considered to have a \"Barrel\" in play at all times; he can \"Draw!\" when he is the target of a \"Bang!\", and on a Heart he is missed. If he has an actual \"Barrel\" card in play, he can count both of them, giving him two chances to cancel the \"Bang!\" before playing a \"Missed!\""
@@ -27,6 +21,13 @@ typedef struct _role
 #define KitCarlaon "KitCarlaon", "During his turn, he looks at the top three cards of the deck: he chooses 2 to draw, and puts the other one back on the top of the deck, face down."
 #define PedroRamirez "PedroRamirez", "During his turn, he may choose to draw the first card from the top of the discard pile or from the deck. Then he draws the second card from the deck."
 #define LuckyDuke "LuckyDuke", "Each time he is required to \"Draw!\", he flips the top two cards from the deck, and chooses the result he prefers. Discard both cards afterward."
+
+typedef struct _role
+{
+    const char *_name;  //名稱
+    const char *_skill; //功能
+    uint8_t _lvalue;    //生命值
+} role;
 
 const role ROLE_01 = {WillyTheKid, 4};
 const role ROLE_02 = {Jourdonnais, 4};
@@ -50,3 +51,5 @@ const role *const ROLE[16] = {
     &ROLE_05, &ROLE_06, &ROLE_07, &ROLE_08,
     &ROLE_09, &ROLE_10, &ROLE_11, &ROLE_12,
     &ROLE_13, &ROLE_14, &ROLE_15, &ROLE_16};
+
+#endif

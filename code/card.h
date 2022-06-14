@@ -12,8 +12,8 @@ typedef struct _card
 {
     uint8_t _suit; // 1 spade 2 heart 3 diamond 4 club
     uint8_t _number;
-    char *_name;
-    char *_skill;
+    const char *_name;
+    const char *_skill;
 } card;
 
 #define VOLCANIC "VOLCANIC", "Equipment: 1-distance gun (unlimited BANG)"
