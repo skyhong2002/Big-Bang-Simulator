@@ -1,10 +1,11 @@
-#pragma once
+#ifndef _PLAYER_H_
+#define _PLAYER_H_
 
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
-#include "role.h"
 #include "card.h"
+#include "role.h"
 
 typedef struct _player
 {
@@ -22,3 +23,5 @@ typedef struct _player
     card *_dinamite;
     card *_barrel;
 } player;
+
+#endif

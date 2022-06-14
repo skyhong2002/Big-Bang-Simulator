@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _GAME_H_
+#define _GAME_H_
 
 #include <stdio.h>
 #include <stdint.h>
@@ -18,3 +19,5 @@ typedef struct _game
     uint32_t _deck_cnt; // if = 0 shuffle from _discard
 
 } game;
+
+#endif

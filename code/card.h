@@ -1,8 +1,12 @@
-#pragma once
+#ifndef _CARD_H_
+#define _CARD_H_
 
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include "player.h"
+#include "role.h"
+#include "game.h"
 
 typedef struct _card
 {
@@ -121,20 +125,37 @@ const card CARD_80 = {4, 13, REMINGTON};
 
 #define NO_CARD CARD[0]
 
-const card *const CARD[81] = { NULL, 
-    &CARD_01, &CARD_02, &CARD_03, &CARD_04, &CARD_05,
-    &CARD_06, &CARD_07, &CARD_08, &CARD_09, &CARD_10,
-    &CARD_11, &CARD_12, &CARD_13, &CARD_14, &CARD_15,
-    &CARD_16, &CARD_17, &CARD_18, &CARD_19, &CARD_20,
-    &CARD_21, &CARD_22, &CARD_23, &CARD_24, &CARD_25,
-    &CARD_26, &CARD_27, &CARD_28, &CARD_29, &CARD_30,
-    &CARD_31, &CARD_32, &CARD_33, &CARD_34, &CARD_35,
-    &CARD_36, &CARD_37, &CARD_38, &CARD_39, &CARD_40,
-    &CARD_41, &CARD_42, &CARD_43, &CARD_44, &CARD_45,
-    &CARD_46, &CARD_47, &CARD_48, &CARD_49, &CARD_50,
-    &CARD_51, &CARD_52, &CARD_53, &CARD_54, &CARD_55,
-    &CARD_56, &CARD_57, &CARD_58, &CARD_59, &CARD_60,
-    &CARD_61, &CARD_62, &CARD_63, &CARD_64, &CARD_65,
-    &CARD_66, &CARD_67, &CARD_68, &CARD_69, &CARD_70,
-    &CARD_71, &CARD_72, &CARD_73, &CARD_74, &CARD_75,
-    &CARD_76, &CARD_77, &CARD_78, &CARD_79, &CARD_80};
+const card *const CARD[81] = {NULL,
+                              &CARD_01, &CARD_02, &CARD_03, &CARD_04, &CARD_05,
+                              &CARD_06, &CARD_07, &CARD_08, &CARD_09, &CARD_10,
+                              &CARD_11, &CARD_12, &CARD_13, &CARD_14, &CARD_15,
+                              &CARD_16, &CARD_17, &CARD_18, &CARD_19, &CARD_20,
+                              &CARD_21, &CARD_22, &CARD_23, &CARD_24, &CARD_25,
+                              &CARD_26, &CARD_27, &CARD_28, &CARD_29, &CARD_30,
+                              &CARD_31, &CARD_32, &CARD_33, &CARD_34, &CARD_35,
+                              &CARD_36, &CARD_37, &CARD_38, &CARD_39, &CARD_40,
+                              &CARD_41, &CARD_42, &CARD_43, &CARD_44, &CARD_45,
+                              &CARD_46, &CARD_47, &CARD_48, &CARD_49, &CARD_50,
+                              &CARD_51, &CARD_52, &CARD_53, &CARD_54, &CARD_55,
+                              &CARD_56, &CARD_57, &CARD_58, &CARD_59, &CARD_60,
+                              &CARD_61, &CARD_62, &CARD_63, &CARD_64, &CARD_65,
+                              &CARD_66, &CARD_67, &CARD_68, &CARD_69, &CARD_70,
+                              &CARD_71, &CARD_72, &CARD_73, &CARD_74, &CARD_75,
+                              &CARD_76, &CARD_77, &CARD_78, &CARD_79, &CARD_80};
+
+bool bang(player *me, card *c, player *target);
+bool panic(player *me, card *c, player *target);
+bool catBalou(player *me, card *c, player *target);
+bool duel(player *me, card *c, player *target);
+
+bool missed(player *me, card *c);
+bool beer(player *me, card *c);
+bool saloon(player *me, card *c);
+bool stageCoach(player *me, card *c);
+bool wellsFargo(player *me, card *c);
+
+bool generalStore(player *me, card *c, game *game);
+bool gatling(player *me, card *c, game *game);
+bool indians(player *me, card *c, game *game);
+
+#endif
