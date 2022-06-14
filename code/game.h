@@ -20,4 +20,12 @@ typedef struct _game
 
 } game;
 
+void gameInit(game *bang);
+int32_t gameEnd(game *bang);
+void shuffle(card *discard);
+void displayPlayer(const player *player);
+void displayHandCard(const player *player);
+void displayAction(const player *player, card *c);
+card *judge(card **deck); //判定
+
 #endif

@@ -145,24 +145,25 @@ const card *const CARD[81] = {NULL,
                               &CARD_71, &CARD_72, &CARD_73, &CARD_74, &CARD_75,
                               &CARD_76, &CARD_77, &CARD_78, &CARD_79, &CARD_80};
 
-card *deckInit(card **discard);
+void deckInit(game *game);
 
 bool bang(player *me, card *c, player *target, game *game);
 bool panic(player *me, card *c, player *target, game *game);
-bool catBalou(player *me, card *c, player *target, game *game);
+bool catBalou(player *me, card *c, player *target);
 bool duel(player *me, card *c, player *target, game *game);
 
 bool missed(player *me, card *c);
-bool beer(player *me, card *c);
-bool saloon(player *me, card *c);
 bool stageCoach(player *me, card *c);
 bool wellsFargo(player *me, card *c);
 
+bool beer(player *me, card *c, game *game);
+bool saloon(player *me, card *c, game *game);
 bool generalStore(player *me, card *c, game *game);
 bool gatling(player *me, card *c, game *game);
 bool indians(player *me, card *c, game *game);
 
 void checkDistance(int32_t *between, int32_t *cD, player *me, player *target, game *game);
 bool drawplayer(player *me, player *target, int8_t choice);
+bool throwaway(player *me, player *target, int8_t choice);
 
 #endif
