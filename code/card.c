@@ -260,10 +260,99 @@ bool catBalou(player *me, card *c, player *target)
     }
     return true;
 }
-// temptly put
+
 bool duel(player *me, card *c, player *target, game *game)
 {
-
+    player *temptplayer = NULL;
+    int32_t end = 0;
+    for (int32_t i = 1; i >= 0; i++)
+    {
+        if (i % 2 == 1)
+        {
+            temptplayer = target;
+        }
+        else
+        {
+            temptplayer = me;
+        }
+        if (temptplayer->_id == 0)
+        {
+            int32_t choose = 0;
+            printf("Do you want to throw bang?\n");
+            printf("1: Yes\n2: No\nChoice: ");
+            scanf("%d", &choose);
+            if (choose == 1)
+            {
+                for (int32_t j = 0; j < temptplayer->_hand_cnt; j++)
+                {
+                    if (strncmp("CalamityJanet", temptplayer->_role->_name, 4) == 0)
+                    {
+                        if (strncmp("BANG", temptplayer->_hand[j]->_name, 4) == 0 || strncmp("MANCATO", temptplayer->_hand[j]->_name, 7) == 0)
+                        {
+                            discard(temptplayer, temptplayer->_hand[j]);
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        if (strncmp("BANG", temptplayer->_hand[j]->_name, 4) == 0)
+                        {
+                            discard(temptplayer, temptplayer->_hand[j]);
+                            break;
+                        }
+                    }
+                    if (j == temptplayer->_hand_cnt - 1)
+                    {
+                        printf("But you don't have \"BANG\"cards to throw.\n");
+                        printf("So you will lose one life.\n");
+                        end = 1;
+                        break;
+                    }
+                }
+            }
+            else if (choose == 2)
+            {
+                printf("Ok. But you need to lose one life.\n");
+                end = 1;
+            }
+            else
+            {
+                printf("Wrong input. Please try again.\n");
+            }
+        }
+        else
+        {
+            for (int32_t j = 0; j < temptplayer->_hand_cnt; j++)
+            {
+                if (strncmp("CalamityJanet", temptplayer->_role->_name, 4) == 0)
+                {
+                    if (strncmp("BANG", temptplayer->_hand[j]->_name, 4) == 0 || strncmp("MANCATO", temptplayer->_hand[j]->_name, 7) == 0)
+                    {
+                        discard(temptplayer, temptplayer->_hand[j]);
+                        break;
+                    }
+                }
+                else
+                {
+                    if (strncmp("BANG", temptplayer->_hand[j]->_name, 4) == 0)
+                    {
+                        discard(temptplayer, temptplayer->_hand[j]);
+                        break;
+                    }
+                }
+                if (j == temptplayer->_hand_cnt - 1)
+                {
+                    end = 1;
+                    break;
+                }
+            }
+        }
+        if (end == 1)
+        {
+            break;
+        }
+    }
+    changeHP(temptplayer, -1);
     return true;
 }
 
@@ -474,7 +563,59 @@ bool gatling(player *me, card *c, game *game)
 }
 bool indians(player *me, card *c, game *game)
 {
-
+    // check if it is indians
+    if (strncmp("INDIANI", c->_name, 7) == 0)
+    {
+        for (int32_t i = 0; i < game->_total_player_cnt; i++)
+        {
+            if (isDead(&(game->_player[i])) == true)
+            {
+                continue;
+            }
+            else if (game->_player[i]._id == me->_id)
+            {
+                continue;
+            }
+            else
+            {
+                for (int32_t j = 0; j < game->_player[i]._hand_cnt; j++)
+                {
+                    if (strncmp("CalamityJanet", game->_player[i]._role->_name, 13) == 0)
+                    {
+                        if (strncmp("BANG", game->_player[i]._hand[j]->_name, 4) == 0 || strncmp("MANCATO", game->_player[i]._hand[j]->_name, 7) == 0)
+                        {
+                            discard(&(game->_player[i]), game->_player[i]._hand[j]);
+                            break;
+                        }
+                        if (j == game->_player[i]._hand_cnt - 1)
+                        {
+                            changeHP(&(game->_player[i]), -1);
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        if (strncmp("BANG", game->_player[i]._hand[j]->_name, 4) == 0)
+                        {
+                            discard(&(game->_player[i]), game->_player[i]._hand[j]);
+                            break;
+                        }
+                        if (j == game->_player[i]._hand_cnt - 1)
+                        {
+                            changeHP(&(game->_player[i]), -1);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        discard(me, c);
+        return true;
+    }
+    else
+    {
+        return false;
+    }
     return true;
 }
 
