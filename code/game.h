@@ -15,6 +15,7 @@ typedef struct _game
     player *_player;
     uint8_t _turn;
     card **_discard;
+    uint32_t _discard_cnt;
     card **_deck;
     uint32_t _deck_cnt; // if = 0 shuffle from _discard
 

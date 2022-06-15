@@ -70,7 +70,7 @@ bool bang(player *me, card *c, player *target, game *game)
             // throw a card
             // (*me)._hand_cnt -= 1;
             // (*me)._hand
-            discard(me, c);
+            discard(me, c, 2, game);
             // changeHp
             changeHP(target, -1);
             return true;
@@ -85,7 +85,7 @@ bool bang(player *me, card *c, player *target, game *game)
         if (betweenDistance <= availDistance)
         {
             // throw a card
-            discard(me, c);
+            discard(me, c, 2, game);
             // changeHp
             changeHP(target, -1);
             return true;
@@ -157,7 +157,7 @@ bool panic(player *me, card *c, player *target, game *game)
                 }
             }
             // throw a card
-            discard(me, c);
+            discard(me, c, 2, game);
             return true;
         }
         else
@@ -171,7 +171,7 @@ bool panic(player *me, card *c, player *target, game *game)
     }
     return true;
 }
-bool catBalou(player *me, card *c, player *target)
+bool catBalou(player *me, card *c, player *target, game *game)
 {
     // check card is carBalou or other
     if (strncmp("CATBALOU", c->_name, 8) == 0)
@@ -192,7 +192,7 @@ bool catBalou(player *me, card *c, player *target)
                 scanf("%d", &choose);
                 if (choose == 1)
                 {
-                    if (throwaway(me, target, 1) == false)
+                    if (throwaway(me, target, 1, game) == false)
                     {
                         printf("You didn't have equipment cards!\n");
                     }
@@ -204,7 +204,7 @@ bool catBalou(player *me, card *c, player *target)
                 }
                 else if (choose == 2)
                 {
-                    if (throwaway(me, target, 2) == false)
+                    if (throwaway(me, target, 2, game) == false)
                     {
                         printf("You didn't have hand cards!\n");
                     }
@@ -225,33 +225,33 @@ bool catBalou(player *me, card *c, player *target)
         {
             if (target->_hand_cnt != 0)
             {
-                discard(target, (*(target->_hand) + (target->_hand_cnt - 1)));
+                discard(target, (*(target->_hand) + (target->_hand_cnt - 1)), 2, game);
             }
             else
             {
                 if (target->_dinamite != NULL)
                 {
-                    discard(target, target->_dinamite);
+                    discard(target, target->_dinamite, 1, game);
                 }
                 else if (target->_jail != NULL)
                 {
-                    discard(target, target->_jail);
+                    discard(target, target->_jail, 1, game);
                 }
                 else if (target->_horse != NULL)
                 {
-                    discard(target, target->_horse);
+                    discard(target, target->_horse, 1, game);
                 }
                 else if (target->_gun != NULL)
                 {
-                    discard(target, target->_gun);
+                    discard(target, target->_gun, 1, game);
                 }
                 else if (target->_barrel != NULL)
                 {
-                    discard(target, target->_barrel);
+                    discard(target, target->_barrel, 1, game);
                 }
             }
         }
-        discard(me, c);
+        discard(me, c, 2, game);
         return true;
     }
     else
@@ -289,7 +289,7 @@ bool duel(player *me, card *c, player *target, game *game)
                     {
                         if (strncmp("BANG", temptplayer->_hand[j]->_name, 4) == 0 || strncmp("MANCATO", temptplayer->_hand[j]->_name, 7) == 0)
                         {
-                            discard(temptplayer, temptplayer->_hand[j]);
+                            discard(temptplayer, temptplayer->_hand[j], 2, game);
                             break;
                         }
                     }
@@ -297,7 +297,7 @@ bool duel(player *me, card *c, player *target, game *game)
                     {
                         if (strncmp("BANG", temptplayer->_hand[j]->_name, 4) == 0)
                         {
-                            discard(temptplayer, temptplayer->_hand[j]);
+                            discard(temptplayer, temptplayer->_hand[j], 2, game);
                             break;
                         }
                     }
@@ -328,7 +328,7 @@ bool duel(player *me, card *c, player *target, game *game)
                 {
                     if (strncmp("BANG", temptplayer->_hand[j]->_name, 4) == 0 || strncmp("MANCATO", temptplayer->_hand[j]->_name, 7) == 0)
                     {
-                        discard(temptplayer, temptplayer->_hand[j]);
+                        discard(temptplayer, temptplayer->_hand[j], 2, game);
                         break;
                     }
                 }
@@ -336,7 +336,7 @@ bool duel(player *me, card *c, player *target, game *game)
                 {
                     if (strncmp("BANG", temptplayer->_hand[j]->_name, 4) == 0)
                     {
-                        discard(temptplayer, temptplayer->_hand[j]);
+                        discard(temptplayer, temptplayer->_hand[j], 2, game);
                         break;
                     }
                 }
@@ -356,17 +356,17 @@ bool duel(player *me, card *c, player *target, game *game)
     return true;
 }
 
-bool missed(player *me, card *c)
+bool missed(player *me, card *c, game *game)
 {
     // check if it is missed
     if (strncmp("MANCATO", c->_name, 7) == 0)
     {
-        discard(me, c);
+        discard(me, c, 2, game);
         return true;
     }
     else if (strncmp("BANG", c->_name, 4) == 0 && strncmp("CalamityJanet", me->_role->_name, 13) == 0)
     {
-        discard(me, c);
+        discard(me, c, 2, game);
         return true;
     }
     else
@@ -377,14 +377,14 @@ bool missed(player *me, card *c)
     return true;
 }
 // fix draw function?
-bool stageCoach(player *me, card *c)
+bool stageCoach(player *me, card *c, game *game)
 {
     // check if it is draw two cards
     if (strncmp("DILIGENZA", c->_name, 9) == 0)
     {
-        draw(me, NULL);
-        draw(me, NULL);
-        discard(me, c);
+        draw(me, game);
+        draw(me, game);
+        discard(me, c, 2, game);
         return true;
     }
     else
@@ -394,14 +394,15 @@ bool stageCoach(player *me, card *c)
     return true;
 }
 // fix draw function?
-bool wellsFargo(player *me, card *c)
+bool wellsFargo(player *me, card *c, game *game)
 {
     // check if it is draw three cards
     if (strncmp("WELLSFARGO", c->_name, 10) == 0)
     {
-        draw(me, NULL);
-        draw(me, NULL);
-        discard(me, c);
+        draw(me, game);
+        draw(me, game);
+        draw(me, game);
+        discard(me, c, 2, game);
         return true;
     }
     else
@@ -422,7 +423,7 @@ bool beer(player *me, card *c, game *game)
     if (strncmp("BIRRA", c->_name, 5) == 0)
     {
         changeHP(me, 1);
-        discard(me, c);
+        discard(me, c, 2, game);
         return true;
     }
     else
@@ -447,7 +448,7 @@ bool saloon(player *me, card *c, game *game)
                 changeHP(&(game->_player[i]), 1);
             }
         }
-        discard(me, c);
+        discard(me, c, 2, game);
         return true;
     }
     else
@@ -470,7 +471,7 @@ bool generalStore(player *me, card *c, game *game)
     }
     for (int32_t i = 0; i < game->_alive_player_cnt; i++)
     {
-        draw(temptplayer2, NULL);
+        draw(temptplayer2, game);
     }
     do
     {
@@ -552,7 +553,7 @@ bool gatling(player *me, card *c, game *game)
                 changeHP(&(game->_player[i]), -1);
             }
         }
-        discard(me, c);
+        discard(me, c, 2, game);
         return true;
     }
     else
@@ -584,7 +585,7 @@ bool indians(player *me, card *c, game *game)
                     {
                         if (strncmp("BANG", game->_player[i]._hand[j]->_name, 4) == 0 || strncmp("MANCATO", game->_player[i]._hand[j]->_name, 7) == 0)
                         {
-                            discard(&(game->_player[i]), game->_player[i]._hand[j]);
+                            discard(&(game->_player[i]), game->_player[i]._hand[j], 2, game);
                             break;
                         }
                         if (j == game->_player[i]._hand_cnt - 1)
@@ -597,7 +598,7 @@ bool indians(player *me, card *c, game *game)
                     {
                         if (strncmp("BANG", game->_player[i]._hand[j]->_name, 4) == 0)
                         {
-                            discard(&(game->_player[i]), game->_player[i]._hand[j]);
+                            discard(&(game->_player[i]), game->_player[i]._hand[j], 2, game);
                             break;
                         }
                         if (j == game->_player[i]._hand_cnt - 1)
@@ -609,7 +610,7 @@ bool indians(player *me, card *c, game *game)
                 }
             }
         }
-        discard(me, c);
+        discard(me, c, 2, game);
         return true;
     }
     else
@@ -802,7 +803,7 @@ bool drawplayer(player *me, player *target, int8_t choice)
     return true;
 }
 
-bool throwaway(player *me, player *target, int8_t choice)
+bool throwaway(player *me, player *target, int8_t choice, game *game)
 {
     if (choice == 1)
     {
@@ -849,31 +850,31 @@ bool throwaway(player *me, player *target, int8_t choice)
             if (want == 1 && target->_gun != NULL)
             {
                 // sort target
-                discard(target, target->_gun);
+                discard(target, target->_gun, 1, game);
                 break;
             }
             else if (want == 2 && target->_horse != NULL)
             {
                 // sort target
-                discard(target, target->_horse);
+                discard(target, target->_horse, 1, game);
                 break;
             }
             else if (want == 3 && target->_jail != NULL)
             {
                 // sort target
-                discard(target, target->_jail);
+                discard(target, target->_jail, 1, game);
                 break;
             }
             else if (want == 4 && target->_dinamite != NULL)
             {
                 // sort target
-                discard(target, target->_dinamite);
+                discard(target, target->_dinamite, 1, game);
                 break;
             }
             else if (want == 5 && target->_barrel != NULL)
             {
                 // sort target
-                discard(target, target->_barrel);
+                discard(target, target->_barrel, 1, game);
                 break;
             }
             else
@@ -897,7 +898,7 @@ bool throwaway(player *me, player *target, int8_t choice)
             if (want >= 1 && want <= target->_hand_cnt)
             {
                 // sort target
-                discard(target, (*(target->_hand) + (want - 1)));
+                discard(target, (*(target->_hand) + (want - 1)), 2, game);
                 for (int32_t i = want - 1; i < target->_hand_cnt; i++)
                 {
                     if (i == target->_hand_cnt - 1)
