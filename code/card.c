@@ -107,55 +107,77 @@ bool panic(player *me, card *c, player *target, game *game)
     int32_t changeDistance = 0;
     int32_t betweenDistance = 0;
     checkDistance(&betweenDistance, &changeDistance, me, target, game);
+    // handcardcnt
+    if (target->_hand_cnt == 0)
+    {
+        return false;
+    }
     // check card is panic or other
     if (strncmp("PANICOI", c->_name, 7) == 0)
     {
         if (betweenDistance <= 1)
         {
-            // draw
-            while (1)
+            // draw (not computer)
+            if (me->_id == 0)
             {
+<<<<<<< Updated upstream
                 int32_t choose = 0;
                 printf("You can draw a card from Player %d\n", target->_id);
                 printf("What do you want to draw?\n");
                 printf("1: Equipments\n2: Hand cards\n3: Cancel\nYour choice: ");
                 scanf("%d", &choose);
                 if (choose == 1)
+=======
+                while (1)
+>>>>>>> Stashed changes
                 {
-                    if (drawplayer(me, target, 1) == false)
+                    int32_t choose = 0;
+                    printf("You can draw a card from Player %d\n", target->_id);
+                    printf("What do you want to draw?\n");
+                    printf("1: Equipments\n2: Hand cards\n3: Cancle\nYour choice: ");
+                    scanf("%d", &choose);
+                    if (choose == 1)
                     {
-                        printf("He/She didn't have equipment cards!\n");
+                        if (drawplayer(me, target, 1) == false)
+                        {
+                            printf("He/She didn't have equipment cards!\n");
+                            return false;
+                        }
+                        else
+                        {
+                            printf("Draw success!\n");
+                            break;
+                        }
+                    }
+                    else if (choose == 2)
+                    {
+                        if (drawplayer(me, target, 2) == false)
+                        {
+                            printf("He/She didn't have hand cards!\n");
+                            return false;
+                        }
+                        else
+                        {
+                            printf("Draw success!\n");
+                            break;
+                        }
+                    }
+                    else if (choose == 3)
+                    {
+                        printf("You didn't use this card.\n");
                         return false;
                     }
                     else
                     {
-                        printf("Draw success!\n");
-                        break;
+                        printf("Your input has problem, please try again.\n");
                     }
-                }
-                else if (choose == 2)
-                {
-                    if (drawplayer(me, target, 2) == false)
-                    {
-                        printf("He/She didn't have hand cards!\n");
-                        return false;
-                    }
-                    else
-                    {
-                        printf("Draw success!\n");
-                        break;
-                    }
-                }
-                else if (choose == 3)
-                {
-                    printf("You didn't use this card.\n");
-                    return false;
-                }
-                else
-                {
-                    printf("Your input has problem, please try again.\n");
                 }
             }
+            // computer
+            else
+            {
+            }
+
             // throw a card
             discard(me, c, 2, game);
             return true;
@@ -647,7 +669,7 @@ void checkDistance(int32_t *between, int32_t *cD, player *me, player *target, ga
 
     return;
 }
-// get info printf information?
+// get info printf information? vv
 bool drawplayer(player *me, player *target, int8_t choice)
 {
     if (choice == 1)
@@ -669,7 +691,7 @@ bool drawplayer(player *me, player *target, int8_t choice)
             if (target->_horse != NULL)
             {
                 printf("%d: \n", index);
-                getHourseInfo(target);
+                getHorseInfo(target);
             }
             index += 1;
             if (target->_jail != NULL)
@@ -805,6 +827,7 @@ bool drawplayer(player *me, player *target, int8_t choice)
 
 bool throwaway(player *me, player *target, int8_t choice, game *game)
 {
+
     if (choice == 1)
     {
         if (target->_gun == NULL && target->_horse == NULL && target->_jail == NULL && target->_dinamite == NULL && target->_barrel == NULL)
@@ -824,7 +847,7 @@ bool throwaway(player *me, player *target, int8_t choice, game *game)
             if (target->_horse != NULL)
             {
                 printf("%d: \n", index);
-                getHourseInfo(target);
+                getHorseInfo(target);
             }
             index += 1;
             if (target->_jail != NULL)
@@ -918,6 +941,7 @@ bool throwaway(player *me, player *target, int8_t choice, game *game)
         }
         return true;
     }
+
     return true;
 }
 // int main()
