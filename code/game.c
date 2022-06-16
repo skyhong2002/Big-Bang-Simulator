@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 void gameInit(game *bang){
-    deckInit(&bang);
+    deckInit(bang);
     bang->_total_card_cnt = 80; // = 80
     bang->_total_player_cnt; 
     bang->_alive_player_cnt;
@@ -22,6 +22,8 @@ void shuffle(game *bang){
     return;
 }
 void displayPlayer(const player *player);
-void displayHandCard(const player *player);
+void displayHandCard(const player *player){
+    return;
+}
 void displayAction(const player *player, card *c);
 card *judge(card **deck); //判定

@@ -164,11 +164,19 @@ bool panic(player *me, card *c, player *target, game *game)
                     }
                 }
             }
-            // computer
+            // computer xxx
             else
             {
+                if (drawplayer(me, target, 2) == false)
+                {
+                    printf("He/She didn't have hand cards!\n");
+                    return false;
+                }
+                else
+                {
+                    printf("Draw success!\n");
+                }
             }
-
             // throw a card
             discard(me, c, 2, game);
             return true;
@@ -663,154 +671,177 @@ void checkDistance(int32_t *between, int32_t *cD, player *me, player *target, ga
 // get info printf information? vv
 bool drawplayer(player *me, player *target, int8_t choice)
 {
-    if (choice == 1)
+    if (me->_id == 0)
     {
-        if (target->_gun == NULL && target->_horse == NULL && target->_jail == NULL && target->_dinamite == NULL && target->_barrel == NULL)
+        if (choice == 1)
         {
-            return false;
+            if (target->_gun == NULL && target->_horse == NULL && target->_jail == NULL && target->_dinamite == NULL && target->_barrel == NULL)
+            {
+                return false;
+            }
+            while (1)
+            {
+                int32_t index = 1;
+                int32_t want = 0;
+                if (target->_gun != NULL)
+                {
+                    printf("%d: \n", index);
+                    getGunInfo(target);
+                }
+                index += 1;
+                if (target->_horse != NULL)
+                {
+                    printf("%d: \n", index);
+                    getHorseInfo(target);
+                }
+                index += 1;
+                if (target->_jail != NULL)
+                {
+                    printf("%d: \n", index);
+                    getJailInfo(target);
+                }
+                index += 1;
+                if (target->_dinamite != NULL)
+                {
+                    printf("%d: \n", index);
+                    getDinamiteInfo(target);
+                }
+                index += 1;
+                if (target->_barrel != NULL)
+                {
+                    printf("%d: \n", index);
+                    getBarrelInfo(target);
+                }
+                index += 1;
+                printf("Which one do you want: ");
+                scanf("%d", &want);
+                if (want == 1 && target->_gun != NULL)
+                {
+                    // sort me
+                    me->_hand_cnt += 1;
+                    int32_t cnt = me->_hand_cnt;
+                    me->_hand[cnt - 1] = calloc(1, sizeof(card));
+                    *(*(me->_hand) + (cnt - 1)) = *(target->_gun);
+                    // sort target
+                    free(target->_gun);
+                    target->_gun = NULL;
+                    break;
+                }
+                else if (want == 2 && target->_horse != NULL)
+                {
+                    // sort me
+                    me->_hand_cnt += 1;
+                    int32_t cnt = me->_hand_cnt;
+                    me->_hand[cnt - 1] = calloc(1, sizeof(card));
+                    *(*(me->_hand) + (cnt - 1)) = *(target->_horse);
+                    // sort target
+                    free(target->_horse);
+                    target->_horse = NULL;
+                    break;
+                }
+                else if (want == 3 && target->_jail != NULL)
+                {
+                    // sort me
+                    me->_hand_cnt += 1;
+                    int32_t cnt = me->_hand_cnt;
+                    me->_hand[cnt - 1] = calloc(1, sizeof(card));
+                    *(*(me->_hand) + (cnt - 1)) = *(target->_jail);
+                    // sort target
+                    free(target->_jail);
+                    target->_jail = NULL;
+                    break;
+                }
+                else if (want == 4 && target->_dinamite != NULL)
+                {
+                    // sort me
+                    me->_hand_cnt += 1;
+                    int32_t cnt = me->_hand_cnt;
+                    me->_hand[cnt - 1] = calloc(1, sizeof(card));
+                    *(*(me->_hand) + (cnt - 1)) = *(target->_dinamite);
+                    // sort target
+                    free(target->_dinamite);
+                    target->_dinamite = NULL;
+                    break;
+                }
+                else if (want == 5 && target->_barrel != NULL)
+                {
+                    // sort me
+                    me->_hand_cnt += 1;
+                    int32_t cnt = me->_hand_cnt;
+                    me->_hand[cnt - 1] = calloc(1, sizeof(card));
+                    *(*(me->_hand) + (cnt - 1)) = *(target->_barrel);
+                    // sort target
+                    target->_barrel = NULL;
+                    free(target->_barrel);
+                    break;
+                }
+                else
+                {
+                    printf("Your input is wrong. Please try again.\n");
+                }
+            }
         }
-        while (1)
+        else if (choice == 2)
         {
-            int32_t index = 1;
-            int32_t want = 0;
-            if (target->_gun != NULL)
+            if (target->_hand == NULL)
             {
-                printf("%d: \n", index);
-                getGunInfo(target);
+                return false;
             }
-            index += 1;
-            if (target->_horse != NULL)
+            while (1)
             {
-                printf("%d: \n", index);
-                getHorseInfo(target);
+                int32_t want = 0;
+                for (int32_t i = 1; i <= target->_hand_cnt; i++)
+                {
+                    printf("%d\n", i);
+                }
+                printf("Which one do you choose: ");
+                scanf("%d", &want);
+                if (want >= 1 && want <= target->_hand_cnt)
+                {
+                    // sort me
+                    me->_hand_cnt += 1;
+                    int32_t cnt = me->_hand_cnt;
+                    me->_hand[cnt - 1] = calloc(1, sizeof(card));
+                    *(*(me->_hand) + (cnt - 1)) = *(*(target->_hand) + (want - 1));
+                    // sort target
+                    for (int32_t i = want - 1; i < target->_hand_cnt; i++)
+                    {
+                        if (i == target->_hand_cnt - 1)
+                        {
+                            free(*(target->_hand) + (want - 1));
+                            break;
+                        }
+                        *(*(target->_hand) + (i)) = *(*(target->_hand) + (i + 1));
+                    }
+                    target->_hand_cnt -= 1;
+                    break;
+                }
+                else
+                {
+                    printf("Your input is wrong. Please try again.\n");
+                }
             }
-            index += 1;
-            if (target->_jail != NULL)
-            {
-                printf("%d: \n", index);
-                getJailInfo(target);
-            }
-            index += 1;
-            if (target->_dinamite != NULL)
-            {
-                printf("%d: \n", index);
-                getDinamiteInfo(target);
-            }
-            index += 1;
-            if (target->_barrel != NULL)
-            {
-                printf("%d: \n", index);
-                getBarrelInfo(target);
-            }
-            index += 1;
-            printf("Which one do you want: ");
-            scanf("%d", &want);
-            if (want == 1 && target->_gun != NULL)
-            {
-                // sort me
-                me->_hand_cnt += 1;
-                int32_t cnt = me->_hand_cnt;
-                me->_hand[cnt - 1] = calloc(1, sizeof(card));
-                *(*(me->_hand) + (cnt - 1)) = *(target->_gun);
-                // sort target
-                free(target->_gun);
-                target->_gun = NULL;
-                break;
-            }
-            else if (want == 2 && target->_horse != NULL)
-            {
-                // sort me
-                me->_hand_cnt += 1;
-                int32_t cnt = me->_hand_cnt;
-                me->_hand[cnt - 1] = calloc(1, sizeof(card));
-                *(*(me->_hand) + (cnt - 1)) = *(target->_horse);
-                // sort target
-                free(target->_horse);
-                target->_horse = NULL;
-                break;
-            }
-            else if (want == 3 && target->_jail != NULL)
-            {
-                // sort me
-                me->_hand_cnt += 1;
-                int32_t cnt = me->_hand_cnt;
-                me->_hand[cnt - 1] = calloc(1, sizeof(card));
-                *(*(me->_hand) + (cnt - 1)) = *(target->_jail);
-                // sort target
-                free(target->_jail);
-                target->_jail = NULL;
-                break;
-            }
-            else if (want == 4 && target->_dinamite != NULL)
-            {
-                // sort me
-                me->_hand_cnt += 1;
-                int32_t cnt = me->_hand_cnt;
-                me->_hand[cnt - 1] = calloc(1, sizeof(card));
-                *(*(me->_hand) + (cnt - 1)) = *(target->_dinamite);
-                // sort target
-                free(target->_dinamite);
-                target->_dinamite = NULL;
-                break;
-            }
-            else if (want == 5 && target->_barrel != NULL)
-            {
-                // sort me
-                me->_hand_cnt += 1;
-                int32_t cnt = me->_hand_cnt;
-                me->_hand[cnt - 1] = calloc(1, sizeof(card));
-                *(*(me->_hand) + (cnt - 1)) = *(target->_barrel);
-                // sort target
-                target->_barrel = NULL;
-                free(target->_barrel);
-                break;
-            }
-            else
-            {
-                printf("Your input is wrong. Please try again.\n");
-            }
+            return true;
         }
     }
-    else if (choice == 2)
+    else
     {
         if (target->_hand == NULL)
         {
             return false;
         }
-        while (1)
-        {
-            int32_t want = 0;
-            for (int32_t i = 1; i <= target->_hand_cnt; i++)
-            {
-                printf("%d\n", i);
-            }
-            printf("Which one do you choose: ");
-            scanf("%d", &want);
-            if (want >= 1 && want <= target->_hand_cnt)
-            {
-                // sort me
-                me->_hand_cnt += 1;
-                int32_t cnt = me->_hand_cnt;
-                me->_hand[cnt - 1] = calloc(1, sizeof(card));
-                *(*(me->_hand) + (cnt - 1)) = *(*(target->_hand) + (want - 1));
-                // sort target
-                for (int32_t i = want - 1; i < target->_hand_cnt; i++)
-                {
-                    if (i == target->_hand_cnt - 1)
-                    {
-                        free(*(target->_hand) + (want - 1));
-                        break;
-                    }
-                    *(*(target->_hand) + (i)) = *(*(target->_hand) + (i + 1));
-                }
-                target->_hand_cnt -= 1;
-                break;
-            }
-            else
-            {
-                printf("Your input is wrong. Please try again.\n");
-            }
-        }
+
+        // sort me
+        me->_hand_cnt += 1;
+        int32_t cnt = me->_hand_cnt;
+        me->_hand[cnt - 1] = calloc(1, sizeof(card));
+        *(*(me->_hand) + (cnt - 1)) = *(*(target->_hand) + (target->_hand_cnt - 1));
+        // sort target
+
+        free(*(target->_hand) + (target->_hand_cnt - 1));
+
+        target->_hand_cnt -= 1;
+
         return true;
     }
     return true;
@@ -818,7 +849,6 @@ bool drawplayer(player *me, player *target, int8_t choice)
 
 bool throwaway(player *me, player *target, int8_t choice, game *game)
 {
-
     if (choice == 1)
     {
         if (target->_gun == NULL && target->_horse == NULL && target->_jail == NULL && target->_dinamite == NULL && target->_barrel == NULL)

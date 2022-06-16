@@ -1,6 +1,5 @@
 all:
-	gcc main.c -o main
-	gcc test.c -o test
+	gcc main.c code/*.c -o main
 
 clean:
 	rm -rf main

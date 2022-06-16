@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include "structure.h"
 
 #define WillyTheKid "WillyTheKid", "During his turn, he can play any number of \"Bang!\" cards."
 #define Jourdonnais "Jourdonnais", "He is considered to have a \"Barrel\" in play at all times; he can \"Draw!\" when he is the target of a \"Bang!\", and on a Heart he is missed. If he has an actual \"Barrel\" card in play, he can count both of them, giving him two chances to cancel the \"Bang!\" before playing a \"Missed!\""
@@ -22,34 +23,50 @@
 #define PedroRamirez "PedroRamirez", "During his turn, he may choose to draw the first card from the top of the discard pile or from the deck. Then he draws the second card from the deck."
 #define LuckyDuke "LuckyDuke", "Each time he is required to \"Draw!\", he flips the top two cards from the deck, and chooses the result he prefers. Discard both cards afterward."
 
-typedef struct _role
-{
-    const char *_name;  //名稱
-    const char *_skill; //功能
-    uint8_t _lvalue;    //生命值
-} role;
 
-const role ROLE_01 = {WillyTheKid, 4};
-const role ROLE_02 = {Jourdonnais, 4};
-const role ROLE_03 = {SlabTheKiller, 4};
-const role ROLE_04 = {CalamityJanet, 4};
-const role ROLE_05 = {JesseJones, 4};
-const role ROLE_06 = {ElGringo, 3};
-const role ROLE_07 = {PaulRegret, 3};
-const role ROLE_08 = {SidKetchum, 4};
-const role ROLE_09 = {BlackJack, 4};
-const role ROLE_10 = {SuzyLafayette, 4};
-const role ROLE_11 = {RoseDoolan, 4};
-const role ROLE_12 = {VultureSam, 4};
-const role ROLE_13 = {BartCassidy, 4};
-const role ROLE_14 = {KitCarlaon, 4};
-const role ROLE_15 = {PedroRamirez, 4};
-const role ROLE_16 = {LuckyDuke, 4};
 
-const role *const ROLE[16] = {
-    &ROLE_01, &ROLE_02, &ROLE_03, &ROLE_04,
-    &ROLE_05, &ROLE_06, &ROLE_07, &ROLE_08,
-    &ROLE_09, &ROLE_10, &ROLE_11, &ROLE_12,
-    &ROLE_13, &ROLE_14, &ROLE_15, &ROLE_16};
+const role *ROLE[16];
+
+void roleInit(){
+    const role ROLE_01 = {WillyTheKid, 4};
+    const role ROLE_02 = {Jourdonnais, 4};
+    const role ROLE_03 = {SlabTheKiller, 4};
+    const role ROLE_04 = {CalamityJanet, 4};
+    const role ROLE_05 = {JesseJones, 4};
+    const role ROLE_06 = {ElGringo, 3};
+    const role ROLE_07 = {PaulRegret, 3};
+    const role ROLE_08 = {SidKetchum, 4};
+    const role ROLE_09 = {BlackJack, 4};
+    const role ROLE_10 = {SuzyLafayette, 4};
+    const role ROLE_11 = {RoseDoolan, 4};
+    const role ROLE_12 = {VultureSam, 4};
+    const role ROLE_13 = {BartCassidy, 4};
+    const role ROLE_14 = {KitCarlaon, 4};
+    const role ROLE_15 = {PedroRamirez, 4};
+    const role ROLE_16 = {LuckyDuke, 4};
+
+    ROLE[0] = &ROLE_01;
+    ROLE[1] = &ROLE_02;
+    ROLE[2] = &ROLE_03;
+    ROLE[3] = &ROLE_04;
+    ROLE[4] = &ROLE_05;
+    ROLE[5] = &ROLE_06;
+    ROLE[6] = &ROLE_07;
+    ROLE[7] = &ROLE_08;
+    ROLE[8] = &ROLE_09;
+    ROLE[9] = &ROLE_10;
+    ROLE[10] = &ROLE_11;
+    ROLE[11] = &ROLE_12;
+    ROLE[12] = &ROLE_13;
+    ROLE[13] = &ROLE_14;
+    ROLE[14] = &ROLE_15;
+    ROLE[15] = &ROLE_16;
+
+    /* ROLE = {
+        &ROLE_01, &ROLE_02, &ROLE_03, &ROLE_04,
+        &ROLE_05, &ROLE_06, &ROLE_07, &ROLE_08,
+        &ROLE_09, &ROLE_10, &ROLE_11, &ROLE_12,
+        &ROLE_13, &ROLE_14, &ROLE_15, &ROLE_16};*/
+}
 
 #endif
