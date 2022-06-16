@@ -118,7 +118,7 @@ bool panic(player *me, card *c, player *target, game *game)
                 int32_t choose = 0;
                 printf("You can draw a card from Player %d\n", target->_id);
                 printf("What do you want to draw?\n");
-                printf("1: Equipments\n2: Hand cards\n3: Cancle\nYour choice: ");
+                printf("1: Equipments\n2: Hand cards\n3: Cancel\nYour choice: ");
                 scanf("%d", &choose);
                 if (choose == 1)
                 {

@@ -149,7 +149,7 @@ bool equip(player *p, card *c)
 }
 bool draw(player *p, game *game)
 {
-    if (p == NULL || c == NULL)
+    if (p == NULL || game == NULL)
     {
         return false;
     }

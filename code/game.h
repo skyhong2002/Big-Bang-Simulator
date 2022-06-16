@@ -23,7 +23,7 @@ typedef struct _game
 
 void gameInit(game *bang);
 int32_t gameEnd(game *bang);
-void shuffle(card *discard);
+void shuffle(game *bang);
 void displayPlayer(const player *player);
 void displayHandCard(const player *player);
 void displayAction(const player *player, card *c);
