@@ -27,6 +27,7 @@ typedef struct _role
 typedef struct _player
 {
     uint8_t _id;
+    char *_name;
     uint8_t _position; // 角色位置
     role *_role;
     char *_identity; // Sceriffo, Vice, Fuorilegge, Rinnegato

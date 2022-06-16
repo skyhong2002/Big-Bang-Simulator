@@ -5,7 +5,7 @@
 
 int32_t gameloop(game *bang){
     int32_t total_turn = 0;
-    while(total_turn <= 10){
+    while(total_turn <= 10 && total_turn >= 0){
         ++total_turn;
         printf("\nTurn %d:\n", total_turn);
 

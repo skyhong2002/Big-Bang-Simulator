@@ -47,6 +47,7 @@ bool bang(player *me, card *c, player *target, game *game)
             discard(me, c, 2, game);
             // changeHp
             changeHP(target, -1);
+            displayAction(me,c);
             return true;
         }
         else
@@ -62,6 +63,7 @@ bool bang(player *me, card *c, player *target, game *game)
             discard(me, c, 2, game);
             // changeHp
             changeHP(target, -1);
+            displayAction(me,c);
             return true;
         }
         else
@@ -153,6 +155,7 @@ bool panic(player *me, card *c, player *target, game *game)
             }
             // throw a card
             discard(me, c, 2, game);
+            displayAction(me,c);
             return true;
         }
         else
@@ -247,6 +250,7 @@ bool catBalou(player *me, card *c, player *target, game *game)
             }
         }
         discard(me, c, 2, game);
+        displayAction(me,c);
         return true;
     }
     else
@@ -348,6 +352,7 @@ bool duel(player *me, card *c, player *target, game *game)
         }
     }
     changeHP(temptplayer, -1);
+    displayAction(me,c);
     return true;
 }
 
@@ -357,11 +362,13 @@ bool missed(player *me, card *c, game *game)
     if (strncmp("MANCATO", c->_name, 7) == 0)
     {
         discard(me, c, 2, game);
+        displayAction(me,c);
         return true;
     }
     else if (strncmp("BANG", c->_name, 4) == 0 && strncmp("CalamityJanet", me->_role->_name, 13) == 0)
     {
         discard(me, c, 2, game);
+        displayAction(me,c);
         return true;
     }
     else
@@ -380,6 +387,7 @@ bool stageCoach(player *me, card *c, game *game)
         draw(me, game);
         draw(me, game);
         discard(me, c, 2, game);
+        displayAction(me,c);
         return true;
     }
     else
@@ -398,6 +406,7 @@ bool wellsFargo(player *me, card *c, game *game)
         draw(me, game);
         draw(me, game);
         discard(me, c, 2, game);
+        displayAction(me,c);
         return true;
     }
     else
@@ -419,6 +428,7 @@ bool beer(player *me, card *c, game *game)
     {
         changeHP(me, 1);
         discard(me, c, 2, game);
+        displayAction(me,c);
         return true;
     }
     else
@@ -444,6 +454,7 @@ bool saloon(player *me, card *c, game *game)
             }
         }
         discard(me, c, 2, game);
+        displayAction(me,c);
         return true;
     }
     else
@@ -525,7 +536,7 @@ bool generalStore(player *me, card *c, game *game)
             temptplayer += 1;
         }
     } while (temptplayer != me);
-
+displayAction(me,c);
     return true;
 }
 bool gatling(player *me, card *c, game *game)
@@ -549,12 +560,13 @@ bool gatling(player *me, card *c, game *game)
             }
         }
         discard(me, c, 2, game);
+        displayAction(me,c);
         return true;
     }
     else
     {
         return false;
-    }
+    }    
     return true;
 }
 bool indians(player *me, card *c, game *game)
@@ -606,6 +618,7 @@ bool indians(player *me, card *c, game *game)
             }
         }
         discard(me, c, 2, game);
+        displayAction(me,c);
         return true;
     }
     else

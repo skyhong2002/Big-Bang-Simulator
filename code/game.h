@@ -12,7 +12,6 @@
 
 int32_t gameloop(game *bang);
 int32_t gameEnd(game *bang);
-void shuffle(game *bang);
 void displayPlayer(const player *p);
 void displayHandCard(const player *p);
 void displayAction(const player *p, card *c);

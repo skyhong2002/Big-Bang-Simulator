@@ -107,6 +107,10 @@ bool draw(player *p, game *game)
 
     p->_hand[p->_hand_cnt - 1] = game->_deck[game->_deck_cnt - 1];
     game->_deck_cnt -= 1;
+    if(game->_deck_cnt==0)
+    {
+        shuffle(game);
+    }
     return true;
 }
 //  equip: 1 or hand: 2

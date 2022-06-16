@@ -112,6 +112,8 @@ void deckInit(game *game)
     int32_t x = 0;
     game->_discard = calloc(80, sizeof(card *));
     game->_deck = calloc(80, sizeof(card *));
+    game->_discard_cnt = 0;
+    game->_deck_cnt = 80;
     for (int32_t i = 0; i < 80; i++)
     {
         game->_discard[i] = calloc(1, sizeof(card));
@@ -134,13 +136,17 @@ void deckInit(game *game)
 int32_t player_id = 0;
 int32_t player_position = 1;
 int8_t checkrole[16] = {0};
+int8_t checkiden[7] = {0};
 
-bool playerInit(player *p, char *identity, game *game, role **ROLE)
+bool playerInit(player *p, char* name,char *identity, game *game, const role **ROLE)
 {
     
     p = calloc(1, sizeof(player));
     p->_id = player_id;
     player_id = player_id + 1;
+
+    p->_name = name;
+    if(p->_name == NULL) p->_name = "John Doe";
 
     p->_position = player_position;
     player_position = player_position + 1;
@@ -160,26 +166,19 @@ bool playerInit(player *p, char *identity, game *game, role **ROLE)
         }
     }
 
-    role *role = NULL;
-    role = calloc(1, sizeof(role));
     p->_hand = calloc(20,sizeof(card*));
     for(int32_t i = 0; i<20; i++)
     {
         p->_hand[i] = calloc(1, sizeof(card));
     }
-    role = ROLE[x];
-    p->_role = role;
+    p->_role = (role*)(ROLE[x]);
     p->_identity = identity;
-    p->_max_hp = role->_lvalue;
-    p->_hp = role->_lvalue;
+    p->_max_hp = p->_role->_lvalue;
+    p->_hp = p->_role->_lvalue;
     // p->_hand_cnt = role->_lvalue
 
     p->_hand = calloc(1, sizeof(card *));
-    for (int i = 0; i < role->_lvalue; i++)
-    {
-        // p->_hand[i] = calloc(1, sizeof(card));
-    }
-    for (int32_t i = 0; i < role->_lvalue; i++)
+    for (int32_t i = 0; i < p->_role->_lvalue; i++)
     {
         draw(p, game);
     }
@@ -187,7 +186,7 @@ bool playerInit(player *p, char *identity, game *game, role **ROLE)
     return true;
 }
 
-void gameInit(game *bang){
+void gameInit(game *bang, int32_t pcnt, char *pname){
     const role ROLE_01 = {WillyTheKid, 4};
     const role ROLE_02 = {Jourdonnais, 4};
     const role ROLE_03 = {SlabTheKiller, 4};
@@ -205,39 +204,42 @@ void gameInit(game *bang){
     const role ROLE_15 = {PedroRamirez, 4};
     const role ROLE_16 = {LuckyDuke, 4};
 
-    /*ROLE[0] = &ROLE_01;
-    ROLE[1] = &ROLE_02;
-    ROLE[2] = &ROLE_03;
-    ROLE[3] = &ROLE_04;
-    ROLE[4] = &ROLE_05;
-    ROLE[5] = &ROLE_06;
-    ROLE[6] = &ROLE_07;
-    ROLE[7] = &ROLE_08;
-    ROLE[8] = &ROLE_09;
-    ROLE[9] = &ROLE_10;
-    ROLE[10] = &ROLE_11;
-    ROLE[11] = &ROLE_12;
-    ROLE[12] = &ROLE_13;
-    ROLE[13] = &ROLE_14;
-    ROLE[14] = &ROLE_15;
-    ROLE[15] = &ROLE_16;*/
-
-    const role *const ROLE[16] = {
+    const role * ROLE[16] = {
         &ROLE_01, &ROLE_02, &ROLE_03, &ROLE_04,
         &ROLE_05, &ROLE_06, &ROLE_07, &ROLE_08,
         &ROLE_09, &ROLE_10, &ROLE_11, &ROLE_12,
         &ROLE_13, &ROLE_14, &ROLE_15, &ROLE_16};
+        
     deckInit(bang);
     bang->_total_card_cnt = 80; // = 80
-    // bang->_total_player_cnt; 
-    // bang->_alive_player_cnt;
+    bang->_total_player_cnt = pcnt;
+    bang->_alive_player_cnt = pcnt;
     bang->_turn = 0;
-    // bang->_discard[i];
-    // bang->_discard_cnt;
-    // bang->_deck[i];
-    // bang->_deck_cnt; // if = 0 shuffle from _discard
+
+    char *namelist[] = {
+        pname, "Akira", "Bob", "Cloud", "Dora", "Eren", "Freya", "Genious", "Haiya"
+    };
+
+    char *iden[] = {
+        "Sceriffo", "Fuorilecce", "Fuorilecce", "Rinnecato", "Vice", "Fuorilecce", "Vice"
+    };
 
     for(int i = 0; i < bang->_total_player_cnt; ++i){
-        // playerInit(&bang->_player[i]);
+        int32_t x = 0;
+        while (1)
+        {
+            srand(time(NULL));
+            x = rand() % pcnt;
+            if (checkiden[x] == 1)
+            {
+                continue;
+            }
+            else
+            {
+                checkiden[x] = 1;
+                break;
+            }
+        }
+        playerInit(&bang->_player[i], namelist[x], iden[0], bang, ROLE);
     }
 }

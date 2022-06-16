@@ -8,9 +8,9 @@
 #include <stdbool.h>
 #include "structure.h"
 
-void gameInit(game *bang);
+void gameInit(game *bang, int32_t pcnt, char *pname);
 void deckInit(game *game);
-bool playerInit(player *p, char *identity, game *game, role **ROLE);
+bool playerInit(player *p, char* name,char *identity, game *game, const role **ROLE);
 
 /* CARD */
 
