@@ -8,7 +8,7 @@
 #include <stdbool.h>
 #include "structure.h"
 
-void gameInit(game *bang, int32_t pcnt, char *pname);
+void gameInit(game *bang, int32_t pcnt, char *pname, char *fname);
 void deckInit(game *game);
 bool playerInit(player *p, char* name,char *identity, game *game, const role **ROLE);
 

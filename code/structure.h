@@ -59,7 +59,7 @@ typedef struct _game
     uint32_t _discard_cnt;
     card **_deck;
     uint32_t _deck_cnt; // if = 0 shuffle from _discard
-
+    char *_logfile_name;
 } game;
 
 #include "game.h"

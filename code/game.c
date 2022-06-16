@@ -2,6 +2,17 @@
 #include <math.h>
 #include <stdlib.h>
 
+void saveLog(game *bang, char *message){
+    char *fname = bang->_logfile_name;
+    FILE *f;
+    if( ( f = fopen( fname, "w" ) ) == NULL ){
+        printf( "File could not be opened!\n" );
+        return;
+    }
+    fprintf(f, "%s\n", message);
+    fclose(f);
+}
+
 char* isGameEnd(const game *bang){
     bool Sceriffo = false;
     bool Fuorilecce = false;
