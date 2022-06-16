@@ -10,7 +10,6 @@
 
 #include "game.h"
 #include "player.h"
-#include "role.h"
 
 void deckInit(game *game);
 

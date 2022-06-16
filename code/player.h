@@ -7,7 +7,6 @@
 #include <stdlib.h>
 #include "structure.h"
 #include "card.h"
-#include "role.h"
 
 
 
