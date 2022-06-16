@@ -90,22 +90,22 @@ void deckInit(game *game)
     const card CARD_80 = {4, 13, REMINGTON};
 
     const card *const CARD[81] = {NULL,
-                                &CARD_01, &CARD_02, &CARD_03, &CARD_04, &CARD_05,
-                                &CARD_06, &CARD_07, &CARD_08, &CARD_09, &CARD_10,
-                                &CARD_11, &CARD_12, &CARD_13, &CARD_14, &CARD_15,
-                                &CARD_16, &CARD_17, &CARD_18, &CARD_19, &CARD_20,
-                                &CARD_21, &CARD_22, &CARD_23, &CARD_24, &CARD_25,
-                                &CARD_26, &CARD_27, &CARD_28, &CARD_29, &CARD_30,
-                                &CARD_31, &CARD_32, &CARD_33, &CARD_34, &CARD_35,
-                                &CARD_36, &CARD_37, &CARD_38, &CARD_39, &CARD_40,
-                                &CARD_41, &CARD_42, &CARD_43, &CARD_44, &CARD_45,
-                                &CARD_46, &CARD_47, &CARD_48, &CARD_49, &CARD_50,
-                                &CARD_51, &CARD_52, &CARD_53, &CARD_54, &CARD_55,
-                                &CARD_56, &CARD_57, &CARD_58, &CARD_59, &CARD_60,
-                                &CARD_61, &CARD_62, &CARD_63, &CARD_64, &CARD_65,
-                                &CARD_66, &CARD_67, &CARD_68, &CARD_69, &CARD_70,
-                                &CARD_71, &CARD_72, &CARD_73, &CARD_74, &CARD_75,
-                                &CARD_76, &CARD_77, &CARD_78, &CARD_79, &CARD_80};
+                                  &CARD_01, &CARD_02, &CARD_03, &CARD_04, &CARD_05,
+                                  &CARD_06, &CARD_07, &CARD_08, &CARD_09, &CARD_10,
+                                  &CARD_11, &CARD_12, &CARD_13, &CARD_14, &CARD_15,
+                                  &CARD_16, &CARD_17, &CARD_18, &CARD_19, &CARD_20,
+                                  &CARD_21, &CARD_22, &CARD_23, &CARD_24, &CARD_25,
+                                  &CARD_26, &CARD_27, &CARD_28, &CARD_29, &CARD_30,
+                                  &CARD_31, &CARD_32, &CARD_33, &CARD_34, &CARD_35,
+                                  &CARD_36, &CARD_37, &CARD_38, &CARD_39, &CARD_40,
+                                  &CARD_41, &CARD_42, &CARD_43, &CARD_44, &CARD_45,
+                                  &CARD_46, &CARD_47, &CARD_48, &CARD_49, &CARD_50,
+                                  &CARD_51, &CARD_52, &CARD_53, &CARD_54, &CARD_55,
+                                  &CARD_56, &CARD_57, &CARD_58, &CARD_59, &CARD_60,
+                                  &CARD_61, &CARD_62, &CARD_63, &CARD_64, &CARD_65,
+                                  &CARD_66, &CARD_67, &CARD_68, &CARD_69, &CARD_70,
+                                  &CARD_71, &CARD_72, &CARD_73, &CARD_74, &CARD_75,
+                                  &CARD_76, &CARD_77, &CARD_78, &CARD_79, &CARD_80};
 
     srand(time(NULL));
     int32_t shuff[80] = {0};
@@ -114,21 +114,25 @@ void deckInit(game *game)
     game->_deck = calloc(80, sizeof(card *));
     game->_discard_cnt = 0;
     game->_deck_cnt = 80;
+
     for (int32_t i = 0; i < 80; i++)
     {
         game->_discard[i] = calloc(1, sizeof(card));
         game->_deck[i] = calloc(1, sizeof(card));
         shuff[i] = i + 1;
     }
-    for (int32_t i = 79; i >= 1; i++)
+
+    for (int32_t i = 79; i >= 1; i--)
     {
         int32_t tempt = 0;
+        // printf("%d\n", i);
         x = rand() % (i);
         tempt = shuff[i];
         shuff[i] = shuff[x];
         shuff[x] = tempt;
         game->_deck[i] = (card *)(CARD[shuff[i]]);
     }
+    // printf("ok?\n");
     game->_deck[0] = (card *)(CARD[shuff[0]]);
     return;
 }
@@ -138,15 +142,16 @@ int32_t player_position = 1;
 int8_t checkrole[16] = {0};
 int8_t checkiden[7] = {0};
 
-bool playerInit(player *p, char* name,char *identity, game *game, const role **ROLE)
+bool playerInit(player *p, char *name, char *identity, game *game, const role **ROLE)
 {
-    
+
     p = calloc(1, sizeof(player));
     p->_id = player_id;
     player_id = player_id + 1;
 
     p->_name = name;
-    if(p->_name == NULL) p->_name = "John Doe";
+    if (p->_name == NULL)
+        p->_name = "John Doe";
 
     p->_position = player_position;
     player_position = player_position + 1;
@@ -166,12 +171,12 @@ bool playerInit(player *p, char* name,char *identity, game *game, const role **R
         }
     }
 
-    p->_hand = calloc(20,sizeof(card*));
-    for(int32_t i = 0; i<20; i++)
+    p->_hand = calloc(20, sizeof(card *));
+    for (int32_t i = 0; i < 20; i++)
     {
         p->_hand[i] = calloc(1, sizeof(card));
     }
-    p->_role = (role*)(ROLE[x]);
+    p->_role = (role *)(ROLE[x]);
     p->_identity = identity;
     p->_max_hp = p->_role->_lvalue;
     p->_hp = p->_role->_lvalue;
@@ -186,7 +191,8 @@ bool playerInit(player *p, char* name,char *identity, game *game, const role **R
     return true;
 }
 
-void gameInit(game *bang, int32_t pcnt, char *pname){
+void gameInit(game *bang, int32_t pcnt, char *pname)
+{
     const role ROLE_01 = {WillyTheKid, 4};
     const role ROLE_02 = {Jourdonnais, 4};
     const role ROLE_03 = {SlabTheKiller, 4};
@@ -204,27 +210,27 @@ void gameInit(game *bang, int32_t pcnt, char *pname){
     const role ROLE_15 = {PedroRamirez, 4};
     const role ROLE_16 = {LuckyDuke, 4};
 
-    const role * ROLE[16] = {
+    const role *ROLE[16] = {
         &ROLE_01, &ROLE_02, &ROLE_03, &ROLE_04,
         &ROLE_05, &ROLE_06, &ROLE_07, &ROLE_08,
         &ROLE_09, &ROLE_10, &ROLE_11, &ROLE_12,
         &ROLE_13, &ROLE_14, &ROLE_15, &ROLE_16};
-        
+    // printf("deckInit success\n");
     deckInit(bang);
+    printf("deckInit success\n");
     bang->_total_card_cnt = 80; // = 80
     bang->_total_player_cnt = pcnt;
     bang->_alive_player_cnt = pcnt;
     bang->_turn = 0;
 
     char *namelist[] = {
-        pname, "Akira", "Bob", "Cloud", "Dora", "Eren", "Freya", "Genious", "Haiya"
-    };
+        pname, "Akira", "Bob", "Cloud", "Dora", "Eren", "Freya", "Genious", "Haiya"};
 
     char *iden[] = {
-        "Sceriffo", "Fuorilecce", "Fuorilecce", "Rinnecato", "Vice", "Fuorilecce", "Vice"
-    };
+        "Sceriffo", "Fuorilecce", "Fuorilecce", "Rinnecato", "Vice", "Fuorilecce", "Vice"};
 
-    for(int i = 0; i < bang->_total_player_cnt; ++i){
+    for (int i = 0; i < bang->_total_player_cnt; ++i)
+    {
         int32_t x = 0;
         while (1)
         {
