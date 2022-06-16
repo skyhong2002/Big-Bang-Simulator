@@ -137,17 +137,19 @@ void deckInit(game *game)
     return;
 }
 
-int32_t player_id = 0;
+uint8_t player_id = 0;
 int32_t player_position = 1;
 int8_t checkrole[16] = {0};
 int8_t checkiden[7] = {0};
 
 bool playerInit(player *p, char *name, char *identity, game *game, const role **ROLE)
 {
-
+    // printf("Hi!\n");
     p = calloc(1, sizeof(player));
+    // uint8_t *pid = &player_id;
     p->_id = player_id;
-    player_id = player_id + 1;
+    // printf("%d %d\n", p->_id, player_id);
+    player_id += 1;
 
     p->_name = name;
     if (p->_name == NULL)
@@ -176,8 +178,10 @@ bool playerInit(player *p, char *name, char *identity, game *game, const role **
     {
         p->_hand[i] = calloc(1, sizeof(card));
     }
+    // p->_role = calloc(1, sizeof(role *));
     p->_role = (role *)(ROLE[x]);
     p->_identity = identity;
+    printf("%s %s\n", p->_role->_name, ROLE[x]->_name);
     p->_max_hp = p->_role->_lvalue;
     p->_hp = p->_role->_lvalue;
     // p->_hand_cnt = role->_lvalue
@@ -217,7 +221,7 @@ void gameInit(game *bang, int32_t pcnt, char *pname)
         &ROLE_13, &ROLE_14, &ROLE_15, &ROLE_16};
     // printf("deckInit success\n");
     deckInit(bang);
-    printf("deckInit success\n");
+    // printf("deckInit success\n");
     bang->_total_card_cnt = 80; // = 80
     bang->_total_player_cnt = pcnt;
     bang->_alive_player_cnt = pcnt;
@@ -228,7 +232,7 @@ void gameInit(game *bang, int32_t pcnt, char *pname)
 
     char *iden[] = {
         "Sceriffo", "Fuorilecce", "Fuorilecce", "Rinnecato", "Vice", "Fuorilecce", "Vice"};
-
+    bang->_player = calloc(bang->_total_player_cnt, sizeof(player*));
     for (int i = 0; i < bang->_total_player_cnt; ++i)
     {
         int32_t x = 0;
@@ -246,6 +250,12 @@ void gameInit(game *bang, int32_t pcnt, char *pname)
                 break;
             }
         }
-        playerInit(&bang->_player[i], namelist[x], iden[0], bang, ROLE);
+        playerInit(&(bang->_player[i]), namelist[i], iden[x], bang, ROLE);
+        printf("i: %d\n", i);
+        printf("%s \n", bang->_player[i]._role->_name);
+        printf("i: %d\n", i);
+        // printf("id1: %d\n", bang->_player[i]._id);
+        // bang->_player[i]._id = player_id - 1;
+        // printf("id2: %d\n", bang->_player[i]._id);
     }
 }

@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
-// #include "code/game.h"
-// #include "code/player.h"
+#include <getopt.h>
+
 #include "code/bang.h"
-// #include "code/role.h"
 
 int main()
 {
@@ -12,9 +11,14 @@ int main()
     int32_t playercnt = 4;
 
     //option
-    printf("BANG!\n");
+    printf( "==========================\n"
+            "    Big Bang Simulator    \n"
+            MAG"(う-`)づ"YEL"︻╦̵̵̿╤──"BLU"   \\(˚☐˚」)/\n"RESET
+            "    Created by Team 10    \n"
+            "==========================\n");
     game bang;
     gameInit(&bang, playercnt, yourname);
+
     gameloop(&bang);
     return 0;
 }

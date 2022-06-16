@@ -8,6 +8,12 @@
 #include <stdbool.h>
 #include <string.h>
 
+#define YEL   "\x1B[33m"
+#define BLU   "\x1B[34m"
+#define GRN   "\x1B[32m"
+#define MAG   "\x1B[35m"
+#define RESET "\x1B[0m"
+
 typedef struct _card
 {
     uint8_t _suit; // 1 spade 2 heart 3 diamond 4 club
