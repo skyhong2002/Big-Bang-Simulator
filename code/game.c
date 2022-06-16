@@ -18,7 +18,7 @@ char* isGameEnd(const game *bang){
     bool Fuorilecce = false;
     bool Rinnecato = false;
     for(int i = 0; i < bang->_total_player_cnt; ++i){
-        if(isDead(&bang->_player[i])) continue;
+        if(isDead(bang->_player[i])) continue;
         //"Sceriffo", "Fuorilecce", "Fuorilecce", "Rinnecato", "Vice", "Fuorilecce", "Vice"
         switch (bang->_player[i]->_identity[0]){
         case 'S': // "Sceriffo"
@@ -56,8 +56,10 @@ int32_t gameloop(game *bang){
         ++total_turn;
         printf("\nTurn %d:\n", total_turn);
 
-        player *cplayer = &bang->_player[bang->_turn]; //current player
+        player *cplayer = bang->_player[bang->_turn]; //current player
         // get 2 card;
+        draw(cplayer, bang);
+        draw(cplayer, bang);
         displayPlayer(cplayer);
         /*
         while(getOption(cplayer) != 0){
@@ -72,7 +74,7 @@ int32_t gameloop(game *bang){
         
         do {
             bang->_turn = (bang->_turn + 1) % bang->_total_player_cnt;
-        }while(!isDead(&bang->_player[bang->_turn]));
+        }while(!isDead(bang->_player[bang->_turn]));
     }
     return 1;
 }

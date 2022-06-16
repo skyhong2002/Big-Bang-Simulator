@@ -590,14 +590,14 @@ char* indians(player *me, card *c, game *game)
                 {
                     if (strncmp("CalamityJanet", game->_player[i]->_role->_name, 13) == 0)
                     {
-                        if (strncmp("BANG", game->_player[i]->_hand[j]->_name, 4) == 0 || strncmp("MANCATO", game->_player[i]._hand[j]->_name, 7) == 0)
+                        if (strncmp("BANG", game->_player[i]->_hand[j]->_name, 4) == 0 || strncmp("MANCATO", game->_player[i]->_hand[j]->_name, 7) == 0)
                         {
-                            discard(&(game->_player[i]), game->_player[i]->_hand[j], 2, game);
+                            discard(game->_player[i], game->_player[i]->_hand[j], 2, game);
                             break;
                         }
                         if (j == game->_player[i]->_hand_cnt - 1)
                         {
-                            changeHP(&(game->_player[i]), -1);
+                            changeHP(game->_player[i], -1);
                             break;
                         }
                     }

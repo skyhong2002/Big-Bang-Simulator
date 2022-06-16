@@ -97,11 +97,11 @@ bool equip(player *p, card *c)
     }
     return true;
 }
-bool draw(player *p, game *game)
+char* draw(player *p, game *game)
 {
     if (p == NULL || game == NULL)
     {
-        return false;
+        return "Warning: ";
     }
     p->_hand_cnt += 1;
 
@@ -111,7 +111,7 @@ bool draw(player *p, game *game)
     {
         shuffle(game);
     }
-    return true;
+    return "Action: ";
 }
 //  equip: 1 or hand: 2
 // I need discard_cnt !

@@ -21,7 +21,7 @@ card *getJailInfo(const player *p);
 card *getDinamiteInfo(const player *p);
 card *getBarrelInfo(const player *p);
 bool equip(player *p, card *c);
-bool draw(player *p, game *game);
+char* draw(player *p, game *game);
 void shuffle(game *bang); // TBD
 bool discard(player *p, card *c, int8_t type, game *game);
 bool changeHP(player *p, int8_t hp); // -3 炸藥 -1 被射 +1 酒

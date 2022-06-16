@@ -125,7 +125,7 @@ void deckInit(game *game)
     for (int32_t i = 79; i >= 1; i--)
     {
         int32_t tempt = 0;
-        printf("%d\n", i);
+        // printf("%d\n", i);
         x = rand() % (i);
         tempt = shuff[i];
         shuff[i] = shuff[x];
@@ -154,7 +154,7 @@ int8_t checkiden[7] = {0};
 bool playerInit(player *p, char *name, char *identity, game *game, const role **ROLE)
 {
     // printf("Hi!\n");
-    p = calloc(1, sizeof(player));
+    // printf("In place: %p\n", p);
     // uint8_t *pid = &player_id;
     p->_id = player_id;
     // printf("%d %d\n", p->_id, player_id);
@@ -190,12 +190,11 @@ bool playerInit(player *p, char *name, char *identity, game *game, const role **
     // p->_role = calloc(1, sizeof(role *));
     p->_role = (role *)(ROLE[x]);
     p->_identity = identity;
-    printf("%s %s\n", p->_role->_name, ROLE[x]->_name);
+    // printf("%s %s\n", p->_role->_name, ROLE[x]->_name);
     p->_max_hp = p->_role->_lvalue;
     p->_hp = p->_role->_lvalue;
     // p->_hand_cnt = role->_lvalue
 
-    p->_hand = calloc(1, sizeof(card *));
     for (int32_t i = 0; i < p->_role->_lvalue; i++)
     {
         draw(p, game);
@@ -230,18 +229,15 @@ void gameInit(game *bang, int32_t pcnt, char *pname, char *fname)
         &ROLE_13, &ROLE_14, &ROLE_15, &ROLE_16};
     // printf("deckInit success\n");
     deckInit(bang);
-    printf("%d\n", bang->_deck_cnt);
-    printf("%d\n", bang->_discard_cnt);
-    // printf("%p\n", bang->_deck[3]);
-    // printf("%s\n", bang->_deck[3]->_name);
-    // printf("%s\n", bang->_deck[3]->_skill);
-    for(int32_t i = 0; i<80; i++)
-    {
-        printf("%d: \n", i+1);
-        // printf("%p\n", bang->_deck[i]);
-        printf("%s\n", bang->_deck[i]->_name);
-        printf("%s\n", bang->_deck[i]->_skill);
-    }
+    // printf("%d\n", bang->_deck_cnt);
+    // printf("%d\n", bang->_discard_cnt);
+    // for(int32_t i = 0; i<80; i++)
+    // {
+    //     printf("%d: \n", i+1);
+    //     // printf("%p\n", bang->_deck[i]);
+    //     printf("%s\n", bang->_deck[i]->_name);
+    //     printf("%s\n", bang->_deck[i]->_skill);
+    // }
     // printf("deckInit success\n");
     bang->_total_card_cnt = 80; // = 80
     bang->_total_player_cnt = pcnt;
@@ -254,7 +250,12 @@ void gameInit(game *bang, int32_t pcnt, char *pname, char *fname)
 
     char *iden[] = {
         "Sceriffo", "Fuorilecce", "Fuorilecce", "Rinnecato", "Vice", "Fuorilecce", "Vice"};
-    realloc(bang->_player, sizeof(player*)*bang->_total_player_cnt);
+    printf("Start player init.\n");
+    bang->_player = calloc (bang->_total_player_cnt, sizeof(player*));
+    // printf("%d\n", pcnt);
+    // printf("place: %p\n", bang->_player);
+    // printf("place: %p\n", bang->_player);
+    printf("Start loop\n");
     for (int i = 0; i < bang->_total_player_cnt; ++i)
     {
         int32_t x = 0;
@@ -272,12 +273,14 @@ void gameInit(game *bang, int32_t pcnt, char *pname, char *fname)
                 break;
             }
         }
+        bang->_player[i] = calloc(1, sizeof(player));
+        // printf("place1: %p\n", bang->_player[i]);
         playerInit(bang->_player[i], namelist[i], iden[x], bang, ROLE);
-        // printf("i: %d\n", i);
-        // printf("%s \n", bang->_player[i]._role->_name);
-        // printf("i: %d\n", i);
-        // printf("id1: %d\n", bang->_player[i]._id);
-        // bang->_player[i]._id = player_id - 1;
-        // printf("id2: %d\n", bang->_player[i]._id);
+        // printf("player init end.\n");
+        // printf("place2: %p\n", bang->_player[i]);
+        // printf("position: %d\n", bang->_player[i]->_position); vv 
+        // printf("%s \n", bang->_player[i]->_role->_name);vv 
+        // printf("id1: %d\n", bang->_player[i]->_id); vv 
+        // printf("id2: %s\n", bang->_player[i]->_hand[0]->_name);
     }
 }
