@@ -15,6 +15,6 @@ int main()
     printf("BANG!\n");
     game bang;
     gameInit(&bang, playercnt, yourname);
-    // gameloop(&bang);
+    gameloop(&bang);
     return 0;
 }
