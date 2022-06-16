@@ -49,16 +49,6 @@ bool playerInit(player *p, char *identity, game *game)
         draw(p, game);
     }
 
-    p->_gun = calloc(1, sizeof(card *));
-
-    p->_horse = calloc(1, sizeof(card *));
-
-    p->_jail = calloc(1, sizeof(card *));
-
-    p->_dinamite = calloc(1, sizeof(card *));
-
-    p->_barrel = calloc(1, sizeof(card *));
-
     return true;
 }
 int8_t getPosition(const player *p)
