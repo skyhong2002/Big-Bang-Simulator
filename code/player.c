@@ -6,7 +6,7 @@ int32_t player_id = 0;
 int32_t player_position = 1;
 int8_t checkrole[16] = {0};
 
-bool playerInit(player *p, int8_t maxhp, char *identity, role *role, game *game)
+bool playerInit(player *p, char *identity, game *game)
 {
     p = calloc(1, sizeof(player));
     p->_id = player_id;
@@ -30,20 +30,21 @@ bool playerInit(player *p, int8_t maxhp, char *identity, role *role, game *game)
         }
     }
 
+    role *role = NULL;
     role = calloc(1, sizeof(role));
     role = ROLE[x];
     p->_role = role;
     p->_identity = identity;
-    p->_max_hp = maxhp;
-    p->_hp = maxhp;
-    // p->_hand_cnt = maxhp;
+    p->_max_hp = role->_lvalue;
+    p->_hp = role->_lvalue;
+    // p->_hand_cnt = role->_lvalue
 
     p->_hand = calloc(1, sizeof(card *));
-    for (int i = 0; i < maxhp; i++)
+    for (int i = 0; i < role->_lvalue; i++)
     {
         // p->_hand[i] = calloc(1, sizeof(card));
     }
-    for (int32_t i = 0; i < maxhp; i++)
+    for (int32_t i = 0; i < role->_lvalue; i++)
     {
         draw(p, game);
     }
@@ -96,31 +97,31 @@ card *getGunInfo(const player *p)
     return (p->_gun);
 }
 
-card *getHourseInfo(const player *p)
+card *getHorseInfo(const player *p)
 {
-    printf("%s\n",p->_horse->_name);
-    printf("%s\n",p->_horse->_skill);
+    printf("%s\n", p->_horse->_name);
+    printf("%s\n", p->_horse->_skill);
     return (p->_horse);
 }
 
 card *getJailInfo(const player *p)
 {
-    printf("%s\n",p->_jail->_name);
-    printf("%s\n",p->_jail->_skill);
+    printf("%s\n", p->_jail->_name);
+    printf("%s\n", p->_jail->_skill);
     return (p->_jail);
 }
 
 card *getDinamiteInfo(const player *p)
 {
-    printf("%s\n",p->_dinamite->_name);
-    printf("%s\n",p->_dinamite->_skill);
+    printf("%s\n", p->_dinamite->_name);
+    printf("%s\n", p->_dinamite->_skill);
     return (p->_dinamite);
 }
 
 card *getBarrelInfo(const player *p)
 {
-    printf("%s\n",p->_barrel->_name);
-    printf("%s\n",p->_barrel->_skill);
+    printf("%s\n", p->_barrel->_name);
+    printf("%s\n", p->_barrel->_skill);
     return (p->_barrel);
 }
 

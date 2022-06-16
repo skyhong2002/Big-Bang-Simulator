@@ -30,7 +30,7 @@ void deckInit(game *game)
     return;
 }
 
-// after change hp isDead ? here or main
+// after change hp isDead ? here or main vv
 bool bang(player *me, card *c, player *target, game *game)
 {
     // check distance
@@ -173,7 +173,7 @@ bool panic(player *me, card *c, player *target, game *game)
 }
 bool catBalou(player *me, card *c, player *target, game *game)
 {
-    // check card is carBalou or other
+    // check card is catBalou or other
     if (strncmp("CATBALOU", c->_name, 8) == 0)
     {
         if (target->_hand_cnt == 0 && target->_gun == NULL && target->_horse == NULL && target->_jail == NULL && target->_dinamite == NULL && target->_barrel == NULL)
@@ -376,7 +376,7 @@ bool missed(player *me, card *c, game *game)
 
     return true;
 }
-// fix draw function?
+// fix draw function? vv
 bool stageCoach(player *me, card *c, game *game)
 {
     // check if it is draw two cards
@@ -393,7 +393,7 @@ bool stageCoach(player *me, card *c, game *game)
     }
     return true;
 }
-// fix draw function?
+// fix draw function? vv
 bool wellsFargo(player *me, card *c, game *game)
 {
     // check if it is draw three cards
@@ -457,7 +457,7 @@ bool saloon(player *me, card *c, game *game)
     }
     return true;
 }
-// fix draw func
+// fix draw func vv
 // displayhandcard need number
 bool generalStore(player *me, card *c, game *game)
 {
