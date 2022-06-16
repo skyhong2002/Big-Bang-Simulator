@@ -120,16 +120,7 @@ bool panic(player *me, card *c, player *target, game *game)
             // draw (not computer)
             if (me->_id == 0)
             {
-<<<<<<< Updated upstream
-                int32_t choose = 0;
-                printf("You can draw a card from Player %d\n", target->_id);
-                printf("What do you want to draw?\n");
-                printf("1: Equipments\n2: Hand cards\n3: Cancel\nYour choice: ");
-                scanf("%d", &choose);
-                if (choose == 1)
-=======
                 while (1)
->>>>>>> Stashed changes
                 {
                     int32_t choose = 0;
                     printf("You can draw a card from Player %d\n", target->_id);
