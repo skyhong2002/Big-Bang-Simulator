@@ -98,29 +98,29 @@ card *getGunInfo(const player *p)
 
 card *getHourseInfo(const player *p)
 {
-    printf("%s\n,p->_name");
-    printf("%s\n,p->_skill");
+    printf("%s\n",p->_horse->_name);
+    printf("%s\n",p->_horse->_skill);
     return (p->_horse);
 }
 
 card *getJailInfo(const player *p)
 {
-    printf("%s\n,p->_name");
-    printf("%s\n,p->_skill");
+    printf("%s\n",p->_jail->_name);
+    printf("%s\n",p->_jail->_skill);
     return (p->_jail);
 }
 
 card *getDinamiteInfo(const player *p)
 {
-    printf("%s\n,p->_name");
-    printf("%s\n,p->_skill");
+    printf("%s\n",p->_dinamite->_name);
+    printf("%s\n",p->_dinamite->_skill);
     return (p->_dinamite);
 }
 
 card *getBarrelInfo(const player *p)
 {
-    printf("%s\n,p->_name");
-    printf("%s\n,p->_skill");
+    printf("%s\n",p->_barrel->_name);
+    printf("%s\n",p->_barrel->_skill);
     return (p->_barrel);
 }
 
