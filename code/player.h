@@ -25,7 +25,7 @@ typedef struct _player
     card *_barrel;
 } player;
 
-bool playerInit(player *p, int8_t maxhp, char *identity, role *role);
+bool playerInit(player *p, int8_t maxhp, char *identity, role *role, game *game);
 int8_t getPosition(const player *p);
 int8_t getHP(const player *p); // return hp
 bool isDead(const player *p);  //return (p._hp == 0);
