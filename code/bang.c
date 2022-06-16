@@ -89,7 +89,7 @@ void deckInit(game *game)
     static const card CARD_79 = {4, 13, MANCATO};
     static const card CARD_80 = {4, 13, REMINGTON};
 
-    static const card *const CARD[81] = {
+    static const card *const CARD[81] = {NULL,
                                   &CARD_01, &CARD_02, &CARD_03, &CARD_04, &CARD_05,
                                   &CARD_06, &CARD_07, &CARD_08, &CARD_09, &CARD_10,
                                   &CARD_11, &CARD_12, &CARD_13, &CARD_14, &CARD_15,
@@ -105,7 +105,7 @@ void deckInit(game *game)
                                   &CARD_61, &CARD_62, &CARD_63, &CARD_64, &CARD_65,
                                   &CARD_66, &CARD_67, &CARD_68, &CARD_69, &CARD_70,
                                   &CARD_71, &CARD_72, &CARD_73, &CARD_74, &CARD_75,
-                                  &CARD_76, &CARD_77, &CARD_78, &CARD_79, &CARD_80, NULL};
+                                  &CARD_76, &CARD_77, &CARD_78, &CARD_79, &CARD_80};
 
     srand(time(NULL));
     int32_t shuff[80] = {0};
@@ -122,25 +122,27 @@ void deckInit(game *game)
         shuff[i] = i + 1;
     }
     // shuffle
-    // for (int32_t i = 79; i >= 1; i--)
-    // {
-    //     int32_t tempt = 0;
-    //     // printf("%d\n", i);
-    //     x = rand() % (i);
-    //     tempt = shuff[i];
-    //     shuff[i] = shuff[x];
-    //     shuff[x] = tempt;
-    //     game->_deck[i] = (card *)(CARD[shuff[i]]);
-    // }
-    // game->_deck[0] = (card *)(CARD[shuff[0]]);
-    // no shuffle xxx
-    for (int32_t i = 79; i >= 0; i--)
+    for (int32_t i = 79; i >= 1; i--)
     {
-        game->_deck[i] = (card *)(CARD[i]);
-        printf("%p\n", game->_deck[i]);
-        printf("%p\n", game->_deck[i]->_name);
-        printf("%s\n", game->_deck[i]->_skill);
+        int32_t tempt = 0;
+        printf("%d\n", i);
+        x = rand() % (i);
+        tempt = shuff[i];
+        shuff[i] = shuff[x];
+        shuff[x] = tempt;
+        game->_deck[i] = (card *)(CARD[shuff[i]]);
+        // printf("%s ,%s\n", game->_deck[i]->_name, CARD[shuff[i]]->_name);
     }
+    game->_deck[0] = (card *)(CARD[shuff[0]]);
+    // no shuffle xxx
+    // for (int32_t i = 79; i >= 0; i--)
+    // {
+        // game->_deck[i] = (card *)(CARD[i]);
+        // printf("%p\n", game->_deck[i]);
+        // printf("%d: \n", i);
+        // printf("%s\n", game->_deck[i]->_name);
+        // printf("%s\n", game->_deck[i]->_skill);
+    // }
     return;
 }
 
@@ -204,24 +206,24 @@ bool playerInit(player *p, char *name, char *identity, game *game, const role **
 
 void gameInit(game *bang, int32_t pcnt, char *pname, char *fname)
 {
-    const role ROLE_01 = {WillyTheKid, 4};
-    const role ROLE_02 = {Jourdonnais, 4};
-    const role ROLE_03 = {SlabTheKiller, 4};
-    const role ROLE_04 = {CalamityJanet, 4};
-    const role ROLE_05 = {JesseJones, 4};
-    const role ROLE_06 = {ElGringo, 3};
-    const role ROLE_07 = {PaulRegret, 3};
-    const role ROLE_08 = {SidKetchum, 4};
-    const role ROLE_09 = {BlackJack, 4};
-    const role ROLE_10 = {SuzyLafayette, 4};
-    const role ROLE_11 = {RoseDoolan, 4};
-    const role ROLE_12 = {VultureSam, 4};
-    const role ROLE_13 = {BartCassidy, 4};
-    const role ROLE_14 = {KitCarlaon, 4};
-    const role ROLE_15 = {PedroRamirez, 4};
-    const role ROLE_16 = {LuckyDuke, 4};
+    static const role ROLE_01 = {WillyTheKid, 4};
+    static const role ROLE_02 = {Jourdonnais, 4};
+    static const role ROLE_03 = {SlabTheKiller, 4};
+    static const role ROLE_04 = {CalamityJanet, 4};
+    static const role ROLE_05 = {JesseJones, 4};
+    static const role ROLE_06 = {ElGringo, 3};
+    static const role ROLE_07 = {PaulRegret, 3};
+    static const role ROLE_08 = {SidKetchum, 4};
+    static const role ROLE_09 = {BlackJack, 4};
+    static const role ROLE_10 = {SuzyLafayette, 4};
+    static const role ROLE_11 = {RoseDoolan, 4};
+    static const role ROLE_12 = {VultureSam, 4};
+    static const role ROLE_13 = {BartCassidy, 4};
+    static const role ROLE_14 = {KitCarlaon, 4};
+    static const role ROLE_15 = {PedroRamirez, 4};
+    static const role ROLE_16 = {LuckyDuke, 4};
 
-    const role *ROLE[16] = {
+    static const role *ROLE[16] = {
         &ROLE_01, &ROLE_02, &ROLE_03, &ROLE_04,
         &ROLE_05, &ROLE_06, &ROLE_07, &ROLE_08,
         &ROLE_09, &ROLE_10, &ROLE_11, &ROLE_12,
@@ -230,15 +232,15 @@ void gameInit(game *bang, int32_t pcnt, char *pname, char *fname)
     deckInit(bang);
     printf("%d\n", bang->_deck_cnt);
     printf("%d\n", bang->_discard_cnt);
-    printf("%p\n", bang->_deck[3]);
-    printf("%s\n", bang->_deck[3]->_name);
-    printf("%s\n", bang->_deck[3]->_skill);
+    // printf("%p\n", bang->_deck[3]);
+    // printf("%s\n", bang->_deck[3]->_name);
+    // printf("%s\n", bang->_deck[3]->_skill);
     for(int32_t i = 0; i<80; i++)
     {
         printf("%d: \n", i+1);
-        printf("%p\n", bang->_deck[i]);
+        // printf("%p\n", bang->_deck[i]);
         printf("%s\n", bang->_deck[i]->_name);
-        // printf("%s\n", bang->_deck[i]->_skill);
+        printf("%s\n", bang->_deck[i]->_skill);
     }
     // printf("deckInit success\n");
     bang->_total_card_cnt = 80; // = 80
@@ -252,7 +254,7 @@ void gameInit(game *bang, int32_t pcnt, char *pname, char *fname)
 
     char *iden[] = {
         "Sceriffo", "Fuorilecce", "Fuorilecce", "Rinnecato", "Vice", "Fuorilecce", "Vice"};
-    bang->_player = calloc(bang->_total_player_cnt, sizeof(player*));
+    realloc(bang->_player, sizeof(player*)*bang->_total_player_cnt);
     for (int i = 0; i < bang->_total_player_cnt; ++i)
     {
         int32_t x = 0;
@@ -270,10 +272,10 @@ void gameInit(game *bang, int32_t pcnt, char *pname, char *fname)
                 break;
             }
         }
-        playerInit(&(bang->_player[i]), namelist[i], iden[x], bang, ROLE);
-        printf("i: %d\n", i);
-        printf("%s \n", bang->_player[i]._role->_name);
-        printf("i: %d\n", i);
+        playerInit(bang->_player[i], namelist[i], iden[x], bang, ROLE);
+        // printf("i: %d\n", i);
+        // printf("%s \n", bang->_player[i]._role->_name);
+        // printf("i: %d\n", i);
         // printf("id1: %d\n", bang->_player[i]._id);
         // bang->_player[i]._id = player_id - 1;
         // printf("id2: %d\n", bang->_player[i]._id);

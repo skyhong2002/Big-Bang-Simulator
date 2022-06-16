@@ -53,7 +53,7 @@ typedef struct _game
     uint32_t _total_card_cnt; // = 80
     uint8_t _total_player_cnt;
     uint8_t _alive_player_cnt;
-    player *_player;
+    player **_player;
     uint8_t _turn;
     card **_discard;
     uint32_t _discard_cnt;

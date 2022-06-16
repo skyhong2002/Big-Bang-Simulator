@@ -65,6 +65,6 @@ int main(int32_t argc, char* argv[])
     game bang;
     gameInit(&bang, playercnt, yourname, logfile_name);
 
-    gameloop(&bang);
+    // gameloop(&bang);
     return 0;
 }

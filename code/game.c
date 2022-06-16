@@ -20,7 +20,7 @@ char* isGameEnd(const game *bang){
     for(int i = 0; i < bang->_total_player_cnt; ++i){
         if(isDead(&bang->_player[i])) continue;
         //"Sceriffo", "Fuorilecce", "Fuorilecce", "Rinnecato", "Vice", "Fuorilecce", "Vice"
-        switch (bang->_player[i]._identity[0]){
+        switch (bang->_player[i]->_identity[0]){
         case 'S': // "Sceriffo"
         case 'V': // "Vice"
             Sceriffo = true;
@@ -191,7 +191,7 @@ bool judge(player*p,card *c, game* game)//判定
         {
             if(p->_position+1>game->_total_player_cnt)
             {
-                game->_player[0]._dinamite = c;
+                game->_player[0]->_dinamite = c;
                 p->_dinamite = NULL;
             }
             else

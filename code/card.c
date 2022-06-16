@@ -444,13 +444,13 @@ char* saloon(player *me, card *c, game *game)
     {
         for (int32_t i = 0; i < game->_total_player_cnt; i++)
         {
-            if (isDead(&(game->_player[i])) == true)
+            if (isDead(game->_player[i]) == true)
             {
                 continue;
             }
             else
             {
-                changeHP(&(game->_player[i]), 1);
+                changeHP(game->_player[i], 1);
             }
         }
         discard(me, c, 2, game);
@@ -529,7 +529,7 @@ char* generalStore(player *me, card *c, game *game)
         }
         if (temptplayer->_position == game->_alive_player_cnt)
         {
-            temptplayer = &game->_player[0];
+            temptplayer = game->_player[0];
         }
         else
         {
@@ -546,17 +546,17 @@ char* gatling(player *me, card *c, game *game)
     {
         for (int32_t i = 0; i < game->_total_player_cnt; i++)
         {
-            if (isDead(&(game->_player[i])) == true)
+            if (isDead(game->_player[i]) == true)
             {
                 continue;
             }
-            else if (game->_player[i]._id == me->_id)
+            else if (game->_player[i]->_id == me->_id)
             {
                 continue;
             }
             else
             {
-                changeHP(&(game->_player[i]), -1);
+                changeHP(game->_player[i], -1);
             }
         }
         discard(me, c, 2, game);
@@ -576,26 +576,26 @@ char* indians(player *me, card *c, game *game)
     {
         for (int32_t i = 0; i < game->_total_player_cnt; i++)
         {
-            if (isDead(&(game->_player[i])) == true)
+            if (isDead(game->_player[i]) == true)
             {
                 continue;
             }
-            else if (game->_player[i]._id == me->_id)
+            else if (game->_player[i]->_id == me->_id)
             {
                 continue;
             }
             else
             {
-                for (int32_t j = 0; j < game->_player[i]._hand_cnt; j++)
+                for (int32_t j = 0; j < game->_player[i]->_hand_cnt; j++)
                 {
-                    if (strncmp("CalamityJanet", game->_player[i]._role->_name, 13) == 0)
+                    if (strncmp("CalamityJanet", game->_player[i]->_role->_name, 13) == 0)
                     {
-                        if (strncmp("BANG", game->_player[i]._hand[j]->_name, 4) == 0 || strncmp("MANCATO", game->_player[i]._hand[j]->_name, 7) == 0)
+                        if (strncmp("BANG", game->_player[i]->_hand[j]->_name, 4) == 0 || strncmp("MANCATO", game->_player[i]._hand[j]->_name, 7) == 0)
                         {
-                            discard(&(game->_player[i]), game->_player[i]._hand[j], 2, game);
+                            discard(&(game->_player[i]), game->_player[i]->_hand[j], 2, game);
                             break;
                         }
-                        if (j == game->_player[i]._hand_cnt - 1)
+                        if (j == game->_player[i]->_hand_cnt - 1)
                         {
                             changeHP(&(game->_player[i]), -1);
                             break;
@@ -603,14 +603,14 @@ char* indians(player *me, card *c, game *game)
                     }
                     else
                     {
-                        if (strncmp("BANG", game->_player[i]._hand[j]->_name, 4) == 0)
+                        if (strncmp("BANG", game->_player[i]->_hand[j]->_name, 4) == 0)
                         {
-                            discard(&(game->_player[i]), game->_player[i]._hand[j], 2, game);
+                            discard(game->_player[i], game->_player[i]->_hand[j], 2, game);
                             break;
                         }
-                        if (j == game->_player[i]._hand_cnt - 1)
+                        if (j == game->_player[i]->_hand_cnt - 1)
                         {
-                            changeHP(&(game->_player[i]), -1);
+                            changeHP(game->_player[i], -1);
                             break;
                         }
                     }
