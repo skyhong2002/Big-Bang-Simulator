@@ -82,26 +82,36 @@ card *getHandcardInfo(const player *p, const int8_t cardID)
     
 card *getGunInfo(const player *p)
 {
+    printf("%s\n,p->_name");
+    printf("%s\n,p->_skill");
     return(p->_gun);
 }
     
 card *getHourseInfo(const player *p)
 {
+    printf("%s\n,p->_name");
+    printf("%s\n,p->_skill");
     return(p->_horse);
 }
     
 card *getJailInfo(const player *p)
 {
+    printf("%s\n,p->_name");
+    printf("%s\n,p->_skill");
     return(p->_jail);
 }
     
 card *getDinamiteInfo(const player *p)
 {
+    printf("%s\n,p->_name");
+    printf("%s\n,p->_skill");
     return(p->_dinamite);
 }
    
 card *getBarrelInfo(const player *p)
 {
+    printf("%s\n,p->_name");
+    printf("%s\n,p->_skill");
     return(p->_barrel);
 }
     
