@@ -4,32 +4,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-void deckInit(game *game)
-{
-    srand(time(NULL));
-    int32_t shuff[80] = {0};
-    int32_t x = 0;
-    game->_discard = calloc(80, sizeof(card *));
-    game->_deck = calloc(80, sizeof(card *));
-    for (int32_t i = 0; i < 80; i++)
-    {
-        game->_discard[i] = calloc(1, sizeof(card));
-        game->_deck[i] = calloc(1, sizeof(card));
-        shuff[i] = i + 1;
-    }
-    for (int32_t i = 79; i >= 1; i++)
-    {
-        int32_t tempt = 0;
-        x = rand() % (i);
-        tempt = shuff[i];
-        shuff[i] = shuff[x];
-        shuff[x] = tempt;
-        game->_deck[i] = (card *)(CARD[shuff[i]]);
-    }
-    game->_deck[0] = (card *)(CARD[shuff[0]]);
-    return;
-}
-
 // after change hp isDead ? here or main vv
 bool bang(player *me, card *c, player *target, game *game)
 {

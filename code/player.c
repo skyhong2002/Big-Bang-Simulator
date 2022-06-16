@@ -1,56 +1,6 @@
 #include "player.h"
 #include <stdlib.h>
-#include <time.h>
 
-int32_t player_id = 0;
-int32_t player_position = 1;
-int8_t checkrole[16] = {0};
-
-bool playerInit(player *p, char *identity, game *game)
-{
-    p = calloc(1, sizeof(player));
-    p->_id = player_id;
-    player_id = player_id + 1;
-
-    p->_position = player_position;
-    player_position = player_position + 1;
-    int32_t x = 0;
-    while (1)
-    {
-        srand(time(NULL));
-        x = rand() % 16;
-        if (checkrole[x] == 1)
-        {
-            continue;
-        }
-        else
-        {
-            checkrole[x] = 1;
-            break;
-        }
-    }
-
-    role *role = NULL;
-    role = calloc(1, sizeof(role));
-    role = ROLE[x];
-    p->_role = role;
-    p->_identity = identity;
-    p->_max_hp = role->_lvalue;
-    p->_hp = role->_lvalue;
-    // p->_hand_cnt = role->_lvalue
-
-    p->_hand = calloc(1, sizeof(card *));
-    for (int i = 0; i < role->_lvalue; i++)
-    {
-        // p->_hand[i] = calloc(1, sizeof(card));
-    }
-    for (int32_t i = 0; i < role->_lvalue; i++)
-    {
-        draw(p, game);
-    }
-
-    return true;
-}
 int8_t getPosition(const player *p)
 {
     return p->_position;
@@ -129,7 +79,7 @@ bool equip(player *p, card *c)
     {
         p->_horse = c;
     }
-    else if (strncmp("PRIGIONE", c->_name, 8) == 0)
+    else if (strncmp("PRIGIONE", c->_name, 8) == 0 && strncmp("Sceriffo",p->_identity,8)!=0)
     {
         p->_jail = c;
     }
@@ -154,11 +104,7 @@ bool draw(player *p, game *game)
         return false;
     }
     p->_hand_cnt += 1;
-    p->_hand = realloc(p->_hand_cnt, sizeof(card *));
-    for (int32_t i = 0; i < p->_hand_cnt; i++)
-    {
-        p->_hand[i] = realloc(p->_hand_cnt, sizeof(card));
-    }
+
     p->_hand[p->_hand_cnt - 1] = game->_deck[game->_deck_cnt - 1];
     game->_deck_cnt -= 1;
     return true;

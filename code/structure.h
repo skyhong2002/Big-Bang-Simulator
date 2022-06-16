@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef _STRUCTURE_H_
 #define _STRUCTURE_H_
 
@@ -53,5 +55,6 @@ typedef struct _game
 
 } game;
 
+#include "game.h"
 
 #endif

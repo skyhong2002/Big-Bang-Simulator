@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef _PLAYER_H_
 #define _PLAYER_H_
 
@@ -8,9 +10,6 @@
 #include "structure.h"
 #include "card.h"
 
-
-
-bool playerInit(player *p, char *identity, game *game);
 int8_t getPosition(const player *p);
 int8_t getHP(const player *p); // return hp
 bool isDead(const player *p);  //return (p._hp == 0);

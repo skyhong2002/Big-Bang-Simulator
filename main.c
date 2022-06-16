@@ -3,7 +3,7 @@
 #include <stdlib.h>
 // #include "code/game.h"
 // #include "code/player.h"
-#include "code/gameinit.h"
+#include "code/bang.h"
 // #include "code/role.h"
 
 int main()

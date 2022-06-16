@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef _GAME_H_
 #define _GAME_H_
 
@@ -8,14 +10,12 @@
 #include "player.h"
 #include "card.h"
 
-
-
-void gameInit(game *bang);
+int32_t gameloop(game *bang);
 int32_t gameEnd(game *bang);
 void shuffle(game *bang);
-void displayPlayer(const player *player);
-void displayHandCard(const player *player);
-void displayAction(const player *player, card *c);
-card *judge(card **deck); //判定
+void displayPlayer(const player *p);
+void displayHandCard(const player *p);
+void displayAction(const player *p, card *c);
+bool judge(player*p,card *c,game*game); //判定
 
 #endif

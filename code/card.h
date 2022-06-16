@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef _CARD_H_
 #define _CARD_H_
 
@@ -7,11 +9,8 @@
 #include <string.h>
 
 #include "structure.h"
-
 #include "game.h"
 #include "player.h"
-
-void deckInit(game *game);
 
 bool bang(player *me, card *c, player *target, game *game);
 bool panic(player *me, card *c, player *target, game *game);
