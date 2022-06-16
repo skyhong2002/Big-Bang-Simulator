@@ -2,9 +2,45 @@
 #include <math.h>
 #include <stdlib.h>
 
+char* isGameEnd(const game *bang){
+    bool Sceriffo = false;
+    bool Fuorilecce = false;
+    bool Rinnecato = false;
+    for(int i = 0; i < bang->_total_player_cnt; ++i){
+        if(isDead(&bang->_player[i])) continue;
+        //"Sceriffo", "Fuorilecce", "Fuorilecce", "Rinnecato", "Vice", "Fuorilecce", "Vice"
+        switch (bang->_player[i]._identity[0]){
+        case 'S': // "Sceriffo"
+        case 'V': // "Vice"
+            Sceriffo = true;
+            break;
+        case 'F': // "Fuorilecce"
+            Fuorilecce = true;
+            break;
+        case 'R': // "Rinnecato"
+            Rinnecato = true;
+            break;
+        
+        default:
+            break;
+        }
+    }
+
+    if(Sceriffo && !Fuorilecce && !Rinnecato){
+        return "Sceriffo camp";
+    }
+    else if(!Sceriffo && Fuorilecce && !Rinnecato){
+        return "Fuorilecce camp";
+    }
+    else if(!Sceriffo && !Fuorilecce && Rinnecato){
+        return "Rinnecato";
+    }
+    return NULL;
+}
 
 int32_t gameloop(game *bang){
     int32_t total_turn = 0;
+    char *winner = "Nobody";
     while(total_turn <= 10 && total_turn >= 0){
         ++total_turn;
         printf("\nTurn %d:\n", total_turn);
@@ -17,6 +53,11 @@ int32_t gameloop(game *bang){
             DO TURN
         }
         */
+
+        if(isGameEnd(bang)){
+            winner = isGameEnd(bang);
+            break;
+        }
         
         do {
             bang->_turn = (bang->_turn + 1) % bang->_total_player_cnt;
@@ -24,10 +65,24 @@ int32_t gameloop(game *bang){
     }
     return 1;
 }
-
-int32_t gameEnd(game *bang);
+int32_t shuffingame[80] = {0};
 void shuffle(game *bang)
 {
+    int32_t x = 0;
+    for (int32_t i = bang->_discard_cnt-1; i >= 1; i--)
+    {
+        int32_t tempt = 0;
+        // printf("%d\n", i);
+        x = rand() % (i);
+        tempt = shuffingame[i];
+        shuffingame[i] = shuffingame[x];
+        shuffingame[x] = tempt;
+        bang->_deck[i] = bang->_discard[shuffingame[i]];
+    }
+    // printf("ok?\n");
+    bang->_deck[0] = bang->_discard[shuffingame[0]];
+    bang->_deck_cnt = bang->_discard_cnt;
+    bang->_discard_cnt = 0;
     return;
 }
 void displayPlayer(const player *p)

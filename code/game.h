@@ -11,10 +11,10 @@
 #include "card.h"
 
 int32_t gameloop(game *bang);
-int32_t gameEnd(game *bang);
+char* isGameEnd(const game *bang);
 void displayPlayer(const player *p);
 void displayHandCard(const player *p);
 void displayAction(const player *p, card *c);
-bool judge(player*p,card *c,game*game); //判定
+bool judge(player* p, card *c, game* game); //判定
 
 #endif
