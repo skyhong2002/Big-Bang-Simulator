@@ -5,7 +5,7 @@
 #include <time.h>
 
 // after change hp isDead ? here or main vv
-char* bang(player *me, card *c, player *target, game *game)
+char *bang(player *me, card *c, player *target, game *game)
 {
     // check distance
     int32_t changeDistance = 0;
@@ -76,7 +76,7 @@ char* bang(player *me, card *c, player *target, game *game)
     }
     return displayAction(me, c, 4);
 }
-char* panic(player *me, card *c, player *target, game *game)
+char *panic(player *me, card *c, player *target, game *game)
 {
     // check distance
     int32_t changeDistance = 0;
@@ -167,7 +167,7 @@ char* panic(player *me, card *c, player *target, game *game)
     }
     return displayAction(me, c, 3);
 }
-char* catBalou(player *me, card *c, player *target, game *game)
+char *catBalou(player *me, card *c, player *target, game *game)
 {
     // check card is catBalou or other
     if (strncmp("CATBALOU", c->_name, 8) == 0)
@@ -257,7 +257,7 @@ char* catBalou(player *me, card *c, player *target, game *game)
     return displayAction(me, c, 3);
 }
 
-char* duel(player *me, card *c, player *target, game *game)
+char *duel(player *me, card *c, player *target, game *game)
 {
     player *temptplayer = NULL;
     int32_t end = 0;
@@ -352,7 +352,7 @@ char* duel(player *me, card *c, player *target, game *game)
     return displayAction(me, c, 3);
 }
 
-char* missed(player *me, card *c, game *game)
+char *missed(player *me, card *c, game *game)
 {
     // check if it is missed
     if (strncmp("MANCATO", c->_name, 7) == 0)
@@ -373,7 +373,7 @@ char* missed(player *me, card *c, game *game)
     return displayAction(me, c, 3);
 }
 // fix draw function? vv
-char* stageCoach(player *me, card *c, game *game)
+char *stageCoach(player *me, card *c, game *game)
 {
     // check if it is draw two cards
     if (strncmp("DILIGENZA", c->_name, 9) == 0)
@@ -390,7 +390,7 @@ char* stageCoach(player *me, card *c, game *game)
     return displayAction(me, c, 3);
 }
 // fix draw function? vv
-char* wellsFargo(player *me, card *c, game *game)
+char *wellsFargo(player *me, card *c, game *game)
 {
     // check if it is draw three cards
     if (strncmp("WELLSFARGO", c->_name, 10) == 0)
@@ -408,7 +408,7 @@ char* wellsFargo(player *me, card *c, game *game)
     return displayAction(me, c, 3);
 }
 
-char* beer(player *me, card *c, game *game)
+char *beer(player *me, card *c, game *game)
 {
     // check player num
     if (game->_alive_player_cnt <= 2)
@@ -428,7 +428,7 @@ char* beer(player *me, card *c, game *game)
     }
     return displayAction(me, c, 3);
 }
-char* saloon(player *me, card *c, game *game)
+char *saloon(player *me, card *c, game *game)
 {
     // check if it is saloon
     if (strncmp("SALOON", c->_name, 6) == 0)
@@ -455,7 +455,7 @@ char* saloon(player *me, card *c, game *game)
 }
 // fix draw func vv
 // displayhandcard need number
-char* generalStore(player *me, card *c, game *game)
+char *generalStore(player *me, card *c, game *game)
 {
     int32_t index = 0;
     player *temptplayer = me;
@@ -529,7 +529,7 @@ char* generalStore(player *me, card *c, game *game)
 
     return displayAction(me, c, 3);
 }
-char* gatling(player *me, card *c, game *game)
+char *gatling(player *me, card *c, game *game)
 {
     // check if it is gatling
     if (strncmp("GATLING", c->_name, 7) == 0)
@@ -555,10 +555,10 @@ char* gatling(player *me, card *c, game *game)
     else
     {
         return displayAction(me, c, 4);
-    }    
+    }
     return displayAction(me, c, 3);
 }
-char* indians(player *me, card *c, game *game)
+char *indians(player *me, card *c, game *game)
 {
     // check if it is indians
     if (strncmp("INDIANI", c->_name, 7) == 0)

@@ -11,15 +11,17 @@ typedef struct _card
 } card;
 int32_t tempt = 0;
 
-int foo(card *c){
+int foo(card *c)
+{
     c->_suit = tempt;
     tempt += 1;
     return 0;
 }
 
-int main(){
+int main()
+{
     // card a = {1, 3, "Wow", "Jennifer Lopez"};
-    card *b = calloc(1,sizeof(card));
+    card *b = calloc(1, sizeof(card));
     printf("%d\n", b->_suit);
     foo(b);
     printf("%d\n", b->_suit);
@@ -27,5 +29,4 @@ int main(){
     printf("%d\n", b->_suit);
     foo(b);
     printf("%d\n", b->_suit);
-    
 }

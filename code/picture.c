@@ -1,75 +1,75 @@
-if(strncmp("BANG", c->_name,4)== 0 )
+/*
+if (strncmp("BANG", c->_name, 4) == 0)
 {
-    printf("( ☉_☉)≡☞o────。。。\n");    //bang
+    printf("( ☉_☉)≡☞o────。。。"); // bang
+}
+if (strncmp("MANCATO", c->_name, 4) == 0)
+{
+    printf("🛡️"); // missed
+}
+if (strncmp("BIRRA", c->_name, 4) == 0)
+{
+    printf("🍻💉"); // beer
+}
+if (strncmp("SALOON", c->_name, 4) == 0)
+{
+    printf("🍷🍸🍹🥂"); // saloon
+}
+if (strncmp("WELLSFARGO", c->_name, 4) == 0)
+{
+    printf("🃏🃏🃏"); // wellsfargo
+}
+if (strncmp("DILIGENZA", c->_name, 4) == 0)
+{
+    printf("🃏🃏"); // DILIGENZA
+}
+if (strncmp("EMPORIO", c->_name, 4) == 0)
+{
+    printf("🏪\n"); // generalstore
+}
+if (strncmp("PANICOI", c->_name, 4) == 0)
+{
+    printf("Σ┗(＠ロ＠;)┛"); // panic
+}
+if (strncmp("CATBALOU", c->_name, 4) == 0)
+{
+    printf("❌🚮"); // catbalou
+}
+if (strncmp("GATLING", c->_name, 4) == 0)
+{
+    printf("🔫"); // gatling
+}
+if (strncmp("INDIANI", c->_name, 4) == 0)
+{
+    printf("(╯>д<)╯"); // INDIANI
+}
+if (strncmp("DUELLO", c->_name, 4) == 0)
+{
+    printf("🤼"); // duel
 }
 
-if(strncmp("missed", c->_name,4)== 0 )
+if (strncmp("MUSTANG", c->_name, 4) == 0 || strncmp("APPALOOSA", c->_name, 4) == 0)
 {
-    printf("🛡️\n");    //missed
+    printf("🐎"); // stagecoach
+}
+if (strncmp("BARREL", c->_name, 4) == 0)
+{
+    printf("🗯🍺"); // BARREL
+}
+if (strncmp("PRIGIONE", c->_name, 4) == 0)
+{
+    printf("🚔\n"); // jail
+}
+if (strncmp("DINAMITE", c->_name, 4) == 0)
+{
+    printf("💣\n"); // dinamite
 }
 
-if(strncmp("gatling", c->_name,4)== 0 )
-{
-    printf("🔫\n");    //gatling
-}
-
-if(strncmp("panic", c->_name,4)== 0 )
-{
-    printf("Σ┗(＠ロ＠;)┛\n");    //panic
-}
-
-if(strncmp("catbalou", c->_name,4)== 0 )
-{
-    printf("\n");    //catbalou
-}
-
-if(strncmp("wellsfargo", c->_name,4)== 0 )
-{
-    printf("\n");    //wellsfargo
-}
-
-if(strncmp("stagecoach", c->_name,4)== 0 )
-{
-    printf("🐎\n");    //stagecoach
-}
-
-if(strncmp("generalstore", c->_name,4)== 0 )
-{
-    printf("🏪\n");    //generalstore
-}
-
-if(strncmp("beer", c->_name,4)== 0 )
-{
-    printf("🍻\n");    //beer
-}
-
-if(strncmp("saloon", c->_name,4)== 0 )
-{
-    printf("🍷🍸🍹🍺🥂\n");    //saloon
-}
-if(strncmp("duel", c->_name,4)== 0 )
-{
-    printf("🤼\n");    //duel
-}
-
-if(strncmp("dead", c->_name,4)== 0 )
-{
-    printf("🏴‍☠️\n");    //dead
-}
+printf("🃏\n");             //抽牌
+printf("🏴‍☠️\n"); // dead
 
 if(strncmp("補血", c->_name,4)== 0 )
 {
-    printf("💉\n");    //補血
+printf("💉\n");    //補血
 }
-
-if(strncmp("dinamite", c->_name,4)== 0 )
-{
-    printf("💣\n");    //dinamite
-}
-
-if(strncmp("jail", c->_name,4)== 0 )
-{
-    printf("🚔\n");    //jail
-}
-
-printf("🃏\n");    //抽牌
+*/

@@ -8,10 +8,10 @@
 #include <stdbool.h>
 #include <string.h>
 
-#define YEL   "\x1B[33m"
-#define BLU   "\x1B[34m"
-#define GRN   "\x1B[32m"
-#define MAG   "\x1B[35m"
+#define YEL "\x1B[33m"
+#define BLU "\x1B[34m"
+#define GRN "\x1B[32m"
+#define MAG "\x1B[35m"
 #define RESET "\x1B[0m"
 
 typedef struct _card
@@ -21,7 +21,6 @@ typedef struct _card
     const char *_name;
     const char *_skill;
 } card;
-
 
 typedef struct _role
 {
