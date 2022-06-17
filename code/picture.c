@@ -64,12 +64,12 @@ if(strncmp("補血", c->_name,4)== 0 )
 
 if(strncmp("dinamite", c->_name,4)== 0 )
 {
-    printf("💣\n")；    //dinamite
+    printf("💣\n");    //dinamite
 }
 
 if(strncmp("jail", c->_name,4)== 0 )
 {
-    printf("🚔\n")；    //jail
+    printf("🚔\n");    //jail
 }
 
-printf("🃏\n")；    //抽牌
+printf("🃏\n");    //抽牌

@@ -122,6 +122,7 @@ char* gameloop(game *bang){
             if(opt == 0){
                 break;
             }
+            // 卡片動作
         }
 
         if(isGameEnd(bang)){
@@ -184,14 +185,14 @@ int32_t getOption(game *bang, player *p){
 }
 
 int32_t getAction(game *bang, card *c){
-
+    int32_t want = 0;
     if(c->_skill[0] == 'E'){ // Equipment
 
     }
     else if(c->_skill[0] == 'A'){ // Action
 
     }
-    
+    return want;
 }
 
 int32_t shuffingame[80] = {0};
