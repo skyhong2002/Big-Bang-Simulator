@@ -5,7 +5,7 @@
 void saveLog(game *bang, char *message){
     char *fname = bang->_logfile_name;
     FILE *f;
-    if( ( f = fopen( fname, "w" ) ) == NULL ){
+    if( ( f = fopen( fname, "a" ) ) == NULL ){
         printf( "File could not be opened!\n" );
         return;
     }
@@ -49,35 +49,151 @@ char* isGameEnd(const game *bang){
     return NULL;
 }
 
-int32_t gameloop(game *bang){
+char* gameloop(game *bang){
     int32_t total_turn = 0;
     char *winner = "Nobody";
     while(total_turn <= 10 && total_turn >= 0){
         ++total_turn;
-        printf("\nTurn %d:\n", total_turn);
+        player *cplayer = bang->_player[bang->_turn]; // current player
 
-        player *cplayer = bang->_player[bang->_turn]; //current player
-        // get 2 card;
-        draw(cplayer, bang);
-        draw(cplayer, bang);
-        displayPlayer(cplayer);
-        /*
-        while(getOption(cplayer) != 0){
-            DO TURN
+        printf("\nTurn "YEL"%d"RESET":", total_turn);
+        for(int i = 0; i < bang->_alive_player_cnt; ++i){
+            if(bang->_player[i]->_position == cplayer->_position)
+                printf(BLU" %s(YOU)"RESET, bang->_player[i]->_name);
+            else
+                printf(" %s", bang->_player[i]->_name);
         }
-        */
+        printf("\n");
+        // Judge Dynamite
+        if(cplayer->_dinamite != NULL){
+            printf("You have a Dynamite, judging...\n");
+            saveLog(bang, judge(cplayer, cplayer->_dinamite, bang));
+        }
+        // use beer to recover
+        while(isDead(cplayer)){
+            printf("You are almost dead (HP: %d/%d), finding BIRRA...\n", cplayer->_hp, cplayer->_max_hp);
+            int32_t bear_cnt = 0;
+            for(int i = 0; i < cplayer->_hand_cnt; ++i){
+                if(strncmp("BIRRA", cplayer->_hand[i]->_name, 5) == 0){
+                    ++bear_cnt;
+                    printf("BIRRA found. using...\n");
+                    saveLog(bang, beer(cplayer, cplayer->_hand[i], bang));
+                }
+            }
+            if(bear_cnt == 0){
+                printf("No BIRRA, You are dead.\n");
+                break;
+            }
+        }
+        if(isDead(cplayer)){
+            continue;
+        }
+        // Judge Jail
+        if(cplayer->_jail != NULL){
+            printf("You are in a jail, judging...\n");
+            char *m = judge(cplayer, cplayer->_jail, bang);
+            saveLog(bang, m);
+            if(m[0] == 'F'){
+                printf("Stay in jail for one turn.\n");
+                continue;
+            }
+        }
+        
+        // get 2 card;
+        saveLog(bang, draw(cplayer, bang));
+        saveLog(bang, draw(cplayer, bang));
+        
+        displayPlayer(cplayer);
+
+        while(!isDead(cplayer)){
+            int32_t opt = -1;
+            int32_t action = -1;
+            while(opt == -1){
+                opt = getOption(bang, cplayer);
+                if(opt > cplayer->_hand_cnt){
+                    printf("No card selected. tryagain.");
+                }
+                /*
+                while(action == -1){
+                    action = getAction(bang, cplayer->_hand[opt-1]);
+                }
+                */
+            }
+            if(opt == 0){
+                break;
+            }
+        }
 
         if(isGameEnd(bang)){
             winner = isGameEnd(bang);
             break;
         }
+
+        printf("Turn %d end.\n", total_turn);
         
         do {
             bang->_turn = (bang->_turn + 1) % bang->_total_player_cnt;
-        }while(!isDead(bang->_player[bang->_turn]));
+        } while(isDead(bang->_player[bang->_turn]));
     }
-    return 1;
+    return winner;
 }
+/*
+need to check
+	if (strncmp(cplayer->_role->_name, "BlackJack", 9) == 0)
+	{
+	}
+	if (strncmp(cplayer->_role->_name, "BartCassidy", 11) == 0)
+	{
+	}
+	if (strncmp(cplayer->_role->_name, "ElGringo", 8) == 0)
+	{
+	}
+	if (strncmp(cplayer->_role->_name, "JesseJones", 10) == 0)
+	{
+	}
+	if (strncmp(cplayer->_role->_name, "KitCarlson", 10) == 0)
+	{
+	}
+	if (strncmp(cplayer->_role->_name, "LuckyDuke", 9) == 0)
+	{
+	}
+	if (strncmp(cplayer->_role->_name, "PedroRamirez", 12) == 0)
+	{
+	}
+	if (strncmp(cplayer->_role->_name, "SidKetchum", 12) == 0)
+	{
+	}
+	if (strncmp(cplayer->_role->_name, "SlabTheKiller", 13) == 0)
+	{
+	}
+	if (strncmp(cplayer->_role->_name, "VultureSam", 10) == 0)
+	{
+	}
+	if (strncmp(cplayer->_role->_name, "WillyTheKid", 11) == 0)
+	{
+	}
+*/
+int32_t getOption(game *bang, player *p){
+    printf("---------------------\n");
+    printf("0: End turn.\n");
+    displayHandCard(p);
+    printf("---------------------\nYour Choice "YEL"> "RESET);
+    int32_t want = 0;
+    scanf("%d", &want);
+    return want;
+}
+
+int32_t getAction(game *bang, card *c){
+
+    if(c->_skill[0] == 'E'){ // Equipment
+
+    }
+    else if(c->_skill[0] == 'A'){ // Action
+
+    }
+    
+}
+
 int32_t shuffingame[80] = {0};
 void shuffle(game *bang)
 {
@@ -100,13 +216,11 @@ void shuffle(game *bang)
 }
 void displayPlayer(const player *p)
 {
-    printf("Player %d info: \n", p->_id);
-    printf("position: %d\n ", p->_position);
-    printf("role name: %s\n", p->_role->_name);
+    printf("Health    : %d/%d\n", p->_hp,p->_max_hp);
+    printf("position  : %d\n", p->_position);
+    printf("identity  : %s\n", (p->_id == 0 ? p->_identity : "TOP SECRET"));
+    printf("role name : %s\n", p->_role->_name);
     printf("role skill: %s\n", p->_role->_skill);
-    printf("identity: %s\n", p->_identity);
-    printf("hp: %d/%d\n", p->_hp,p->_max_hp);
-    displayHandCard(p);
     if(p->_gun!=NULL)
     {
         printf("%s: %s\n", p->_gun->_name, p->_gun->_skill);
@@ -131,22 +245,66 @@ void displayPlayer(const player *p)
 }
 void displayHandCard(const player *p)
 {
-    printf("handcards: \n");
+    // printf("handcards: \n");
     for(int32_t i = 0; i<p->_hand_cnt; i++)
     {
-        printf("%d: \n", i+1);
+        printf("%d: ", i+1);
         printf("%s\n", p->_hand[i]->_name);
-        printf("%s\n", p->_hand[i]->_skill);
+        // printf("%s\n", p->_hand[i]->_skill);
     }
     return;
 }
-// write in card.c xxx
-void displayAction(const player *p, card *c)
+// write in card.c vv
+char strmessage[200] = {0};
+char* displayAction(const player *p, card *c, int32_t type)
 {
-    printf("Player %d used %s\n", p->_id,c->_name);
-    return;
+    for(int32_t i = 0; i<200; i++)
+    {
+        strmessage[i] = 0;
+    }
+    if(type == 1)
+    {
+        strcat(strmessage,"SUCCESS: ");
+    }
+    else if(type == 2)
+    {
+        strcat(strmessage,"FAILED: ");
+    }
+    else if(type == 3 || type == 5)
+    {
+        strcat(strmessage,"Action: ");
+    }
+    else if(type == 4 || type == 6)
+    {
+        strcat(strmessage,"Warning: ");
+    }
+    
+    strcat(strmessage,"Player ");
+    strcat(strmessage,p->_name);
+    if( type != 5 && type != 6 )
+    {
+        strcat(strmessage," used");
+        strcat(strmessage,c->_name);        
+    }
+    if(type == 1 || type == 3)
+    {
+        strcat(strmessage," successed");
+    }
+    else if(type == 2 || type == 4)
+    {
+        strcat(strmessage," failed");
+    }
+    else if(type == 5)
+    {
+        strcat(strmessage," draw a card!");
+    }
+    else if(type == 6)
+    {
+        strcat(strmessage," can't draw a card!");
+    }
+    return strmessage;
 }
-bool judge(player*p,card *c, game* game)//判定
+char* judge(player*p,card *c, game* game)//判定
 {
     if(strncmp("BARREL",c->_name,6)==0)
     {
@@ -155,13 +313,13 @@ bool judge(player*p,card *c, game* game)//判定
         {
             discard(p,c,1,game);
             discard(p,p->_hand[p->_hand_cnt-1],2,game);
-            return true;
+            return displayAction(p, c, 1); // "SUCCESS: " [0] = 'S'
         }
         else
         {
             discard(p,c,1,game);
             discard(p,p->_hand[p->_hand_cnt-1],2,game);
-            return false;
+            return displayAction(p, c, 2); // "FAILED: " [0] = 'F'
         }
     }
     else if(strncmp("PRIGIONE",c->_name,8)==0)
@@ -171,13 +329,13 @@ bool judge(player*p,card *c, game* game)//判定
         {
             discard(p,c,1,game);
             discard(p,p->_hand[p->_hand_cnt-1],2,game);
-            return true;
+            return displayAction(p, c, 1);
         }
         else
         {
             discard(p,c,1,game);
             discard(p,p->_hand[p->_hand_cnt-1],2,game);
-            return false;
+            return displayAction(p, c, 2);
         }
     }
     else if(strncmp("DINAMITE",c->_name,8)==0)
@@ -187,7 +345,7 @@ bool judge(player*p,card *c, game* game)//判定
         {
             discard(p,c,1,game);
             discard(p,p->_hand[p->_hand_cnt-1],2,game);
-            return true;
+            return displayAction(p, c, 1);
         }
         else
         {
@@ -202,12 +360,12 @@ bool judge(player*p,card *c, game* game)//判定
                 p->_dinamite = NULL;
             }
             discard(p,p->_hand[p->_hand_cnt-1],2,game);
-            return false;
+            return displayAction(p, c, 2);
         }
     }
     else
     {
-        return false;
+        return displayAction(p, c, 0);
     }
-return true;
+    return displayAction(p, c, 0);
 }
