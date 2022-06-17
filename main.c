@@ -8,7 +8,7 @@
 
 int main(int32_t argc, char* argv[])
 {
-    char *yourname = "Joker";
+    char yourname[50] = "Joker";
     char logfile_name[FILENAME_MAX] = "log.txt";
     int32_t playercnt = 4;
 
@@ -30,7 +30,7 @@ int main(int32_t argc, char* argv[])
             break;
         case 'n':
 			strcpy(yourname, optarg);
-        break;
+            break;
 		case 'p':
             if (!optarg ||  ((l=strtol(optarg, &endp, 10)),(endp && *endp))){ 
                 fprintf(stderr, "invalid p option %s - expecting a number\n", optarg?optarg:"");
@@ -64,7 +64,8 @@ int main(int32_t argc, char* argv[])
             "==========================\n\n");
     game bang;
     gameInit(&bang, playercnt, yourname, logfile_name);
-
-    // gameloop(&bang);
+    printf("GAME START\n");
+    char *winner = gameloop(&bang);
+    printf("Winner: %s\n", winner);
     return 0;
 }

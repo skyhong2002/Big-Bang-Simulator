@@ -191,11 +191,11 @@ bool playerInit(player *p, char *name, char *identity, game *game, const role **
     p->_role = (role *)(ROLE[x]);
     p->_identity = identity;
     // printf("%s %s\n", p->_role->_name, ROLE[x]->_name);
-    p->_max_hp = p->_role->_lvalue;
-    p->_hp = p->_role->_lvalue;
+    p->_max_hp = p->_role->_lvalue + (strncmp(p->_identity, "Sceriffo", 4)==0?1:0);
+    p->_hp = p->_max_hp;
     // p->_hand_cnt = role->_lvalue
 
-    for (int32_t i = 0; i < p->_role->_lvalue; i++)
+    for (int32_t i = 0; i < p->_max_hp; i++)
     {
         draw(p, game);
     }
@@ -218,7 +218,7 @@ void gameInit(game *bang, int32_t pcnt, char *pname, char *fname)
     static const role ROLE_11 = {RoseDoolan, 4};
     static const role ROLE_12 = {VultureSam, 4};
     static const role ROLE_13 = {BartCassidy, 4};
-    static const role ROLE_14 = {KitCarlaon, 4};
+    static const role ROLE_14 = {KitCarlson, 4};
     static const role ROLE_15 = {PedroRamirez, 4};
     static const role ROLE_16 = {LuckyDuke, 4};
 
@@ -250,12 +250,9 @@ void gameInit(game *bang, int32_t pcnt, char *pname, char *fname)
 
     char *iden[] = {
         "Sceriffo", "Fuorilecce", "Fuorilecce", "Rinnecato", "Vice", "Fuorilecce", "Vice"};
-    printf("Start player init.\n");
+    // printf("Start player init.\n");
     bang->_player = calloc (bang->_total_player_cnt, sizeof(player*));
-    // printf("%d\n", pcnt);
-    // printf("place: %p\n", bang->_player);
-    // printf("place: %p\n", bang->_player);
-    printf("Start loop\n");
+    // printf("Start loop\n");
     for (int i = 0; i < bang->_total_player_cnt; ++i)
     {
         int32_t x = 0;
@@ -274,13 +271,6 @@ void gameInit(game *bang, int32_t pcnt, char *pname, char *fname)
             }
         }
         bang->_player[i] = calloc(1, sizeof(player));
-        // printf("place1: %p\n", bang->_player[i]);
         playerInit(bang->_player[i], namelist[i], iden[x], bang, ROLE);
-        // printf("player init end.\n");
-        // printf("place2: %p\n", bang->_player[i]);
-        // printf("position: %d\n", bang->_player[i]->_position); vv 
-        // printf("%s \n", bang->_player[i]->_role->_name);vv 
-        // printf("id1: %d\n", bang->_player[i]->_id); vv 
-        // printf("id2: %s\n", bang->_player[i]->_hand[0]->_name);
     }
 }

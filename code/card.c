@@ -47,12 +47,12 @@ char* bang(player *me, card *c, player *target, game *game)
             discard(me, c, 2, game);
             // changeHp
             changeHP(target, -1);
-            displayAction(me,c);
-            return "true";
+
+            return displayAction(me, c, 3);
         }
         else
         {
-            return "Warning: ";
+            return displayAction(me, c, 4);
         }
     }
     else if (strncmp("MANCATO", c->_name, 7) == 0 && strncmp("CalamityJanet", me->_role->_name, 13) == 0)
@@ -63,19 +63,18 @@ char* bang(player *me, card *c, player *target, game *game)
             discard(me, c, 2, game);
             // changeHp
             changeHP(target, -1);
-            displayAction(me,c);
-            return "Action: ";
+            return displayAction(me, c, 3);
         }
         else
         {
-            return "Warning: ";
+            return displayAction(me, c, 4);
         }
     }
     else
     {
-        return "Warning: ";
+        return displayAction(me, c, 4);
     }
-    return "Action: ";
+    return displayAction(me, c, 4);
 }
 char* panic(player *me, card *c, player *target, game *game)
 {
@@ -86,7 +85,7 @@ char* panic(player *me, card *c, player *target, game *game)
     // handcardcnt
     if (target->_hand_cnt == 0)
     {
-        return "Warning: ";
+        return displayAction(me, c, 4);
     }
     // check card is panic or other
     if (strncmp("PANICOI", c->_name, 7) == 0)
@@ -108,7 +107,7 @@ char* panic(player *me, card *c, player *target, game *game)
                         if (drawplayer(me, target, 1) == false)
                         {
                             printf("He/She didn't have equipment cards!\n");
-                            return "Warning: ";
+                            return displayAction(me, c, 4);
                         }
                         else
                         {
@@ -121,7 +120,7 @@ char* panic(player *me, card *c, player *target, game *game)
                         if (drawplayer(me, target, 2) == false)
                         {
                             printf("He/She didn't have hand cards!\n");
-                            return "Warning: ";
+                            return displayAction(me, c, 4);
                         }
                         else
                         {
@@ -132,7 +131,7 @@ char* panic(player *me, card *c, player *target, game *game)
                     else if (choose == 3)
                     {
                         printf("You didn't use this card.\n");
-                        return "Warning: ";
+                        return displayAction(me, c, 4);
                     }
                     else
                     {
@@ -146,7 +145,7 @@ char* panic(player *me, card *c, player *target, game *game)
                 if (drawplayer(me, target, 2) == false)
                 {
                     printf("He/She didn't have hand cards!\n");
-                    return "Warning: ";
+                    return displayAction(me, c, 4);
                 }
                 else
                 {
@@ -155,19 +154,18 @@ char* panic(player *me, card *c, player *target, game *game)
             }
             // throw a card
             discard(me, c, 2, game);
-            displayAction(me,c);
-            return "Action: ";
+            return displayAction(me, c, 3);
         }
         else
         {
-            return "Warning: ";
+            return displayAction(me, c, 4);
         }
     }
     else
     {
-        return "Warning: ";
+        return displayAction(me, c, 4);
     }
-    return "Action: ";
+    return displayAction(me, c, 3);
 }
 char* catBalou(player *me, card *c, player *target, game *game)
 {
@@ -177,7 +175,7 @@ char* catBalou(player *me, card *c, player *target, game *game)
         if (target->_hand_cnt == 0 && target->_gun == NULL && target->_horse == NULL && target->_jail == NULL && target->_dinamite == NULL && target->_barrel == NULL)
         {
             printf("Target don't have cards!\n");
-            return "Warning: ";
+            return displayAction(me, c, 4);
         }
         if (target->_id == 0)
         {
@@ -250,14 +248,13 @@ char* catBalou(player *me, card *c, player *target, game *game)
             }
         }
         discard(me, c, 2, game);
-        displayAction(me,c);
-        return "Action: ";
+        return displayAction(me, c, 3);
     }
     else
     {
-        return "Warning: ";
+        return displayAction(me, c, 4);
     }
-    return "Action: ";
+    return displayAction(me, c, 3);
 }
 
 char* duel(player *me, card *c, player *target, game *game)
@@ -352,8 +349,7 @@ char* duel(player *me, card *c, player *target, game *game)
         }
     }
     changeHP(temptplayer, -1);
-    displayAction(me,c);
-    return "Action: ";
+    return displayAction(me, c, 3);
 }
 
 char* missed(player *me, card *c, game *game)
@@ -362,21 +358,19 @@ char* missed(player *me, card *c, game *game)
     if (strncmp("MANCATO", c->_name, 7) == 0)
     {
         discard(me, c, 2, game);
-        displayAction(me,c);
-        return "Action: ";
+        return displayAction(me, c, 3);
     }
     else if (strncmp("BANG", c->_name, 4) == 0 && strncmp("CalamityJanet", me->_role->_name, 13) == 0)
     {
         discard(me, c, 2, game);
-        displayAction(me,c);
-        return "Action: ";
+        return displayAction(me, c, 3);
     }
     else
     {
-        return "Warning: ";
+        return displayAction(me, c, 4);
     }
 
-    return "Action: ";
+    return displayAction(me, c, 3);
 }
 // fix draw function? vv
 char* stageCoach(player *me, card *c, game *game)
@@ -387,14 +381,13 @@ char* stageCoach(player *me, card *c, game *game)
         draw(me, game);
         draw(me, game);
         discard(me, c, 2, game);
-        displayAction(me,c);
-        return "Action: ";
+        return displayAction(me, c, 3);
     }
     else
     {
-        return "Warning: ";
+        return displayAction(me, c, 4);
     }
-    return "Action: ";
+    return displayAction(me, c, 3);
 }
 // fix draw function? vv
 char* wellsFargo(player *me, card *c, game *game)
@@ -406,14 +399,13 @@ char* wellsFargo(player *me, card *c, game *game)
         draw(me, game);
         draw(me, game);
         discard(me, c, 2, game);
-        displayAction(me,c);
-        return "Action: ";
+        return displayAction(me, c, 3);
     }
     else
     {
-        return "Warning: ";
+        return displayAction(me, c, 4);
     }
-    return "Action: ";
+    return displayAction(me, c, 3);
 }
 
 char* beer(player *me, card *c, game *game)
@@ -421,21 +413,20 @@ char* beer(player *me, card *c, game *game)
     // check player num
     if (game->_alive_player_cnt <= 2)
     {
-        return "Warning: ";
+        return displayAction(me, c, 4);
     }
     // check if it is beer
     if (strncmp("BIRRA", c->_name, 5) == 0)
     {
         changeHP(me, 1);
         discard(me, c, 2, game);
-        displayAction(me,c);
-        return "Action: ";
+        return displayAction(me, c, 3);
     }
     else
     {
-        return "Warning: ";
+        return displayAction(me, c, 4);
     }
-    return "Action: ";
+    return displayAction(me, c, 3);
 }
 char* saloon(player *me, card *c, game *game)
 {
@@ -454,14 +445,13 @@ char* saloon(player *me, card *c, game *game)
             }
         }
         discard(me, c, 2, game);
-        displayAction(me,c);
-        return "Action: ";
+        return displayAction(me, c, 3);
     }
     else
     {
-        return "Warning: ";
+        return displayAction(me, c, 4);
     }
-    return "Action: ";
+    return displayAction(me, c, 3);
 }
 // fix draw func vv
 // displayhandcard need number
@@ -536,8 +526,8 @@ char* generalStore(player *me, card *c, game *game)
             temptplayer += 1;
         }
     } while (temptplayer != me);
-displayAction(me,c);
-    return "Action: ";
+
+    return displayAction(me, c, 3);
 }
 char* gatling(player *me, card *c, game *game)
 {
@@ -560,14 +550,13 @@ char* gatling(player *me, card *c, game *game)
             }
         }
         discard(me, c, 2, game);
-        displayAction(me,c);
-        return "Action: ";
+        return displayAction(me, c, 3);
     }
     else
     {
-        return "Warning: ";
+        return displayAction(me, c, 4);
     }    
-    return "Action: ";
+    return displayAction(me, c, 3);
 }
 char* indians(player *me, card *c, game *game)
 {
@@ -618,14 +607,13 @@ char* indians(player *me, card *c, game *game)
             }
         }
         discard(me, c, 2, game);
-        displayAction(me,c);
-        return "Action: ";
+        return displayAction(me, c, 3);
     }
     else
     {
-        return "Warning: ";
+        return displayAction(me, c, 4);
     }
-    return "Action: ";
+    return displayAction(me, c, 3);
 }
 
 void checkDistance(int32_t *between, int32_t *cD, player *me, player *target, game *game)
@@ -664,7 +652,7 @@ bool drawplayer(player *me, player *target, int8_t choice)
         {
             if (target->_gun == NULL && target->_horse == NULL && target->_jail == NULL && target->_dinamite == NULL && target->_barrel == NULL)
             {
-                return "Warning: ";
+                return false;
             }
             while (1)
             {
@@ -772,7 +760,7 @@ bool drawplayer(player *me, player *target, int8_t choice)
         {
             if (target->_hand == NULL)
             {
-                return "Warning: ";
+                return false;
             }
             while (1)
             {
@@ -808,14 +796,14 @@ bool drawplayer(player *me, player *target, int8_t choice)
                     printf("Your input is wrong. Please try again.\n");
                 }
             }
-            return "Action: ";
+            return true;
         }
     }
     else
     {
         if (target->_hand == NULL)
         {
-            return "Warning: ";
+            return false;
         }
 
         // sort me
@@ -829,9 +817,9 @@ bool drawplayer(player *me, player *target, int8_t choice)
 
         target->_hand_cnt -= 1;
 
-        return "Action: ";
+        return true;
     }
-    return "Action: ";
+    return true;
 }
 
 bool throwaway(player *me, player *target, int8_t choice, game *game)
@@ -840,7 +828,7 @@ bool throwaway(player *me, player *target, int8_t choice, game *game)
     {
         if (target->_gun == NULL && target->_horse == NULL && target->_jail == NULL && target->_dinamite == NULL && target->_barrel == NULL)
         {
-            return "Warning: ";
+            return false;
         }
         while (1)
         {
@@ -918,7 +906,7 @@ bool throwaway(player *me, player *target, int8_t choice, game *game)
     {
         if (target->_hand == NULL)
         {
-            return "Warning: ";
+            return false;
         }
         while (1)
         {
@@ -947,10 +935,10 @@ bool throwaway(player *me, player *target, int8_t choice, game *game)
                 printf("Your input is wrong. Please try again.\n");
             }
         }
-        return "Action: ";
+        return true;
     }
 
-    return "Action: ";
+    return true;
 }
 // int main()
 // {

@@ -101,7 +101,7 @@ char* draw(player *p, game *game)
 {
     if (p == NULL || game == NULL)
     {
-        return "Warning: ";
+        return displayAction(p, NULL, 6);
     }
     p->_hand_cnt += 1;
 
@@ -111,7 +111,7 @@ char* draw(player *p, game *game)
     {
         shuffle(game);
     }
-    return "Action: ";
+    return displayAction(p, NULL, 5);;
 }
 //  equip: 1 or hand: 2
 // I need discard_cnt !
