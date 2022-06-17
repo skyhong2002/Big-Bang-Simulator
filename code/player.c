@@ -11,10 +11,11 @@ int8_t getHP(const player *p)
     return p->_hp;
 }
 
-bool isDead(const player *p) //return (p,hp == 0);
+bool isDead(const player *p) // return (p,hp == 0);
 {
     if (p->_hp < 0 || p->_hp == 0)
     {
+        printf("Player %s is dead 🏴‍☠️ ( ´･･)ﾉ(._.`)\n", p->_name);
         return true;
     }
     return false;
@@ -79,7 +80,7 @@ bool equip(player *p, card *c)
     {
         p->_horse = c;
     }
-    else if (strncmp("PRIGIONE", c->_name, 8) == 0 && strncmp("Sceriffo",p->_identity,8)!=0)
+    else if (strncmp("PRIGIONE", c->_name, 8) == 0 && strncmp("Sceriffo", p->_identity, 8) != 0)
     {
         p->_jail = c;
     }
@@ -97,7 +98,7 @@ bool equip(player *p, card *c)
     }
     return true;
 }
-char* draw(player *p, game *game)
+char *draw(player *p, game *game)
 {
     if (p == NULL || game == NULL)
     {
@@ -107,11 +108,12 @@ char* draw(player *p, game *game)
 
     p->_hand[p->_hand_cnt - 1] = game->_deck[game->_deck_cnt - 1];
     game->_deck_cnt -= 1;
-    if(game->_deck_cnt==0)
+    if (game->_deck_cnt == 0)
     {
         shuffle(game);
     }
-    return displayAction(p, NULL, 5);;
+    return displayAction(p, NULL, 5);
+    ;
 }
 //  equip: 1 or hand: 2
 // I need discard_cnt !

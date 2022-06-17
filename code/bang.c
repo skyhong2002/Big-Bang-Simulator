@@ -90,22 +90,22 @@ void deckInit(game *game)
     static const card CARD_80 = {4, 13, REMINGTON};
 
     static const card *const CARD[81] = {NULL,
-                                  &CARD_01, &CARD_02, &CARD_03, &CARD_04, &CARD_05,
-                                  &CARD_06, &CARD_07, &CARD_08, &CARD_09, &CARD_10,
-                                  &CARD_11, &CARD_12, &CARD_13, &CARD_14, &CARD_15,
-                                  &CARD_16, &CARD_17, &CARD_18, &CARD_19, &CARD_20,
-                                  &CARD_21, &CARD_22, &CARD_23, &CARD_24, &CARD_25,
-                                  &CARD_26, &CARD_27, &CARD_28, &CARD_29, &CARD_30,
-                                  &CARD_31, &CARD_32, &CARD_33, &CARD_34, &CARD_35,
-                                  &CARD_36, &CARD_37, &CARD_38, &CARD_39, &CARD_40,
-                                  &CARD_41, &CARD_42, &CARD_43, &CARD_44, &CARD_45,
-                                  &CARD_46, &CARD_47, &CARD_48, &CARD_49, &CARD_50,
-                                  &CARD_51, &CARD_52, &CARD_53, &CARD_54, &CARD_55,
-                                  &CARD_56, &CARD_57, &CARD_58, &CARD_59, &CARD_60,
-                                  &CARD_61, &CARD_62, &CARD_63, &CARD_64, &CARD_65,
-                                  &CARD_66, &CARD_67, &CARD_68, &CARD_69, &CARD_70,
-                                  &CARD_71, &CARD_72, &CARD_73, &CARD_74, &CARD_75,
-                                  &CARD_76, &CARD_77, &CARD_78, &CARD_79, &CARD_80};
+                                         &CARD_01, &CARD_02, &CARD_03, &CARD_04, &CARD_05,
+                                         &CARD_06, &CARD_07, &CARD_08, &CARD_09, &CARD_10,
+                                         &CARD_11, &CARD_12, &CARD_13, &CARD_14, &CARD_15,
+                                         &CARD_16, &CARD_17, &CARD_18, &CARD_19, &CARD_20,
+                                         &CARD_21, &CARD_22, &CARD_23, &CARD_24, &CARD_25,
+                                         &CARD_26, &CARD_27, &CARD_28, &CARD_29, &CARD_30,
+                                         &CARD_31, &CARD_32, &CARD_33, &CARD_34, &CARD_35,
+                                         &CARD_36, &CARD_37, &CARD_38, &CARD_39, &CARD_40,
+                                         &CARD_41, &CARD_42, &CARD_43, &CARD_44, &CARD_45,
+                                         &CARD_46, &CARD_47, &CARD_48, &CARD_49, &CARD_50,
+                                         &CARD_51, &CARD_52, &CARD_53, &CARD_54, &CARD_55,
+                                         &CARD_56, &CARD_57, &CARD_58, &CARD_59, &CARD_60,
+                                         &CARD_61, &CARD_62, &CARD_63, &CARD_64, &CARD_65,
+                                         &CARD_66, &CARD_67, &CARD_68, &CARD_69, &CARD_70,
+                                         &CARD_71, &CARD_72, &CARD_73, &CARD_74, &CARD_75,
+                                         &CARD_76, &CARD_77, &CARD_78, &CARD_79, &CARD_80};
 
     srand(time(NULL));
     int32_t shuff[80] = {0};
@@ -137,11 +137,11 @@ void deckInit(game *game)
     // no shuffle xxx
     // for (int32_t i = 79; i >= 0; i--)
     // {
-        // game->_deck[i] = (card *)(CARD[i]);
-        // printf("%p\n", game->_deck[i]);
-        // printf("%d: \n", i);
-        // printf("%s\n", game->_deck[i]->_name);
-        // printf("%s\n", game->_deck[i]->_skill);
+    // game->_deck[i] = (card *)(CARD[i]);
+    // printf("%p\n", game->_deck[i]);
+    // printf("%d: \n", i);
+    // printf("%s\n", game->_deck[i]->_name);
+    // printf("%s\n", game->_deck[i]->_skill);
     // }
     return;
 }
@@ -191,7 +191,7 @@ bool playerInit(player *p, char *name, char *identity, game *game, const role **
     p->_role = (role *)(ROLE[x]);
     p->_identity = identity;
     // printf("%s %s\n", p->_role->_name, ROLE[x]->_name);
-    p->_max_hp = p->_role->_lvalue + (strncmp(p->_identity, "Sceriffo", 4)==0?1:0);
+    p->_max_hp = p->_role->_lvalue + (strncmp(p->_identity, "Sceriffo", 4) == 0 ? 1 : 0);
     p->_hp = p->_max_hp;
     // p->_hand_cnt = role->_lvalue
 
@@ -251,7 +251,7 @@ void gameInit(game *bang, int32_t pcnt, char *pname, char *fname)
     char *iden[] = {
         "Sceriffo", "Fuorilecce", "Fuorilecce", "Rinnecato", "Vice", "Fuorilecce", "Vice"};
     // printf("Start player init.\n");
-    bang->_player = calloc (bang->_total_player_cnt, sizeof(player*));
+    bang->_player = calloc(bang->_total_player_cnt, sizeof(player *));
     // printf("Start loop\n");
     for (int i = 0; i < bang->_total_player_cnt; ++i)
     {
