@@ -12,7 +12,7 @@
 #include "game.h"
 #include "player.h"
 
-char *bang(player *me, card *c, player *target, game *game);
+char *bangAction(player *me, card *c, player *target, game *game);
 char *panic(player *me, card *c, player *target, game *game);
 char *catBalou(player *me, card *c, player *target, game *game);
 char *duel(player *me, card *c, player *target, game *game);

@@ -5,13 +5,19 @@
 #include <time.h>
 
 // after change hp isDead ? here or main vv
-char *bang(player *me, card *c, player *target, game *game)
+char *bangAction(player *me, card *c, player *target, game *game)
 {
+    // // check target is me?
+    // if(target->_id == me->_id)
+    // {
+    //     return displayAction(me, c, 4);
+    // }
     // check distance
     int32_t changeDistance = 0;
     int32_t betweenDistance = 0;
     int32_t availDistance = 1;
     checkDistance(&betweenDistance, &changeDistance, me, target, game);
+    printf("check distance\n");
     if (me->_gun != NULL)
     {
         if (strncmp("VOLCANIC", me->_gun->_name, 8) == 0)
@@ -35,6 +41,7 @@ char *bang(player *me, card *c, player *target, game *game)
             availDistance = 5;
         }
     }
+    printf("check gun\n");
     // check card is bang or other
     if (strncmp("BANG", c->_name, 4) == 0)
     {
@@ -44,6 +51,7 @@ char *bang(player *me, card *c, player *target, game *game)
             // throw a card
             // (*me)._hand_cnt -= 1;
             // (*me)._hand
+            printf("check used\n");
             discard(me, c, 2, game);
             // changeHp
             changeHP(target, -1);
@@ -78,6 +86,11 @@ char *bang(player *me, card *c, player *target, game *game)
 }
 char *panic(player *me, card *c, player *target, game *game)
 {
+    // // check target is me?
+    // if(target->_id == me->_id)
+    // {
+    //     return displayAction(me, c, 4);
+    // }
     // check distance
     int32_t changeDistance = 0;
     int32_t betweenDistance = 0;
@@ -169,6 +182,11 @@ char *panic(player *me, card *c, player *target, game *game)
 }
 char *catBalou(player *me, card *c, player *target, game *game)
 {
+    // // check target is me?
+    // if(target->_id == me->_id)
+    // {
+    //     return displayAction(me, c, 4);
+    // }
     // check card is catBalou or other
     if (strncmp("CATBALOU", c->_name, 8) == 0)
     {
@@ -259,6 +277,11 @@ char *catBalou(player *me, card *c, player *target, game *game)
 
 char *duel(player *me, card *c, player *target, game *game)
 {
+    // // check target is me?
+    // if(target->_id == me->_id)
+    // {
+    //     return displayAction(me, c, 4);
+    // }
     player *temptplayer = NULL;
     int32_t end = 0;
     for (int32_t i = 1; i >= 0; i++)
@@ -622,10 +645,12 @@ void checkDistance(int32_t *between, int32_t *cD, player *me, player *target, ga
     {
         *cD -= 1;
     }
+    printf("check NUll?\n");
     if (strncmp("APPALOOSA", me->_horse->_name, 9) == 0)
     {
         *cD -= 1;
     }
+    printf("check NUll?\n");
     if (strncmp("PaulRegret", target->_role->_name, 10) == 0)
     {
         *cD += 1;

@@ -66,6 +66,8 @@ int main(int32_t argc, char *argv[])
            "    Created by Team 10    \n"
            "==========================\n\n");
     game bang;
+    
+    printf("Game log will be stored in %s\n",logfile_name);
     gameInit(&bang, playercnt, yourname, logfile_name);
     printf("GAME START\n");
     char *winner = gameloop(&bang);

@@ -24,21 +24,22 @@ bool playerInit(player *p, char *name, char *identity, game *game, const role **
 #define PRIGIONE "PRIGIONE", "Equipment: Play this card in front of any player regardless of the distance: you put him in jail! If you are in jail, you must \"draw!\" before the beginning of your turn:\nif you draw a Heart card, you escape from jail: discard the Jail, and continue your turn as normal;\notherwise discard the Jail and skip your turn."
 #define MUSTANG "MUSTANG", "Equipment: The distance between other players and you is increased by 1(other watch you)"
 #define APPALOOSA "APPALOOSA", "Equipment: Distance from other players minus one"
-#define BARREL "BARREL", "Facility: prevent from card heart"
+#define BARREL "BARREL", "Equipment: prevent from card heart"
+
+#define DILIGENZA "DILIGENZA", "Action (self): Draw 2 cards from the deck"
+#define WELLSFARGO "WELLSFARGO", "Action (self): Draw 3 cards from the deck"
+#define BIRRA "BIRRA", "Action (self): Regain your one life point"
 
 #define BANG "BANG", "Action: BANG someone within distace"
 #define MANCATO "MANCATO", "Action: prevent from BANGed"
 #define DUELLO "DUELLO", "Action: draw BANG until the one can't draw HP-1"
-#define EMPORIO "EMPORIO", "Action: Everyone gets a card (雜貨鋪)"
 #define PANICOI "PANICOI", "Action: Draw a card from a player at distance 1"
-#define WELLSFARGO "WELLSFARGO", "Action: Draw three cards from the deck"
-#define SALOON "SALOON", "Action: Regain your one life point or regain everyone one life points"
-#define BIRRA "BIRRA", "Action: Regain your one life point"
-#define GATLING "GATLING", "Action: Shoots a BANG! to all the other players"
 #define CATBALOU "CATBALOU", "Action: Force any one player to discard a card"
-#define DILIGENZA "DILIGENZA", "Action: Draw 2 cards from the deck"
 
-#define INDIANI "INDIANI", "Facility: who played this card, may discard a BANG, or lose one life point"
+#define EMPORIO "EMPORIO", "Action (all): Everyone gets a card (雜貨鋪)"
+#define INDIANI "INDIANI", "Action (all): who played this card, may discard a BANG, or lose one life point"
+#define GATLING "GATLING", "Action (all): Shoots a BANG! to all the other players"
+#define SALOON "SALOON", "Action (all): Regain everyone one life points"
 
 /* ROLE */
 
@@ -47,7 +48,7 @@ bool playerInit(player *p, char *name, char *identity, game *game, const role **
 #define SlabTheKiller "SlabTheKiller", "Players trying to cancel his \"Bang!\" cards need to play 2 \"Missed!\". The \"Barrel\" effect, if successfully used, only counts as one \"Missed!\""
 #define CalamityJanet "CalamityJanet", "She can use \"Bang!\" cards as \"Missed!\" cards and vice versa. She is still subject to \"Bang!\" limitations: If she plays a \"Missed!\" card as a \"Bang!\", she cannot play another \"Bang!\" card that turn (unless she has a Volcanic in play)."
 #define JesseJones "JesseJones", "During phase 1 of his turn, he may choose to draw the first card from the deck, or randomly from the hand of any other player. Then he draws the second card from the deck."
-#define ElGringo "ElGringo", "Each time he loses a life point due to a card played by another player, Gringo draws a random card from the hand of that player (one card for each life), unless he has no more hand cards."
+#define ElGringo "ElGringo", "Each time he loses a life point due to a card played by another player, Gringo draws a random card from the hand of that player (one card for each life)."
 #define PaulRegret "PaulRegret", "He is considered to have a \"Mustang\" in play at all times; all other players must add 1 to the distance to him. If he has an actual \"Mustang\" card in play, he can count both of them, increasing all distance to him by a total of 2."
 #define SidKetchum "SidKetchum", "At any time, he may discard 2 cards from his hand to regain one life point. If he is willing and able to, he can use this ability more than once at a time."
 #define BlackJack "BlackJack", "During phase 1 of his turn, he must show the second card he draws; on Hearts or Diamonds, he draws one additional card that turn (without revealing it)."

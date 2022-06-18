@@ -66,11 +66,11 @@ card *getBarrelInfo(const player *p)
     return (p->_barrel);
 }
 
-bool equip(player *p, card *c)
+char* equip(player *p, card *c)
 {
     if (p == NULL || c == NULL)
     {
-        return false;
+        return displayAction(p, c, 2);
     }
     if (strncmp("VOLCANIC", c->_name, 8) == 0 || strncmp("SCHOFIELD", c->_name, 9) == 0 || strncmp("REMINGTON", c->_name, 9) == 0 || strncmp("REV. CARABINE", c->_name, 13) == 0 || strncmp("WINCHESTER", c->_name, 10) == 0)
     {
@@ -94,9 +94,9 @@ bool equip(player *p, card *c)
     }
     else
     {
-        return false;
+        return displayAction(p, c, 2);;
     }
-    return true;
+    return displayAction(p, c, 1);;
 }
 char *draw(player *p, game *game)
 {
@@ -118,16 +118,16 @@ char *draw(player *p, game *game)
 //  equip: 1 or hand: 2
 // I need discard_cnt !
 // sure the discard size is bigger enough?
-bool discard(player *p, card *c, int8_t type, game *game)
+char* discard(player *p, card *c, int8_t type, game *game)
 {
     if (p == NULL || c == NULL)
     {
-        return false;
+        return displayAction(p, c, 8);
     }
     if (type == 1)
     {
         game->_discard[game->_discard_cnt] = c;
-        c = NULL;
+        // c = NULL;
     }
     else if (type == 2)
     {
@@ -136,7 +136,8 @@ bool discard(player *p, card *c, int8_t type, game *game)
             if (p->_hand[i] == c)
             {
                 game->_discard[game->_discard_cnt] = c;
-                c = NULL;
+                // c = NULL;
+                // printf("i: %d\n", i);
                 for (int32_t j = i; j < p->_hand_cnt; j++)
                 {
                     if (j + 1 != p->_hand_cnt)
@@ -154,10 +155,22 @@ bool discard(player *p, card *c, int8_t type, game *game)
         p->_hand_cnt -= 1;
     }
     game->_discard_cnt += 1;
-    return true;
+    return displayAction(p, c, 7);
 }
 bool changeHP(player *p, int8_t hp)
 {
+    char mes[100] = {0};
+    char strhp[2] = {0};
+    if(hp < 0)
+    {
+        strhp[0] = '-';
+        strhp[1] = (-hp)+'0';
+    }
+    else
+    {
+        strhp[0] = hp+'0';
+    }
+    
     if (p == NULL)
     {
         return false;
@@ -166,5 +179,10 @@ bool changeHP(player *p, int8_t hp)
     {
         p->_hp += hp;
     }
+    strcat(mes, "Player ");
+    strcat(mes, p->_name);
+    strcat(mes, "hp change ");
+    strcat(mes, strhp);
+    saveLog(mes);
     return true;
 }
