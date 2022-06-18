@@ -20,7 +20,7 @@ card *getHorseInfo(const player *p);
 card *getJailInfo(const player *p);
 card *getDinamiteInfo(const player *p);
 card *getBarrelInfo(const player *p);
-char *equip(player *p, card *c);
+char *equip(player *me, card *c, player *target, game* game);
 char *draw(player *p, game *game);
 void shuffle(game *bang); // TBD
 char* discard(player *p, card *c, int8_t type, game *game);

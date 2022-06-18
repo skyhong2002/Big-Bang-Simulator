@@ -62,7 +62,8 @@ int main(int32_t argc, char *argv[])
     }
     // option
     printf("==========================\n"
-           "    Big Bang Simulator    \n" MAG "(う-`)づ" YEL "︻╦̵̵̿╤──" BLU "   \\(˚☐˚」)/\n" RESET
+           "    Big Bang Simulator    \n"
+           MAG "(う-`)づ" YEL "︻╦̵̵̿╤──" BLU "   \\(˚☐˚」)/\n" RESET
            "    Created by Team 10    \n"
            "==========================\n\n");
     game bang;

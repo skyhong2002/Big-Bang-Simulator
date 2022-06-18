@@ -66,37 +66,39 @@ card *getBarrelInfo(const player *p)
     return (p->_barrel);
 }
 
-char* equip(player *p, card *c)
+char* equip(player *me, card *c, player *target,game* game)
 {
-    if (p == NULL || c == NULL)
+    if (me == NULL || c == NULL)
     {
-        return displayAction(p, c, 2);
+        return displayAction(me, c, 2);
     }
-    if (strncmp("VOLCANIC", c->_name, 8) == 0 || strncmp("SCHOFIELD", c->_name, 9) == 0 || strncmp("REMINGTON", c->_name, 9) == 0 || strncmp("REV. CARABINE", c->_name, 13) == 0 || strncmp("WINCHESTER", c->_name, 10) == 0)
+    if ((strncmp("VOLCANIC", c->_name, 8) == 0 || strncmp("SCHOFIELD", c->_name, 9) == 0 || strncmp("REMINGTON", c->_name, 9) == 0 || strncmp("REV. CARABINE", c->_name, 13) == 0 || strncmp("WINCHESTER", c->_name, 10) == 0) && target->_gun==NULL)
     {
-        p->_gun = c;
+        target->_gun = c;
     }
-    else if (strncmp("MUSTANG", c->_name, 7) == 0 || strncmp("APPALOOSA", c->_name, 9) == 0)
+    else if ((strncmp("MUSTANG", c->_name, 7) == 0 || strncmp("APPALOOSA", c->_name, 9) == 0) && target->_horse==NULL)
     {
-        p->_horse = c;
+        target->_horse = c;
     }
-    else if (strncmp("PRIGIONE", c->_name, 8) == 0 && strncmp("Sceriffo", p->_identity, 8) != 0)
+    else if ((strncmp("PRIGIONE", c->_name, 8) == 0 && strncmp("Sceriffo", target->_identity, 8) != 0) && target->_jail==NULL)
     {
-        p->_jail = c;
+        // printf("jail ok\n");
+        target->_jail = c;
     }
-    else if (strncmp("DINAMITE", c->_name, 8) == 0)
+    else if ((strncmp("DINAMITE", c->_name, 8) == 0) && target->_dinamite==NULL )
     {
-        p->_dinamite = c;
+        target->_dinamite = c;
     }
-    else if (strncmp("BARREL", c->_name, 6) == 0)
+    else if ((strncmp("BARREL", c->_name, 6) == 0) && target->_barrel==NULL )
     {
-        p->_barrel = c;
+        target->_barrel = c;
     }
     else
     {
-        return displayAction(p, c, 2);;
+        return displayAction(me, c, 2);;
     }
-    return displayAction(p, c, 1);;
+    discard(me, c, 2, game);
+    return displayAction(me, c, 1);
 }
 char *draw(player *p, game *game)
 {
@@ -181,8 +183,13 @@ bool changeHP(player *p, int8_t hp)
     }
     strcat(mes, "Player ");
     strcat(mes, p->_name);
-    strcat(mes, "hp change ");
+    strcat(mes, " HP change ");
     strcat(mes, strhp);
+    strcat(mes, ". Now HP: ");
+    if(p->_hp < 0) strcat(mes, "-");
+    char tmp[2] = {0};
+    tmp[0] = abs(p->_hp) + '0';
+    strcat(mes, tmp);
     saveLog(mes);
     return true;
 }

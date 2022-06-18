@@ -188,6 +188,12 @@ bool playerInit(player *p, char *name, char *identity, game *game, const role **
     {
         p->_hand[i] = calloc(1, sizeof(card));
     }
+    p->_gun = NULL;
+    p->_horse = NULL;
+    p->_jail = NULL;
+    p->_dinamite = NULL;
+    p->_barrel = NULL;
+    // printf("%p\n", p->_gun->_name);
     // p->_role = calloc(1, sizeof(role *));
     p->_role = (role *)(ROLE[x]);
     p->_identity = identity;
