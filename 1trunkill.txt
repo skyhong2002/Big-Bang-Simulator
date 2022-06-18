@@ -1,0 +1,67 @@
+Game Player: 5
+
+Joker (ID: 0, MAXHP: 3)
+identity: Rinnecato
+role:     ElGringo
+Handcard:
+	0: BANG
+	1: BANG
+	2: INDIANI
+
+Akira (ID: 1, MAXHP: 4)
+identity: Fuorilecce
+role:     SidKetchum
+Handcard:
+	0: VOLCANIC
+	1: BANG
+	2: DUELLO
+	3: REMINGTON
+
+Bob (ID: 2, MAXHP: 4)
+identity: Fuorilecce
+role:     SuzyLafayette
+Handcard:
+	0: MUSTANG
+	1: BARREL
+	2: BANG
+	3: SCHOFIELD
+
+Cloud (ID: 3, MAXHP: 4)
+identity: Vice
+role:     BartCassidy
+Handcard:
+	0: BANG
+	1: EMPORIO
+	2: BANG
+	3: MANCATO
+
+Dora (ID: 4, MAXHP: 4)
+identity: Sceriffo
+role:     PaulRegret
+Handcard:
+	0: APPALOOSA
+	1: CATBALOU
+	2: PRIGIONE
+	3: BIRRA
+
+BANG! Game start
+---------------------
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker discard REV. CARABINE 🃏 ξ( ✿＞◡❛)!
+SUCCESS: Joker equiped REV. CARABINE successed
+Action: Akira discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Bob discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Cloud discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Dora HP change -1D(Player Dora HP change . Now HP: 3
+Action: Joker discard INDIANI 🃏 ξ( ✿＞◡❛)!
+Action: Joker used INDIANI successed
+Action: Joker discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Dora HP change -1D(Player Dora HP change . Now HP: 2
+Action: Joker used BANG successed
+Action: Joker discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Dora HP change -1D(Player Dora HP change . Now HP: 1
+Action: Joker used BANG successed
+Action: Joker discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Dora HP change -1D(Player Dora HP change . Now HP: 0
+Action: Joker used BANG successed

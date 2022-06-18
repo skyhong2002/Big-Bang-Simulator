@@ -1,20 +1,131 @@
---- BANG! Game start ---
-Action: Player Joker draw a card ξ( ✿＞◡❛)!
-Action: Player Joker draw a card ξ( ✿＞◡❛)!
-Action: Player Joker draw a card ξ( ✿＞◡❛)!
-Action: Player Joker draw a card ξ( ✿＞◡❛)!
-Action: Player Akira draw a card ξ( ✿＞◡❛)!
-Action: Player Akira draw a card ξ( ✿＞◡❛)!
-Action: Player Akira draw a card ξ( ✿＞◡❛)!
-Action: Player Akira draw a card ξ( ✿＞◡❛)!
-Action: Player Bob draw a card ξ( ✿＞◡❛)!
-Action: Player Bob draw a card ξ( ✿＞◡❛)!
-Action: Player Bob draw a card ξ( ✿＞◡❛)!
-Action: Player Bob draw a card ξ( ✿＞◡❛)!
-Action: Player Bob draw a card ξ( ✿＞◡❛)!
-Action: Player Cloud draw a card ξ( ✿＞◡❛)!
-Action: Player Cloud draw a card ξ( ✿＞◡❛)!
-Action: Player Cloud draw a card ξ( ✿＞◡❛)!
-Action: Player Cloud draw a card ξ( ✿＞◡❛)!
-Action: Player Joker draw a card ξ( ✿＞◡❛)!
-Action: Player Joker draw a card ξ( ✿＞◡❛)!
+Game Player: 4
+
+Joker (ID: 0, MAXHP: 4):
+identity: Fuorilecce
+role:     PedroRamirez
+Handcard:
+	0: BIRRA
+	1: BARREL
+	2: BANG
+	3: MANCATO
+
+Akira (ID: 1, MAXHP: 5):
+identity: Sceriffo
+role:     JesseJones
+Handcard:
+	0: BANG
+	1: BIRRA
+	2: BIRRA
+	3: PRIGIONE
+	4: BANG
+
+Bob (ID: 2, MAXHP: 4):
+identity: Rinnecato
+role:     SidKetchum
+Handcard:
+	0: MUSTANG
+	1: BANG
+	2: DINAMITE
+	3: SCHOFIELD
+
+Cloud (ID: 3, MAXHP: 4):
+identity: Fuorilecce
+role:     Jourdonnais
+Handcard:
+	0: INDIANI
+	1: MANCATO
+	2: DILIGENZA
+	3: PRIGIONE
+
+BANG! Game start
+---------------------
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Eren draw a card ξ( ✿＞◡❛)!
+Action: Eren draw a card ξ( ✿＞◡❛)!
+Action: Eren draw a card ξ( ✿＞◡❛)!
+Action: Eren draw a card ξ( ✿＞◡❛)!
+Action: Freya draw a card ξ( ✿＞◡❛)!
+Action: Freya draw a card ξ( ✿＞◡❛)!
+Action: Freya draw a card ξ( ✿＞◡❛)!
+Action: Freya draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!

@@ -266,7 +266,6 @@ void gameInit(game *bang, int32_t pcnt, char *pname, char *fname)
     bang->_alive_player_cnt = pcnt;
     bang->_turn = 0;
     bang->_logfile_name = fname;
-    saveLogInit(bang);
 
     char *namelist[] = {
         pname, "Akira", "Bob", "Cloud", "Dora", "Eren", "Freya", "Genious", "Haiya"};

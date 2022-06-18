@@ -365,6 +365,20 @@ char *duel(player *me, card *c, player *target, game *game)
         }
     }
     changeHP(temptplayer, -1, game);
+    if (strncmp(temptplayer->_role->_name, "ElGringo", 8) == 0)
+    {
+        printf("Because Player %s is ElGringo, so ElGringo can draw a card\n", target->_name);
+        if(temptplayer == me)
+        {
+            drawplayer(temptplayer, target, 2);
+        }
+        else
+        {
+            drawplayer(temptplayer, me, 2);
+        }
+        
+    }
+    discard(me, c, 2, game);
     return displayAction(me, c, 3);
 }
 
@@ -566,6 +580,11 @@ char *gatling(player *me, card *c, game *game)
             else
             {
                 changeHP(game->_player[i], -1, game);
+                if (strncmp(game->_player[i]->_role->_name, "ElGringo", 8) == 0)
+                {
+                    printf("Because Player %s is ElGringo, so ElGringo can draw a card\n", game->_player[i]->_name);
+                    drawplayer(game->_player[i], me, 2);        
+                }
             }
         }
         discard(me, c, 2, game);
@@ -606,6 +625,11 @@ char *indians(player *me, card *c, game *game)
                         if (j == game->_player[i]->_hand_cnt - 1)
                         {
                             changeHP(game->_player[i], -1, game);
+                            if (strncmp(game->_player[i]->_role->_name, "ElGringo", 8) == 0)
+                            {
+                                printf("Because Player %s is ElGringo, so ElGringo can draw a card\n", game->_player[i]->_name);
+                                drawplayer(game->_player[i], me, 2);        
+                            }
                             break;
                         }
                     }
@@ -619,6 +643,11 @@ char *indians(player *me, card *c, game *game)
                         if (j == game->_player[i]->_hand_cnt - 1)
                         {
                             changeHP(game->_player[i], -1, game);
+                            if (strncmp(game->_player[i]->_role->_name, "ElGringo", 8) == 0)
+                            {
+                                printf("Because Player %s is ElGringo, so ElGringo can draw a card\n", game->_player[i]->_name);
+                                drawplayer(game->_player[i], me, 2);        
+                            }
                             break;
                         }
                     }
@@ -968,17 +997,3 @@ bool throwaway(player *me, player *target, int8_t choice, game *game)
 
     return true;
 }
-// int main()
-// {
-//     card test = CARD_02;
-//     card test2 = CARD_03;
-//     player p1;
-//     **p1._hand = test;
-//     printf("%s\n", (**p1._hand)._name);
-//     *(*p1._hand + 1) = test2;
-//     // for (int32_t i = 0; i < 2; i++)
-//     // {
-//     //     printf("%s\n", *((*p1._hand) + i)._name);
-//     // }
-//     return 0;
-// }
