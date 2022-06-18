@@ -72,25 +72,39 @@ char* equip(player *me, card *c, player *target,game* game)
     {
         return displayAction(me, c, 2);
     }
-    if ((strncmp("VOLCANIC", c->_name, 8) == 0 || strncmp("SCHOFIELD", c->_name, 9) == 0 || strncmp("REMINGTON", c->_name, 9) == 0 || strncmp("REV. CARABINE", c->_name, 13) == 0 || strncmp("WINCHESTER", c->_name, 10) == 0) && target->_gun==NULL)
+    if ((strncmp("VOLCANIC", c->_name, 8) == 0 || strncmp("SCHOFIELD", c->_name, 9) == 0 || strncmp("REMINGTON", c->_name, 9) == 0 || strncmp("REV. CARABINE", c->_name, 13) == 0 || strncmp("WINCHESTER", c->_name, 10) == 0))
     {
+        if(target->_gun != NULL){
+            discard(me, target->_gun, 1, game);
+        }
         target->_gun = c;
     }
     else if ((strncmp("MUSTANG", c->_name, 7) == 0 || strncmp("APPALOOSA", c->_name, 9) == 0) && target->_horse==NULL)
     {
+        if(target->_horse != NULL){
+            discard(me, target->_horse, 1, game);
+        }
         target->_horse = c;
     }
     else if ((strncmp("PRIGIONE", c->_name, 8) == 0 && strncmp("Sceriffo", target->_identity, 8) != 0) && target->_jail==NULL)
     {
-        // printf("jail ok\n");
+        if(target->_jail != NULL){
+            discard(me, target->_jail, 1, game);
+        }
         target->_jail = c;
     }
     else if ((strncmp("DINAMITE", c->_name, 8) == 0) && target->_dinamite==NULL )
     {
+        if(target->_dinamite != NULL){
+            discard(me, target->_dinamite, 1, game);
+        }
         target->_dinamite = c;
     }
     else if ((strncmp("BARREL", c->_name, 6) == 0) && target->_barrel==NULL )
     {
+        if(target->_barrel != NULL){
+            discard(me, target->_barrel, 1, game);
+        }
         target->_barrel = c;
     }
     else
@@ -107,15 +121,21 @@ char *draw(player *p, game *game)
         return displayAction(p, NULL, 6);
     }
     p->_hand_cnt += 1;
-
+    // printf("plus card\n");
     p->_hand[p->_hand_cnt - 1] = game->_deck[game->_deck_cnt - 1];
+    // printf("draw one\n");
     game->_deck_cnt -= 1;
+    // printf("change card num\n");
     if (game->_deck_cnt == 0)
     {
         shuffle(game);
     }
+    if(p->_name == NULL)
+    {
+        return displayAction(p, NULL, 9);
+    }
+    // printf("return\n");
     return displayAction(p, NULL, 5);
-    ;
 }
 //  equip: 1 or hand: 2
 // I need discard_cnt !
@@ -159,8 +179,13 @@ char* discard(player *p, card *c, int8_t type, game *game)
     game->_discard_cnt += 1;
     return displayAction(p, c, 7);
 }
-bool changeHP(player *p, int8_t hp)
+bool changeHP(player *p, int8_t hp, game* game)
 {
+    if (strncmp(p->_role->_name, "BartCassidy", 11) == 0 && hp < 0)
+    {
+        printf("Because Player %s is BartCassidy, so you can draw %d card(s)\n", p->_name, abs(hp));
+        for(int32_t i = 0; i < abs(hp); i++) draw(p, game);
+    }
     char mes[100] = {0};
     char strhp[2] = {0};
     if(hp < 0)

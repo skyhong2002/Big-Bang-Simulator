@@ -9,6 +9,21 @@
 
 void deckInit(game *game)
 {
+    // static const card CARD_01 = {1, 1, EMPORIO};
+    // static const card CARD_02 = {1, 1, EMPORIO};
+    // static const card CARD_03 = {1, 2, EMPORIO};
+    // static const card CARD_04 = {1, 3, EMPORIO};
+    // static const card CARD_05 = {1, 4, EMPORIO};
+    // static const card CARD_06 = {1, 5, EMPORIO};
+    // static const card CARD_07 = {1, 6, EMPORIO};
+    // static const card CARD_08 = {1, 7, EMPORIO};
+    // static const card CARD_09 = {1, 8, EMPORIO};
+    // static const card CARD_10 = {1, 8, EMPORIO};
+    // static const card CARD_11 = {1, 9, EMPORIO};
+    // static const card CARD_12 = {1, 9, EMPORIO};
+    // static const card CARD_13 = {1, 10, EMPORIO};
+    // static const card CARD_14 = {1, 10, EMPORIO};
+    // static const card CARD_15 = {1, 11, EMPORIO};
     static const card CARD_01 = {1, 1, APPALOOSA};
     static const card CARD_02 = {1, 1, BANG};
     static const card CARD_03 = {1, 2, MANCATO};

@@ -24,6 +24,6 @@ char *equip(player *me, card *c, player *target, game* game);
 char *draw(player *p, game *game);
 void shuffle(game *bang); // TBD
 char* discard(player *p, card *c, int8_t type, game *game);
-bool changeHP(player *p, int8_t hp); // -3 炸藥 -1 被射 +1 酒
+bool changeHP(player *p, int8_t hp, game* game); // -3 炸藥 -1 被射 +1 酒
 
 #endif

@@ -7,7 +7,7 @@ Action: Player Akira draw a card ξ( ✿＞◡❛)!
 Action: Player Akira draw a card ξ( ✿＞◡❛)!
 Action: Player Akira draw a card ξ( ✿＞◡❛)!
 Action: Player Akira draw a card ξ( ✿＞◡❛)!
-Action: Player Akira draw a card ξ( ✿＞◡❛)!
+Action: Player Bob draw a card ξ( ✿＞◡❛)!
 Action: Player Bob draw a card ξ( ✿＞◡❛)!
 Action: Player Bob draw a card ξ( ✿＞◡❛)!
 Action: Player Bob draw a card ξ( ✿＞◡❛)!
@@ -18,5 +18,3 @@ Action: Player Cloud draw a card ξ( ✿＞◡❛)!
 Action: Player Cloud draw a card ξ( ✿＞◡❛)!
 Action: Player Joker draw a card ξ( ✿＞◡❛)!
 Action: Player Joker draw a card ξ( ✿＞◡❛)!
-Action: Player Joker discard PANICOI 🃏 ξ( ✿＞◡❛)!
-Action: Player Joker used PANICOI successed
