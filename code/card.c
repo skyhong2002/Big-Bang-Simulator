@@ -44,7 +44,7 @@ char *bangAction(player *me, card *c, player *target, game *game)
     // printf("check gun\n");
     // check card is bang or other
     if (strncmp("BANG", c->_name, 4) == 0 ||
-       (strncmp("MANCATO", c->_name, 7) == 0 && strncmp("CalamityJanet", me->_role->_name, 13) == 0))
+        (strncmp("MANCATO", c->_name, 7) == 0 && strncmp("CalamityJanet", me->_role->_name, 13) == 0))
     {
         if (betweenDistance <= availDistance)
         {
@@ -368,7 +368,7 @@ char *duel(player *me, card *c, player *target, game *game)
     if (strncmp(temptplayer->_role->_name, "ElGringo", 8) == 0)
     {
         printf("Because Player %s is ElGringo, so ElGringo can draw a card\n", target->_name);
-        if(temptplayer == me)
+        if (temptplayer == me)
         {
             drawplayer(temptplayer, target, 2);
         }
@@ -376,7 +376,6 @@ char *duel(player *me, card *c, player *target, game *game)
         {
             drawplayer(temptplayer, me, 2);
         }
-        
     }
     discard(me, c, 2, game);
     return displayAction(me, c, 3);
@@ -556,7 +555,7 @@ char *generalStore(player *me, card *c, game *game)
         }
         else
         {
-            temptplayer = game->_player[temptplayer->_id+1];
+            temptplayer = game->_player[temptplayer->_id + 1];
         }
     } while (temptplayer != me);
     discard(me, c, 2, game);
@@ -583,7 +582,7 @@ char *gatling(player *me, card *c, game *game)
                 if (strncmp(game->_player[i]->_role->_name, "ElGringo", 8) == 0)
                 {
                     printf("Because Player %s is ElGringo, so ElGringo can draw a card\n", game->_player[i]->_name);
-                    drawplayer(game->_player[i], me, 2);        
+                    drawplayer(game->_player[i], me, 2);
                 }
             }
         }
@@ -628,7 +627,7 @@ char *indians(player *me, card *c, game *game)
                             if (strncmp(game->_player[i]->_role->_name, "ElGringo", 8) == 0)
                             {
                                 printf("Because Player %s is ElGringo, so ElGringo can draw a card\n", game->_player[i]->_name);
-                                drawplayer(game->_player[i], me, 2);        
+                                drawplayer(game->_player[i], me, 2);
                             }
                             break;
                         }
@@ -646,7 +645,7 @@ char *indians(player *me, card *c, game *game)
                             if (strncmp(game->_player[i]->_role->_name, "ElGringo", 8) == 0)
                             {
                                 printf("Because Player %s is ElGringo, so ElGringo can draw a card\n", game->_player[i]->_name);
-                                drawplayer(game->_player[i], me, 2);        
+                                drawplayer(game->_player[i], me, 2);
                             }
                             break;
                         }
@@ -671,7 +670,7 @@ void checkDistance(int32_t *between, int32_t *cD, player *me, player *target, ga
         *cD -= 1;
     }
     // printf("check NUll?\n");
-    if(me->_horse != NULL)
+    if (me->_horse != NULL)
     {
         // printf("inside\n");
         if (strncmp("APPALOOSA", me->_horse->_name, 9) == 0)
@@ -684,7 +683,8 @@ void checkDistance(int32_t *between, int32_t *cD, player *me, player *target, ga
     {
         *cD += 1;
     }
-    if(target->_horse != NULL){
+    if (target->_horse != NULL)
+    {
         if (strncmp("MUSTANG", target->_horse->_name, 7) == 0)
         {
             *cD += 1;
@@ -752,7 +752,7 @@ bool drawplayer(player *me, player *target, int8_t choice)
                     me->_hand_cnt += 1;
                     int32_t cnt = me->_hand_cnt;
                     // me->_hand[cnt - 1] = calloc(1, sizeof(card));
-                    me->_hand[cnt-1] = target->_gun;
+                    me->_hand[cnt - 1] = target->_gun;
                     // sort target
                     // free(target->_gun);
                     target->_gun = NULL;
@@ -764,7 +764,7 @@ bool drawplayer(player *me, player *target, int8_t choice)
                     me->_hand_cnt += 1;
                     int32_t cnt = me->_hand_cnt;
                     // me->_hand[cnt - 1] = calloc(1, sizeof(card));
-                    me->_hand[cnt-1] = target->_horse;
+                    me->_hand[cnt - 1] = target->_horse;
                     // sort target
                     // free(target->_horse);
                     target->_horse = NULL;
@@ -776,7 +776,7 @@ bool drawplayer(player *me, player *target, int8_t choice)
                     me->_hand_cnt += 1;
                     int32_t cnt = me->_hand_cnt;
                     // me->_hand[cnt - 1] = calloc(1, sizeof(card));
-                    me->_hand[cnt-1] = target->_jail;
+                    me->_hand[cnt - 1] = target->_jail;
                     // sort target
                     // free(target->_jail);
                     target->_jail = NULL;
@@ -788,7 +788,7 @@ bool drawplayer(player *me, player *target, int8_t choice)
                     me->_hand_cnt += 1;
                     int32_t cnt = me->_hand_cnt;
                     // me->_hand[cnt - 1] = calloc(1, sizeof(card));
-                    me->_hand[cnt-1] = target->_dinamite;
+                    me->_hand[cnt - 1] = target->_dinamite;
                     // sort target
                     // free(target->_dinamite);
                     target->_dinamite = NULL;
@@ -800,7 +800,7 @@ bool drawplayer(player *me, player *target, int8_t choice)
                     me->_hand_cnt += 1;
                     int32_t cnt = me->_hand_cnt;
                     // me->_hand[cnt - 1] = calloc(1, sizeof(card));
-                    me->_hand[cnt-1] = target->_barrel;
+                    me->_hand[cnt - 1] = target->_barrel;
                     // sort target
                     target->_barrel = NULL;
                     // free(target->_barrel);
@@ -834,7 +834,7 @@ bool drawplayer(player *me, player *target, int8_t choice)
                     int32_t cnt = me->_hand_cnt;
                     // me->_hand[cnt - 1] = calloc(1, sizeof(card));
                     me->_hand[cnt - 1] = target->_hand[want - 1];
-                    
+
                     // sort target
                     for (int32_t i = want - 1; i < target->_hand_cnt; i++)
                     {
@@ -843,7 +843,7 @@ bool drawplayer(player *me, player *target, int8_t choice)
                             // free(*(target->_hand) + (want - 1));
                             break;
                         }
-                        target->_hand[i] = target->_hand[i+1];
+                        target->_hand[i] = target->_hand[i + 1];
                     }
                     target->_hand_cnt -= 1;
                     break;

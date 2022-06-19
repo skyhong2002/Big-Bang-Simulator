@@ -66,7 +66,7 @@ card *getBarrelInfo(const player *p)
     return (p->_barrel);
 }
 
-char* equip(player *me, card *c, player *target,game* game)
+char *equip(player *me, card *c, player *target, game *game)
 {
     if (me == NULL || c == NULL)
     {
@@ -74,42 +74,48 @@ char* equip(player *me, card *c, player *target,game* game)
     }
     if ((strncmp("VOLCANIC", c->_name, 8) == 0 || strncmp("SCHOFIELD", c->_name, 9) == 0 || strncmp("REMINGTON", c->_name, 9) == 0 || strncmp("REV. CARABINE", c->_name, 13) == 0 || strncmp("WINCHESTER", c->_name, 10) == 0))
     {
-        if(target->_gun != NULL){
+        if (target->_gun != NULL)
+        {
             discard(me, target->_gun, 1, game);
         }
         target->_gun = c;
     }
-    else if ((strncmp("MUSTANG", c->_name, 7) == 0 || strncmp("APPALOOSA", c->_name, 9) == 0) && target->_horse==NULL)
+    else if ((strncmp("MUSTANG", c->_name, 7) == 0 || strncmp("APPALOOSA", c->_name, 9) == 0) && target->_horse == NULL)
     {
-        if(target->_horse != NULL){
+        if (target->_horse != NULL)
+        {
             discard(me, target->_horse, 1, game);
         }
         target->_horse = c;
     }
-    else if ((strncmp("PRIGIONE", c->_name, 8) == 0 && strncmp("Sceriffo", target->_identity, 8) != 0) && target->_jail==NULL)
+    else if ((strncmp("PRIGIONE", c->_name, 8) == 0 && strncmp("Sceriffo", target->_identity, 8) != 0) && target->_jail == NULL)
     {
-        if(target->_jail != NULL){
+        if (target->_jail != NULL)
+        {
             discard(me, target->_jail, 1, game);
         }
         target->_jail = c;
     }
-    else if ((strncmp("DINAMITE", c->_name, 8) == 0) && target->_dinamite==NULL )
+    else if ((strncmp("DINAMITE", c->_name, 8) == 0) && target->_dinamite == NULL)
     {
-        if(target->_dinamite != NULL){
+        if (target->_dinamite != NULL)
+        {
             discard(me, target->_dinamite, 1, game);
         }
         target->_dinamite = c;
     }
-    else if ((strncmp("BARREL", c->_name, 6) == 0) && target->_barrel==NULL )
+    else if ((strncmp("BARREL", c->_name, 6) == 0) && target->_barrel == NULL)
     {
-        if(target->_barrel != NULL){
+        if (target->_barrel != NULL)
+        {
             discard(me, target->_barrel, 1, game);
         }
         target->_barrel = c;
     }
     else
     {
-        return displayAction(me, c, 2);;
+        return displayAction(me, c, 2);
+        ;
     }
     discard(me, c, 2, game);
     return displayAction(me, c, 1);
@@ -130,7 +136,7 @@ char *draw(player *p, game *game)
     {
         shuffle(game);
     }
-    if(p->_name == NULL)
+    if (p->_name == NULL)
     {
         return displayAction(p, NULL, 9);
     }
@@ -140,7 +146,7 @@ char *draw(player *p, game *game)
 //  equip: 1 or hand: 2
 // I need discard_cnt !
 // sure the discard size is bigger enough?
-char* discard(player *p, card *c, int8_t type, game *game)
+char *discard(player *p, card *c, int8_t type, game *game)
 {
     if (p == NULL || c == NULL)
     {
@@ -184,25 +190,26 @@ char* discard(player *p, card *c, int8_t type, game *game)
     game->_discard_cnt += 1;
     return displayAction(p, c, 7);
 }
-bool changeHP(player *p, int8_t hp, game* game)
+bool changeHP(player *p, int8_t hp, game *game)
 {
     if (strncmp(p->_role->_name, "BartCassidy", 11) == 0 && hp < 0)
     {
         printf("Because Player %s is BartCassidy, so you can draw %d card(s)\n", p->_name, abs(hp));
-        for(int32_t i = 0; i < abs(hp); i++) draw(p, game);
+        for (int32_t i = 0; i < abs(hp); i++)
+            draw(p, game);
     }
     char mes[100] = {0};
     char strhp[2] = {0};
-    if(hp < 0)
+    if (hp < 0)
     {
         strhp[0] = '-';
-        strhp[1] = (-hp)+'0';
+        strhp[1] = (-hp) + '0';
     }
     else
     {
-        strhp[0] = hp+'0';
+        strhp[0] = hp + '0';
     }
-    
+
     if (p == NULL)
     {
         return false;
@@ -216,7 +223,8 @@ bool changeHP(player *p, int8_t hp, game* game)
     strcat(mes, " HP change ");
     strcat(mes, strhp);
     strcat(mes, ". Now HP: ");
-    if(p->_hp < 0) strcat(mes, "-");
+    if (p->_hp < 0)
+        strcat(mes, "-");
     char tmp[2] = {0};
     tmp[0] = abs(p->_hp) + '0';
     strcat(mes, tmp);
