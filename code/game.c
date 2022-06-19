@@ -164,20 +164,22 @@ char *isGameEnd(game *bang)
         }
     }
 
-    saveLog("BANG! Game end\n---------------------\n\nWinner: ");
 
     if (Sceriffo && !Fuorilecce && !Rinnecato)
     {
+        saveLog("BANG! Game end\n---------------------\n\nWinner: ");
         saveLog("Sceriffo camp");
         return "Sceriffo camp";
     }
     else if (!Sceriffo && Fuorilecce)
     {
+        saveLog("BANG! Game end\n---------------------\n\nWinner: ");
         saveLog("Fuorilecce camp");
         return "Fuorilecce camp";
     }
     else if (!Sceriffo && !Fuorilecce && Rinnecato)
     {
+        saveLog("BANG! Game end\n---------------------\n\nWinner: ");
         saveLog("Rinnecato");
         return "Rinnecato";
     }

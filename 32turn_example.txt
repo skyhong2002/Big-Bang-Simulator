@@ -1,0 +1,480 @@
+Game Player: 4
+Joker (ID: 0, MAXHP: 4)
+identity: Fuorilecce
+role:     SuzyLafayette
+Handcard:
+	0: MANCATO
+	1: BANG
+	2: BANG
+	3: BIRRA
+Akira (ID: 1, MAXHP: 4)
+identity: Rinnecato
+role:     VultureSam
+Handcard:
+	0: MANCATO
+	1: MANCATO
+	2: MANCATO
+	3: MANCATO
+Bob (ID: 2, MAXHP: 3)
+identity: Fuorilecce
+role:     PaulRegret
+Handcard:
+	0: MUSTANG
+	1: SCHOFIELD
+	2: GATLING
+Cloud (ID: 3, MAXHP: 5)
+identity: Sceriffo
+role:     BartCassidy
+Handcard:
+	0: APPALOOSA
+	1: BANG
+	2: BANG
+	3: BANG
+	4: BANG
+BANG! Game start
+---------------------
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Akira HP change -1ĂÂ¸Player Akira HP change . Now HP: 3
+Action: Joker used BANG successed
+Action: Akira discard MANCATO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Akira HP change 1. Now HP: 4
+Action: Akira used MANCATO successed
+
+Action: Joker discard VOLCANIC ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker used VOLCANIC successed
+Action: Joker discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Akira HP change -1ĂÂ¸Player Akira HP change . Now HP: 3
+Action: Joker used BANG successed
+Action: Akira discard MANCATO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Akira HP change 1. Now HP: 4
+Action: Akira used MANCATO successed
+
+---------------------
+Action: Akira draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Akira draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Akira discard MANCATO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Akira discard PANICOI ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+---------------------
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+Action: Bob discard REMINGTON ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob used REMINGTON successed
+Action: Bob discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Joker HP change -1ĂÂ¸Player Joker HP change . Now HP: 3
+Player Akira HP change -13. Now HP: 3
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Cloud HP change -13. Now HP: 4
+Action: Bob discard GATLING ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob used GATLING successed
+
+---------------------
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Cloud HP change -1ĂÂ¸Player Cloud HP change . Now HP: 3
+Action: Cloud used BANG successed
+Action: Cloud discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Bob HP change -1. Now HP: 2
+Action: Cloud discard DUELLO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud used DUELLO successed
+
+Player Cloud HP change 1. Now HP: 4
+Action: Cloud discard BIRRA ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud used BIRRA successed
+Action: Cloud discard APPALOOSA ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud used APPALOOSA successed
+
+Player Joker HP change 1. Now HP: 4
+Player Akira HP change 1. Now HP: 4
+Player Bob HP change 1. Now HP: 3
+Player Cloud HP change 1. Now HP: 5
+Action: Cloud discard SALOON ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud used SALOON successed
+
+
+---------------------
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Akira HP change -1ĂÂ¸Player Akira HP change . Now HP: 3
+Action: Joker used BANG successed
+Action: Akira discard MANCATO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Akira HP change 1. Now HP: 4
+Action: Akira used MANCATO successed
+
+---------------------
+Action: Akira draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Akira draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Akira HP change -1ĂÂ¸Player Akira HP change . Now HP: 3
+Action: Akira discard DUELLO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Akira used DUELLO successed
+Player Joker HP change -1. Now HP: 3
+Action: Akira discard DUELLO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Akira used DUELLO successed
+ draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+ draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+ draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+ draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Akira discard EMPORIO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Akira used EMPORIO successed
+
+---------------------
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Bob HP change -1ĂÂ¸Player Bob HP change . Now HP: 2
+Action: Bob used BANG successed
+Action: Bob discard MANCATO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Bob HP change 1. Now HP: 3
+Action: Bob used MANCATO successed
+Action: Bob discard MUSTANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob used MUSTANG successed
+
+---------------------
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+---------------------
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+Action: Joker discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Akira HP change -1ĂÂ¸Player Akira HP change . Now HP: 2
+Action: Joker used BANG successed
+ draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+ draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+ draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+ draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker discard EMPORIO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker used EMPORIO successed
+
+Player Joker HP change 1. Now HP: 4
+Action: Joker discard BIRRA ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker used BIRRA successed
+Action: Joker discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Akira HP change -1ĂÂ¸Player Akira HP change . Now HP: 1
+Action: Joker used BANG successed
+
+---------------------
+Action: Akira draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Akira draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Warning: Akira used PANICOI failed
+Action: Akira discard VOLCANIC ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Akira used VOLCANIC successed
+Warning: Akira used PANICOI failed
+Action: Akira discard PANICOI ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Akira used PANICOI successed
+
+Action: Akira discard VOLCANIC ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Akira discard WINCHESTER ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Akira used WINCHESTER successed
+
+---------------------
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+Action: Bob discard PRIGIONE ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob used PRIGIONE successed
+Action: Bob discard PANICOI ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob used PANICOI successed
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob discard DILIGENZA ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob used DILIGENZA successed
+Action: Bob discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Akira HP change -1ĂÂ¸Player Akira HP change . Now HP: 0
+Action: Bob used BANG successed
+Action: Akira discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Akira discard WINCHESTER ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Akira discard PRIGIONE ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob discard REMINGTON ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob discard SCHOFIELD ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob used SCHOFIELD successed
+
+
+Action: Bob discard SCHOFIELD ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob discard SCHOFIELD ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob used SCHOFIELD successed
+Action: Bob discard MANCATO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+---------------------
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud discard SCHOFIELD ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud used SCHOFIELD successed
+Action: Cloud discard CATBALOU ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud discard PRIGIONE ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud used PRIGIONE successed
+
+Action: Cloud discard MANCATO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+Action: Cloud discard MANCATO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+---------------------
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+DINAMITE: Ă˘âŹĹĄĂÂ´Ă˘âŹÂ˘02
+Action: Joker discard DINAMITE ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker discard PRIGIONE ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+SUCCESS: Joker judged PRIGIONE successed
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Warning: Joker used BANG failed
+Warning: Joker used BANG failed
+Warning: Joker used BANG failed
+Warning: Joker used BANG failed
+Warning: Joker used BANG failed
+
+Action: Joker discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Cloud HP change -1ĂÂ¸Player Cloud HP change . Now HP: 4
+Action: Joker used BANG successed
+Action: Bob discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker discard INDIANI ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker used INDIANI successed
+
+---------------------
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+---------------------
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+---------------------
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Warning: Joker used BANG failed
+Action: Joker discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Cloud HP change -1ĂÂ¸Player Cloud HP change . Now HP: 3
+Action: Joker used BANG successed
+
+
+Action: Joker discard MUSTANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker used MUSTANG successed
+
+---------------------
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+---------------------
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud discard SCHOFIELD ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud discard REV. CARABINE ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud used REV. CARABINE successed
+
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud discard DILIGENZA ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud used DILIGENZA successed
+Action: Cloud discard WELLSFARGO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+
+Player Cloud HP change 1. Now HP: 4
+Action: Cloud discard BIRRA ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud used BIRRA successed
+Action: Cloud discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Joker HP change -1ĂÂ¸Player Joker HP change . Now HP: 3
+Action: Cloud used BANG successed
+Action: Joker discard MANCATO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Joker HP change 1. Now HP: 4
+Action: Joker used MANCATO successed
+
+Action: Cloud discard PRIGIONE ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud used PRIGIONE successed
+Action: Cloud discard BARREL ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud used BARREL successed
+
+---------------------
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Warning: Joker used BANG failed
+Action: Joker discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Cloud HP change -1ĂÂ¸Player Cloud HP change . Now HP: 3
+Action: Joker used BANG successed
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+BIRRA: Ă˘âŹĹĄĂÂ´Ă˘âŹÂ˘10
+Action: Cloud discard BIRRA ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Cloud HP change 1. Now HP: 4
+SUCCESS: Cloud judged BARREL successed
+
+Action: Joker discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Cloud HP change -1ĂÂ¸Player Cloud HP change . Now HP: 3
+Action: Joker used BANG successed
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+CATBALOU: Ă˘âŹĹĄĂÂ´ĂÂś11
+Action: Cloud discard CATBALOU ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+FAILED: Cloud judged BARREL failed
+Action: Cloud discard MANCATO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Cloud HP change 1. Now HP: 4
+Action: Cloud used MANCATO successed
+
+---------------------
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+INDIANI: Ă˘âŹĹĄĂÂ´ĂÂś02
+Action: Bob discard INDIANI ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob discard PRIGIONE ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+FAILED: Bob judged PRIGIONE failed
+---------------------
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Warning: Cloud used BARREL failed
+Warning: Cloud used BARREL failed
+
+Action: Cloud discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Joker HP change -1ĂÂ¸Player Joker HP change . Now HP: 3
+Action: Cloud used BANG successed
+Action: Joker discard MANCATO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Joker HP change 1. Now HP: 4
+Action: Joker used MANCATO successed
+
+---------------------
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Cloud HP change -1ĂÂ¸Player Cloud HP change . Now HP: 3
+Action: Joker used BANG successed
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+BARREL: Ă˘âŹĹĄĂÂ´Ă˘âŹÂ 12
+Action: Cloud discard BARREL ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+FAILED: Cloud judged BARREL failed
+
+Action: Joker discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Cloud HP change -1ĂÂ¸Player Cloud HP change . Now HP: 2
+Action: Joker used BANG successed
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+REMINGTON: Ă˘âŹĹĄĂÂ´ĂÂŁ13
+Action: Cloud discard REMINGTON ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+FAILED: Cloud judged BARREL failed
+
+---------------------
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker discard BIRRA ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob discard CATBALOU ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob used CATBALOU successed
+Action: Bob discard SCHOFIELD ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob discard WINCHESTER ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob used WINCHESTER successed
+
+Action: Bob discard WINCHESTER ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob discard REMINGTON ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob used REMINGTON successed
+
+---------------------
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud discard PANICOI ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud used PANICOI successed
+Action: Cloud discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Cloud HP change -1ĂÂ¸Player Cloud HP change . Now HP: 1
+Action: Cloud used BANG successed
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+SCHOFIELD: Ă˘âŹĹĄĂÂ´ĂÂŁ11
+Action: Cloud discard SCHOFIELD ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+FAILED: Cloud judged BARREL failed
+Action: Cloud discard MANCATO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Cloud HP change 1. Now HP: 2
+Action: Cloud used MANCATO successed
+
+Action: Cloud discard SALOON ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud discard DUELLO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud discard VOLCANIC ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud discard BARREL ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+---------------------
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker discard VOLCANIC ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker discard SCHOFIELD ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker used SCHOFIELD successed
+
+---------------------
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+Action: Bob discard BIRRA ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob discard MANCATO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker discard BIRRA ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob discard CATBALOU ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob used CATBALOU successed
+
+---------------------
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+Action: Cloud discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Joker HP change -1ĂÂ¸Player Joker HP change . Now HP: 3
+Action: Cloud used BANG successed
+Action: Cloud discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+---------------------
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Bob HP change -1ĂÂ¸Player Bob HP change . Now HP: 2
+Action: Cloud discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker discard INDIANI ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker used INDIANI successed
+Warning: Joker used PRIGIONE failed
+
+---------------------
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob discard REMINGTON ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob discard WINCHESTER ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob used WINCHESTER successed
+Action: Bob discard BANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Bob HP change -1ĂÂ¸Player Bob HP change . Now HP: 1
+Action: Bob used BANG successed
+
+---------------------
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+Action: Cloud discard EMPORIO ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+---------------------
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker discard PANICOI ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker used PANICOI successed
+Player Joker HP change 1. Now HP: 4
+Action: Joker discard BIRRA ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Joker used BIRRA successed
+
+---------------------
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+Player Joker HP change -1ĂÂ¸Player Joker HP change . Now HP: 3
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Cloud HP change -13. Now HP: 1
+Action: Cloud draw a card ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Player Cloud HP change -11. Now HP: 0
+Action: Bob discard INDIANI ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Bob used INDIANI successed
+Action: Cloud discard MUSTANG ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud discard BARREL ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud discard REV. CARABINE ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+Action: Cloud discard APPALOOSA ĂŻÂŁÂżĂÂźĂâ°ĂÂ¨ ĂâĂÂŚ( Ă˘âŹĹĄĂÂşĂÂ¸ĂâĂÂşĂÂťĂ˘âŹĹĄĂÂłĂÂ°Ă˘âŹĹĄĂÂšĂÂľ)!
+
+BANG! Game end
+---------------------
+Winner:
+Fuorilecce camp
