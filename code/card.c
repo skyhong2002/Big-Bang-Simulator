@@ -304,6 +304,12 @@ char *duel(player *me, card *c, player *target, game *game)
             fflush(stdin);
             if (choose == 1)
             {
+                if(temptplayer->_hand_cnt == 0)
+                {
+                    printf("But you don't have \"BANG\"cards to throw.\n");
+                    printf("So you will lose one life.\n");
+                    end = 1;                    
+                }
                 for (int32_t j = 0; j < temptplayer->_hand_cnt; j++)
                 {
                     if (strncmp("CalamityJanet", temptplayer->_role->_name, 4) == 0)
@@ -343,6 +349,10 @@ char *duel(player *me, card *c, player *target, game *game)
         }
         else
         {
+            if(temptplayer->_hand_cnt == 0)
+            {
+                end = 1;
+            }
             for (int32_t j = 0; j < temptplayer->_hand_cnt; j++)
             {
                 if (strncmp("CalamityJanet", temptplayer->_role->_name, 4) == 0)
@@ -379,10 +389,12 @@ char *duel(player *me, card *c, player *target, game *game)
         printf("Player %s is ElGringo, so %s can draw a card\n", target->_name, target->_name);
         if (temptplayer == me)
         {
+            // printf("Start draw?\n");
             drawplayer(temptplayer, target, 2);
         }
         else
         {
+            // printf("Start draw2?\n");
             drawplayer(temptplayer, me, 2);
         }
     }
@@ -597,6 +609,7 @@ char *gatling(player *me, card *c, game *game)
                 if (strncmp(game->_player[i]->_role->_name, "ElGringo", 8) == 0)
                 {
                     printf("Player %s is ElGringo, so %s can draw a card\n", game->_player[i]->_name, game->_player[i]->_name);
+                    // printf("gat start draw?\n");
                     drawplayer(game->_player[i], me, 2);
                 }
             }
@@ -846,7 +859,7 @@ bool drawplayer(player *me, player *target, int8_t choice)
         }
         else if (choice == 2)
         {
-            if (target->_hand == NULL)
+            if (target->_hand_cnt == 0)
             {
                 return false;
             }
@@ -891,7 +904,7 @@ bool drawplayer(player *me, player *target, int8_t choice)
     }
     else
     {
-        if (target->_hand == NULL && target->_gun == NULL && target->_horse == NULL && target->_dinamite == NULL && target->_jail == NULL && target->_barrel == NULL)
+        if (target->_hand_cnt == 0 && target->_gun == NULL && target->_horse == NULL && target->_dinamite == NULL && target->_jail == NULL && target->_barrel == NULL)
         {
             return false;
         }
@@ -1046,7 +1059,7 @@ bool throwaway(player *me, player *target, int8_t choice, game *game)
     }
     else if (choice == 2)
     {
-        if (target->_hand == NULL)
+        if (target->_hand_cnt == 0)
         {
             return false;
         }

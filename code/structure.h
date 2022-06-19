@@ -40,7 +40,7 @@ typedef struct _player
     char *_identity; // Sceriffo, Vice, Fuorilegge, Rinnegato
     int8_t _max_hp;  // after checking the role is Sceriffo or not
     int8_t _hp;
-    uint8_t _hand_cnt; // must not higher than _hp at the end of round
+    int8_t _hand_cnt; // must not higher than _hp at the end of round
     card **_hand;
     card *_gun;   // 0, 1, 2, 3, 4, 5
     card *_horse; // -1, 0, 1
@@ -52,14 +52,14 @@ typedef struct _player
 typedef struct _game
 {
     uint32_t _total_card_cnt; // = 80
-    uint8_t _total_player_cnt;
-    uint8_t _alive_player_cnt;
+    int8_t _total_player_cnt;
+    int8_t _alive_player_cnt;
     player **_player;
     uint8_t _turn;
     card **_discard;
-    uint32_t _discard_cnt;
+    int32_t _discard_cnt;
     card **_deck;
-    uint32_t _deck_cnt; // if = 0 shuffle from _discard
+    int32_t _deck_cnt; // if = 0 shuffle from _discard
     char *_logfile_name;
 } game;
 

@@ -1,0 +1,46 @@
+Game Player: 4
+
+Joker (ID: 0, MAXHP: 4)
+identity: Rinnecato
+role:     VultureSam
+Handcard:
+	0: MANCATO
+	1: BANG
+	2: DILIGENZA
+	3: EMPORIO
+
+Akira (ID: 1, MAXHP: 3)
+identity: Fuorilecce
+role:     PaulRegret
+Handcard:
+	0: MANCATO
+	1: MANCATO
+	2: BIRRA
+
+Bob (ID: 2, MAXHP: 4)
+identity: Fuorilecce
+role:     SuzyLafayette
+Handcard:
+	0: BANG
+	1: PRIGIONE
+	2: BIRRA
+	3: PANICOI
+
+Cloud (ID: 3, MAXHP: 5)
+identity: Sceriffo
+role:     JesseJones
+Handcard:
+	0: BANG
+	1: SCHOFIELD
+	2: PANICOI
+	3: BANG
+	4: BANG
+
+BANG! Game start
+---------------------
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+BANG! Game end
+---------------------
+
+Winner: 

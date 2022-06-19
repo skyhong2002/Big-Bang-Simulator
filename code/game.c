@@ -204,12 +204,18 @@ char *gameloop(game *bang)
             char *m = {0};
             m = judge(cplayer, cplayer->_dinamite, bang);
             cplayer->_dinamite = NULL;
-            if (strncmp(cplayer->_role->_name, "LuckyDuke", 9) == 0 && m[0] == 'F')
+            if (strncmp(cplayer->_role->_name, "LuckyDuke", 9) == 0 && m[0] == 'S')
             {
+                printf("ROLE effect: LuckyDuke\n");
                 // hp +3
                 changeHP(cplayer, 3, bang);
                 m = judge(cplayer, cplayer->_dinamite, bang);
             }
+            if(m[0] == 'S'){
+                printf("💣 BANG💣 \n");
+                discard(cplayer, cplayer->_dinamite, 1, bang);
+            }
+            if(m[0] == 'F') printf("💣 ~PHEW~💣 \n");
         }
         // use beer to recover
         while (cplayer->_hp <= 0)
@@ -307,6 +313,11 @@ char *gameloop(game *bang)
             printf("Choice(input 2 numbers, ex. 1 2): ");
             scanf("%d %d", &Kitchoice1, &Kitchoice2);
             fflush(stdin);
+            if(Kitchoice2 > Kitchoice1){
+                int32_t Kitchoice3 = Kitchoice1;
+                Kitchoice1 = Kitchoice2;
+                Kitchoice2 = Kitchoice3;
+            }
             if (Kitchoice1 == 1 && Kitchoice2 == 2)
             {
                 draw(cplayer, bang);
@@ -428,7 +439,10 @@ char *gameloop(game *bang)
                 }
             }
             card *targetcard = cplayer->_hand[opt - 1];
-            player *target = bang->_player[action];
+            player *target;
+            if (action >= 0) {
+                target = bang->_player[action];
+            }
             if (action == -1)
             { // throwcard
                 discard(cplayer, targetcard, 2, bang);
@@ -441,16 +455,17 @@ char *gameloop(game *bang)
                         changeHP(cplayer, 1, bang);
                     }
                 }
-            }
-            else
-            {
+            } else {
                 char *msg = "Warning: No valid action.";
                 // Action
                 printf("%s plays %s:\n", cplayer->_name, targetcard->_name);
                 if (strncmp(targetcard->_name, "BANG", 4) == 0 ||
                     (strncmp(targetcard->_name, "MANCATO", 4) == 0 &&
-                    strncmp(cplayer->_role->_name, "CalamityJanet", 11) == 0))
-                {
+                    strncmp(cplayer->_role->_name, "CalamityJanet", 11) == 0)){
+                    if (target->_id == cplayer->_id){
+                        printf("Warning: Target cannot be yourself.\n");
+                        continue;
+                    }
                     // unlimit bang 
                     if(cplayer->_gun != NULL)
                         if(strncmp(cplayer->_gun->_name, "VOLCANIC", 7) == 0)
@@ -527,6 +542,10 @@ char *gameloop(game *bang)
                 }
                 else if (strncmp(targetcard->_name, "CATBALOU", 4) == 0)
                 {
+                    if (target->_id == cplayer->_id){
+                        printf("Warning: Target cannot be yourself.\n");
+                        continue;
+                    }
                     msg = catBalou(cplayer, targetcard, target, bang);
                 }
                 // Action self
@@ -705,9 +724,9 @@ int32_t getAction(game *bang, card *c)
             {
                 if (isDead(bang->_player[i]))
                     continue;
-                printf("%d: Use the card to %s", i, bang->_player[i]->_name);
                 if (i == bang->_turn)
-                    printf(BLU" yourself"RESET);
+                    continue;
+                printf("%d: Use the card to %s", i, bang->_player[i]->_name);
                 printf("\n");
             }
         }
@@ -1101,7 +1120,7 @@ char *judge(player *p, card *c, game *game) //判定
         {
             discard(p, p->_hand[p->_hand_cnt - 1], 2, game);
             changeHP(p, -3, game);
-            discard(p, c, 1, game);
+            // discard(p, c, 1, game);
             // printf("return dinamite\n");
             return displayAction(p, c, 1);
         }
