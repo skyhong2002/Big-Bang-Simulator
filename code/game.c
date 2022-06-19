@@ -6,6 +6,7 @@
 #include <unistd.h>
 
 char LOGFILE_NAME[FILENAME_MAX] = "log.txt";
+int32_t Sidchoice = 0;
 
 void saveLogInit(game *bang){
     strcpy(LOGFILE_NAME, bang->_logfile_name);
@@ -198,6 +199,61 @@ char *gameloop(game *bang)
             }
             draw(cplayer, bang);
         }
+        else if (strncmp(cplayer->_role->_name, "KitCarlson", 10) == 0 && cplayer->_id == 0)
+        {
+            int32_t Kitchoice1 = 0, Kitchoice2 = 0;
+            if (bang->_deck_cnt <= 3)
+            {
+                for(int32_t i = 0; bang->_deck_cnt < 3; i++)
+                {
+                    bang->_deck[bang->_deck_cnt - 1] = bang->_discard[bang->_discard_cnt - 1];
+                    bang->_deck_cnt += 1;
+                    bang->_discard_cnt -= 1;
+                }
+            }
+            printf("KitCarlson can choose two cards between three cards!\n");
+            printf("1: %s\n", bang->_deck[bang->_deck_cnt - 1]->_name);
+            printf("2: %s\n", bang->_deck[bang->_deck_cnt - 2]->_name);
+            printf("3: %s\n", bang->_deck[bang->_deck_cnt - 3]->_name);
+            printf("---------------------\n");
+            printf("Choice: ");            
+            scanf("%d %d", &Kitchoice1, &Kitchoice2);
+            if(Kitchoice1 == 1 && Kitchoice2 == 2)
+            {
+                draw(cplayer, bang);
+                draw(cplayer, bang);
+            }
+            else if(Kitchoice1 == 1 && Kitchoice2 == 3)
+            {
+                draw(cplayer, bang);
+                p->_hand_cnt += 1;
+                p->_hand[p->_hand_cnt - 1] = bang->_deck[bang->_deck_cnt - 3];
+                bang->_deck[bang->_deck_cnt - 3] = bang->_deck[bang->_deck_cnt - 2];
+                bang->_deck_cnt -= 1;
+                displayAction(p, NULL, 5);
+            }
+            else if(Kitchoice1 == 2 && Kitchoice2 == 3)
+            {
+                p->_hand_cnt += 1;
+                p->_hand[p->_hand_cnt - 1] = bang->_deck[bang->_deck_cnt - 2];
+                p->_hand_cnt += 1;
+                p->_hand[p->_hand_cnt - 1] = bang->_deck[bang->_deck_cnt - 3];
+                bang->_deck[bang->_deck_cnt - 3] = bang->_deck[bang->_deck_cnt - 1];
+                bang->_deck_cnt -= 2;
+                displayAction(p, NULL, 5);
+                displayAction(p, NULL, 5);
+            }
+        }
+        else if (strncmp(cplayer->_role->_name, "PedroRamirez", 12) == 0)
+        {
+            printf("PedroRamirez first card from discard cards!\n");
+            p->_hand_cnt += 1;
+            p->_hand[p->_hand_cnt - 1] = bang->_discard[bang->_discard_cnt - 1];
+            bang->_discard_cnt -= 1;
+            displayAction(p, NULL, 5);
+            draw(cplayer, bang);
+
+        }
         else
         {
             // get 2 card;
@@ -267,6 +323,15 @@ char *gameloop(game *bang)
             player *target = bang->_player[action];
             if(action == -1){ // throwcard
                 discard(cplayer, targetcard, 2, bang);
+                if (strncmp(cplayer->_role->_name, "SidKetchum", 12) == 0)
+                {
+                    printf("When SidKetchum discard two cards, he can gain one hp.\n");
+                    Sidchoice += 1;
+                    if(Sidchoice % 2 == 0)
+                    {
+                        changeHP(cplayer, 1, bang);
+                    }
+                }
             }
             else{
                 char *msg = "Warning: No valid action.";
@@ -373,26 +438,27 @@ need to check
     某個陣營贏
     bang 的次數（無限）
     確認每張牌
+    整理 dead person cards
     choice buffer 更改
-    if (strncmp(cplayer->_role->_name, "KitCarlson", 10) == 0)
+    全部回合（目前上限 20）
+    // have dead player cards
+    if (strncmp(me->_role->_name, "VultureSam", 10) == 0)
     {
+        for(int32_t i = 0; i < dead->_hanc_cnt; i++)
+        {
+            drawplayer(me, dead, 2);
+        }
+        for(int32_t i = 0; i < 5; i++)
+        {
+            drawplayer(me, dead, 1);
+        }        
     }
-    if (strncmp(cplayer->_role->_name, "PedroRamirez", 12) == 0)
-    {
-    }
-    if (strncmp(cplayer->_role->_name, "SidKetchum", 12) == 0)
-    {
-    }
-    if (strncmp(cplayer->_role->_name, "SuzyLafayette", 13) == 0)
-    {
-    }
-    if (strncmp(cplayer->_role->_name, "VultureSam", 10) == 0)
-    {
-    }
+    // unlimit bang
     if (strncmp(cplayer->_role->_name, "WillyTheKid", 11) == 0)
     {
     }
 */
+drawplayer();
 int32_t getOption(game *bang, player *p)
 {
     int32_t want = -1;

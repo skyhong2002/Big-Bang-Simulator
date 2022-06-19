@@ -175,6 +175,11 @@ char* discard(player *p, card *c, int8_t type, game *game)
             }
         }
         p->_hand_cnt -= 1;
+        if (strncmp(p->_role->_name, "SuzyLafayette", 13) == 0 && p->_hand_cnt == 0)
+        {
+            printf("When SuzyLafayette no cards, draw a card.\n");
+            draw(p, game);
+        }
     }
     game->_discard_cnt += 1;
     return displayAction(p, c, 7);
