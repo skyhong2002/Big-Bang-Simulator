@@ -164,16 +164,21 @@ char *isGameEnd(game *bang)
         }
     }
 
+    saveLog("BANG! Game end\n---------------------\n\nWinner: ");
+
     if (Sceriffo && !Fuorilecce && !Rinnecato)
     {
+        saveLog("Sceriffo camp");
         return "Sceriffo camp";
     }
     else if (!Sceriffo && Fuorilecce)
     {
+        saveLog("Fuorilecce camp");
         return "Fuorilecce camp";
     }
     else if (!Sceriffo && !Fuorilecce && Rinnecato)
     {
+        saveLog("Rinnecato");
         return "Rinnecato";
     }
     return NULL;
@@ -723,6 +728,7 @@ int32_t getAction(game *bang, card *c)
     else
     {
         printf("---------------------\n%s's Action " BLU "> " RESET, bang->_player[bang->_turn]->_name);
+        srand(time(NULL));
         want = (rand() % (bang->_total_player_cnt + 3)) - 2;
         if ((strncmp("Action:", c->_skill, 7) != 0 &&
              strncmp("PRIGIONE", c->_name, 8) != 0)){
