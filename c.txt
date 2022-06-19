@@ -1,0 +1,71 @@
+Game Player: 4
+
+Joker (ID: 0, MAXHP: 4)
+identity: Rinnecato
+role:     SidKetchum
+Handcard:
+	0: SALOON
+	1: PRIGIONE
+	2: SCHOFIELD
+	3: BANG
+
+Akira (ID: 1, MAXHP: 4)
+identity: Fuorilecce
+role:     PedroRamirez
+Handcard:
+	0: WINCHESTER
+	1: MANCATO
+	2: BANG
+	3: EMPORIO
+
+Bob (ID: 2, MAXHP: 5)
+identity: Sceriffo
+role:     BartCassidy
+Handcard:
+	0: PANICOI
+	1: VOLCANIC
+	2: BANG
+	3: INDIANI
+	4: DILIGENZA
+
+Cloud (ID: 3, MAXHP: 3)
+identity: Fuorilecce
+role:     ElGringo
+Handcard:
+	0: CATBALOU
+	1: BANG
+	2: CATBALOU
+
+BANG! Game start
+---------------------
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Joker discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Joker HP change 1. Now HP: 4
+Action: Joker discard SCHOFIELD 🃏 ξ( ✿＞◡❛)!
+Action: Joker used SCHOFIELD successed
+Action: Joker discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Player Bob HP change -1�Player Bob HP change . Now HP: 4
+Action: Joker used BANG successed
+Action: Bob discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Player Bob HP change 1. Now HP: 5
+Action: Bob used MANCATO successed
+Action: Joker discard PRIGIONE 🃏 ξ( ✿＞◡❛)!
+Action: Joker used PRIGIONE successed
+Player Joker HP change 1. Now HP: 4
+Player Akira HP change 1. Now HP: 4
+Player Bob HP change 1. Now HP: 5
+Player Cloud HP change 1. Now HP: 3
+Action: Joker discard SALOON 🃏 ξ( ✿＞◡❛)!
+Action: Joker used SALOON successed
+---------------------
+Action: Akira draw a card ξ( ✿＞◡❛)!
+BANG: ♠01
+Action: Akira discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Akira discard PRIGIONE 🃏 ξ( ✿＞◡❛)!
+FAILED: Akira judged PRIGIONE failed
+---------------------
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!

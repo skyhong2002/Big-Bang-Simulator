@@ -14,6 +14,8 @@
 #define MAG "\x1B[35m"
 #define RESET "\x1B[0m"
 
+#define MAX_CARD_CNT 80
+
 typedef struct _card
 {
     uint8_t _suit; // 1 spade 2 heart 3 diamond 4 club

@@ -106,6 +106,7 @@ char *panic(player *me, card *c, player *target, game *game)
                     printf("What do you want to draw?\n");
                     printf("1: Equipments\n2: Hand cards\n3: Cancel\nYour choice: ");
                     scanf("%d", &choose);
+                    fflush(stdin);
                     if (choose == 1)
                     {
                         if (drawplayer(me, target, 1) == false)
@@ -195,6 +196,7 @@ char *catBalou(player *me, card *c, player *target, game *game)
                 printf("What do you want to throw?\n");
                 printf("1: Equipments\n2: Hand cards\nYour choice: ");
                 scanf("%d", &choose);
+                fflush(stdin);
                 if (choose == 1)
                 {
                     if (throwaway(me, target, 1, game) == false)
@@ -239,22 +241,27 @@ char *catBalou(player *me, card *c, player *target, game *game)
                 if (target->_dinamite != NULL)
                 {
                     discard(target, target->_dinamite, 1, game);
+                    target->_dinamite = NULL;
                 }
                 else if (target->_jail != NULL)
                 {
                     discard(target, target->_jail, 1, game);
+                    target->_jail = NULL;
                 }
                 else if (target->_horse != NULL)
                 {
                     discard(target, target->_horse, 1, game);
+                    target->_horse = NULL;
                 }
                 else if (target->_gun != NULL)
                 {
                     discard(target, target->_gun, 1, game);
+                    target->_gun = NULL;
                 }
                 else if (target->_barrel != NULL)
                 {
                     discard(target, target->_barrel, 1, game);
+                    target->_barrel = NULL;
                 }
             }
         }
@@ -293,6 +300,7 @@ char *duel(player *me, card *c, player *target, game *game)
             printf("Do you want to throw bang?\n");
             printf("1: Yes\n2: No\nChoice: ");
             scanf("%d", &choose);
+            fflush(stdin);
             if (choose == 1)
             {
                 for (int32_t j = 0; j < temptplayer->_hand_cnt; j++)
@@ -387,11 +395,13 @@ char *missed(player *me, card *c, game *game)
     if (strncmp("MANCATO", c->_name, 7) == 0)
     {
         discard(me, c, 2, game);
+        changeHP(me, 1, game);
         return displayAction(me, c, 3);
     }
     else if (strncmp("BANG", c->_name, 4) == 0 && strncmp("CalamityJanet", me->_role->_name, 13) == 0)
     {
         discard(me, c, 2, game);
+        changeHP(me, 1, game);
         return displayAction(me, c, 3);
     }
     else
@@ -501,9 +511,10 @@ char *generalStore(player *me, card *c, game *game)
         draw(temptplayer2, game);
     }
     // printf("init3\n");
+    int32_t next_man = game->_turn;
     do
     {
-        if (temptplayer->_id == 0)
+        if (temptplayer->_id == 0 )
         {
             while (1)
             {
@@ -511,6 +522,7 @@ char *generalStore(player *me, card *c, game *game)
                 displayHandCard(temptplayer2);
                 printf("Which one do you choose: ");
                 scanf("%d", &want);
+                fflush(stdin);
                 if (want >= 1 && want <= temptplayer2->_hand_cnt)
                 {
                     // sort me
@@ -529,6 +541,7 @@ char *generalStore(player *me, card *c, game *game)
                         temptplayer2->_hand[i] = temptplayer2->_hand[i + 1];
                     }
                     temptplayer2->_hand_cnt -= 1;
+                    // printf("break???\n");
                     break;
                 }
                 else
@@ -537,7 +550,7 @@ char *generalStore(player *me, card *c, game *game)
                 }
             }
         }
-        else
+        else 
         {
 
             // sort temptplayer
@@ -549,13 +562,14 @@ char *generalStore(player *me, card *c, game *game)
             // free(*(temptplayer2->_hand) + (temptplayer2->_hand_cnt - 1));
             temptplayer2->_hand_cnt -= 1;
         }
-        if (temptplayer->_position == game->_alive_player_cnt)
+        do {
+            next_man = (next_man + 1) % game->_total_player_cnt;
+        } while (isDead(game->_player[next_man]));
+        // printf("break?\n");
+        temptplayer = game->_player[next_man];
+        if(temptplayer == me)
         {
-            temptplayer = game->_player[0];
-        }
-        else
-        {
-            temptplayer = game->_player[temptplayer->_id + 1];
+            break;
         }
     } while (temptplayer != me);
     discard(me, c, 2, game);
@@ -746,6 +760,7 @@ bool drawplayer(player *me, player *target, int8_t choice)
                 index += 1;
                 printf("Which one do you want: ");
                 scanf("%d", &want);
+                fflush(stdin);
                 if (want == 1 && target->_gun != NULL)
                 {
                     // sort me
@@ -754,7 +769,8 @@ bool drawplayer(player *me, player *target, int8_t choice)
                     // me->_hand[cnt - 1] = calloc(1, sizeof(card));
                     me->_hand[cnt - 1] = target->_gun;
                     // sort target
-                    // free(target->_gun);
+                    // card* tempt = calloc(1,sizeof(card*));            
+                    // target->_gun = tempt;
                     target->_gun = NULL;
                     break;
                 }
@@ -766,7 +782,8 @@ bool drawplayer(player *me, player *target, int8_t choice)
                     // me->_hand[cnt - 1] = calloc(1, sizeof(card));
                     me->_hand[cnt - 1] = target->_horse;
                     // sort target
-                    // free(target->_horse);
+                    // card* tempt = calloc(1,sizeof(card*));            
+                    // target->_horse = tempt;
                     target->_horse = NULL;
                     break;
                 }
@@ -778,7 +795,8 @@ bool drawplayer(player *me, player *target, int8_t choice)
                     // me->_hand[cnt - 1] = calloc(1, sizeof(card));
                     me->_hand[cnt - 1] = target->_jail;
                     // sort target
-                    // free(target->_jail);
+                    // card* tempt = calloc(1,sizeof(card*));            
+                    // target->_jail = tempt;
                     target->_jail = NULL;
                     break;
                 }
@@ -790,7 +808,8 @@ bool drawplayer(player *me, player *target, int8_t choice)
                     // me->_hand[cnt - 1] = calloc(1, sizeof(card));
                     me->_hand[cnt - 1] = target->_dinamite;
                     // sort target
-                    // free(target->_dinamite);
+                    // card* tempt = calloc(1,sizeof(card*));            
+                    // target->_dinamite = tempt;
                     target->_dinamite = NULL;
                     break;
                 }
@@ -803,7 +822,6 @@ bool drawplayer(player *me, player *target, int8_t choice)
                     me->_hand[cnt - 1] = target->_barrel;
                     // sort target
                     target->_barrel = NULL;
-                    // free(target->_barrel);
                     break;
                 }
                 else
@@ -827,6 +845,7 @@ bool drawplayer(player *me, player *target, int8_t choice)
                 }
                 printf("Which one do you choose: ");
                 scanf("%d", &want);
+                fflush(stdin);
                 if (want >= 1 && want <= target->_hand_cnt)
                 {
                     // sort me
@@ -858,22 +877,68 @@ bool drawplayer(player *me, player *target, int8_t choice)
     }
     else
     {
-        if (target->_hand == NULL)
+        if (target->_hand == NULL && target->_gun == NULL && target->_horse == NULL && target->_dinamite == NULL && target->_jail == NULL && target->_barrel == NULL)
         {
             return false;
         }
+        if(choice == 2)
+        {
+            // sort me
+            me->_hand_cnt += 1;
+            int32_t cnt = me->_hand_cnt;
+            // me->_hand[cnt - 1] = calloc(1, sizeof(card));
+            me->_hand[cnt - 1] = target->_hand[target->_hand_cnt - 1];
+            // sort target
 
-        // sort me
-        me->_hand_cnt += 1;
-        int32_t cnt = me->_hand_cnt;
-        // me->_hand[cnt - 1] = calloc(1, sizeof(card));
-        *(*(me->_hand) + (cnt - 1)) = *(*(target->_hand) + (target->_hand_cnt - 1));
-        // sort target
+            // free(*(target->_hand) + (target->_hand_cnt - 1));
 
-        // free(*(target->_hand) + (target->_hand_cnt - 1));
-
-        target->_hand_cnt -= 1;
-
+            target->_hand_cnt -= 1;
+        }
+        else if(choice == 1)
+        {
+            me->_hand_cnt += 1;
+            int32_t cnt = me->_hand_cnt;   
+            if (target->_gun != NULL)
+            {
+                card *c = target->_gun;
+                me->_hand[cnt - 1] = c;  
+                card* tempt = calloc(1,sizeof(card*));            
+                target->_gun = tempt;
+                target->_gun = NULL;
+            }
+            if (target->_horse!= NULL)
+            {
+                card *c = target->_horse;
+                me->_hand[cnt - 1] = c;  
+                card* tempt = calloc(1,sizeof(card*));            
+                target->_horse = tempt;
+                target->_horse = NULL;
+            }  
+            if (target->_dinamite!= NULL)
+            {
+                card *c = target->_dinamite;
+                me->_hand[cnt - 1] = c;  
+                card* tempt = calloc(1,sizeof(card*));            
+                target->_dinamite= tempt;
+                target->_dinamite = NULL;
+            }   
+            if (target->_jail!= NULL)
+            {
+                card *c = target->_jail;
+                me->_hand[cnt - 1] = c;  
+                card* tempt = calloc(1,sizeof(card*));            
+                target->_jail = tempt;
+                target->_jail = NULL;
+            } 
+            if (target->_barrel!= NULL)
+            {
+                card *c = target->_barrel;
+                me->_hand[cnt - 1] = c;  
+                card* tempt = calloc(1,sizeof(card*));            
+                target->_barrel = tempt;
+                target->_barrel = NULL;
+            }                          
+        }
         return true;
     }
     return true;
@@ -923,34 +988,40 @@ bool throwaway(player *me, player *target, int8_t choice, game *game)
             index += 1;
             printf("Which one do you want to throw: ");
             scanf("%d", &want);
+            fflush(stdin);
             if (want == 1 && target->_gun != NULL)
             {
                 // sort target
                 discard(target, target->_gun, 1, game);
+                target->_gun = NULL;
                 break;
             }
             else if (want == 2 && target->_horse != NULL)
             {
                 // sort target
                 discard(target, target->_horse, 1, game);
+                target->_horse = NULL;
                 break;
             }
             else if (want == 3 && target->_jail != NULL)
             {
                 // sort target
                 discard(target, target->_jail, 1, game);
+                target->_jail = NULL;
                 break;
             }
             else if (want == 4 && target->_dinamite != NULL)
             {
                 // sort target
                 discard(target, target->_dinamite, 1, game);
+                target->_dinamite = NULL;
                 break;
             }
             else if (want == 5 && target->_barrel != NULL)
             {
                 // sort target
                 discard(target, target->_barrel, 1, game);
+                target->_barrel = NULL;
                 break;
             }
             else
@@ -971,18 +1042,19 @@ bool throwaway(player *me, player *target, int8_t choice, game *game)
             displayHandCard(target);
             printf("Which one do you want to throw: ");
             scanf("%d", &want);
+            fflush(stdin);
             if (want >= 1 && want <= target->_hand_cnt)
             {
                 // sort target
-                discard(target, (*(target->_hand) + (want - 1)), 2, game);
+                discard(target, target->_hand[want - 1], 2, game);
                 for (int32_t i = want - 1; i < target->_hand_cnt; i++)
                 {
                     if (i == target->_hand_cnt - 1)
                     {
-                        free(*(target->_hand) + (want - 1));
+                        // free(*(target->_hand) + (want - 1));
                         break;
                     }
-                    *(*(target->_hand) + (i)) = *(*(target->_hand) + (i + 1));
+                    target->_hand[i] =target->_hand[i + 1];
                 }
                 target->_hand_cnt -= 1;
                 break;

@@ -58,6 +58,6 @@ bool playerInit(player *p, char *name, char *identity, game *game, const role **
 #define BartCassidy "BartCassidy", "Each time he loses a life point, he immediately draws a card from the deck."
 #define KitCarlson "KitCarlson", "During his turn, he looks at the top three cards of the deck: he chooses 2 to draw, and puts the other one back on the top of the deck, face down."
 #define PedroRamirez "PedroRamirez", "During his turn, he may choose to draw the first card from the top of the discard pile or from the deck. Then he draws the second card from the deck."
-#define LuckyDuke "LuckyDuke", "Each time he is required to \"Draw!\", he flips the top two cards from the deck, and chooses the result he prefers. Discard both cards afterward."
+#define LuckyDuke "LuckyDuke", "Each time he is required to \"Judge\", he flips the top two cards from the deck, and chooses the result he prefers. Discard both cards afterward."
 
 #endif

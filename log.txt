@@ -2,42 +2,145 @@ Game Player: 4
 
 Joker (ID: 0, MAXHP: 4)
 identity: Fuorilecce
-role:     KitCarlson
+role:     Jourdonnais
 Handcard:
 	0: PRIGIONE
-	1: INDIANI
-	2: WELLSFARGO
+	1: PANICOI
+	2: MANCATO
 	3: BANG
 
 Akira (ID: 1, MAXHP: 5)
 identity: Sceriffo
-role:     JesseJones
+role:     BlackJack
 Handcard:
 	0: BANG
-	1: DINAMITE
-	2: MANCATO
-	3: BANG
-	4: BANG
+	1: MANCATO
+	2: PANICOI
+	3: SCHOFIELD
+	4: MANCATO
 
-Bob (ID: 2, MAXHP: 4)
-identity: Rinnecato
-role:     VultureSam
+Bob (ID: 2, MAXHP: 3)
+identity: Fuorilecce
+role:     PaulRegret
 Handcard:
-	0: BIRRA
-	1: BANG
-	2: PRIGIONE
-	3: EMPORIO
+	0: BARREL
+	1: REMINGTON
+	2: EMPORIO
 
 Cloud (ID: 3, MAXHP: 4)
-identity: Fuorilecce
-role:     SlabTheKiller
+identity: Rinnecato
+role:     SidKetchum
 Handcard:
-	0: BANG
-	1: PRIGIONE
-	2: BANG
-	3: BIRRA
+	0: DILIGENZA
+	1: BANG
+	2: DUELLO
+	3: MANCATO
 
 BANG! Game start
 ---------------------
 Action: Joker draw a card ξ( ✿＞◡❛)!
 Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker discard PRIGIONE 🃏 ξ( ✿＞◡❛)!
+Action: Joker used PRIGIONE successed
+Action: Joker discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Akira HP change -1p�Player Akira HP change . Now HP: 4
+Action: Joker used BANG successed
+Action: Akira discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Player Akira HP change 1. Now HP: 5
+Action: Akira used MANCATO successed
+---------------------
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira discard PANICOI 🃏 ξ( ✿＞◡❛)!
+Action: Akira used PANICOI successed
+Action: Akira discard SCHOFIELD 🃏 ξ( ✿＞◡❛)!
+Action: Akira used SCHOFIELD successed
+---------------------
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob discard REMINGTON 🃏 ξ( ✿＞◡❛)!
+Action: Bob used REMINGTON successed
+Action: Bob discard BARREL 🃏 ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+Action: Bob discard EMPORIO 🃏 ξ( ✿＞◡❛)!
+Action: Bob used EMPORIO successed
+Warning: Bob used PRIGIONE failed
+Action: Bob discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Bob HP change -1p�Player Bob HP change . Now HP: 2
+Action: Bob used BANG successed
+Warning: Bob used PRIGIONE failed
+---------------------
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+DILIGENZA: ♠09
+Action: Cloud discard DILIGENZA 🃏 ξ( ✿＞◡❛)!
+Action: Cloud discard PRIGIONE 🃏 ξ( ✿＞◡❛)!
+FAILED: Cloud judged PRIGIONE failed
+---------------------
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker discard PANICOI 🃏 ξ( ✿＞◡❛)!
+Action: Joker used PANICOI successed
+Action: Akira discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Action: Joker discard CATBALOU 🃏 ξ( ✿＞◡❛)!
+Action: Joker used CATBALOU successed
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker discard WELLSFARGO 🃏 ξ( ✿＞◡❛)!
+Action: Joker used WELLSFARGO successed
+Action: Akira discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Bob HP change -1p�Player Bob HP change . Now HP: 1
+Action: Cloud discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Joker discard INDIANI 🃏 ξ( ✿＞◡❛)!
+Action: Joker used INDIANI successed
+Action: Joker discard VOLCANIC 🃏 ξ( ✿＞◡❛)!
+Action: Joker used VOLCANIC successed
+Action: Joker discard VOLCANIC 🃏 ξ( ✿＞◡❛)!
+---------------------
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+Action: Akira discard EMPORIO 🃏 ξ( ✿＞◡❛)!
+Action: Akira used EMPORIO successed
+Warning: Akira used PRIGIONE failed
+Action: Akira discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Akira discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Bob HP change -1p�Player Bob HP change . Now HP: 0
+Action: Akira used BANG successed
+Action: Bob discard SCHOFIELD 🃏 ξ( ✿＞◡❛)!
+Action: Bob discard PRIGIONE 🃏 ξ( ✿＞◡❛)!
+Action: Bob discard REMINGTON 🃏 ξ( ✿＞◡❛)!
+---------------------
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud discard DILIGENZA 🃏 ξ( ✿＞◡❛)!
+Action: Cloud used DILIGENZA successed
+Action: Cloud discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Akira HP change -1p�Player Akira HP change . Now HP: 4
+Action: Cloud used BANG successed
+Action: Akira discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Player Akira HP change 1. Now HP: 5
+Action: Akira used MANCATO successed
+Action: Cloud discard REV. CARABINE 🃏 ξ( ✿＞◡❛)!
+Action: Cloud used REV. CARABINE successed
+Action: Cloud discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Cloud discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Cloud HP change -1p�Player Cloud HP change . Now HP: 3
+Action: Cloud discard DUELLO 🃏 ξ( ✿＞◡❛)!
+Action: Cloud used DUELLO successed
+---------------------
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Akira discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Joker discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Akira HP change -1p�Player Akira HP change . Now HP: 4
+Action: Joker discard DUELLO 🃏 ξ( ✿＞◡❛)!
+Action: Joker used DUELLO successed

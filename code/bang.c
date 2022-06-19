@@ -9,6 +9,19 @@
 
 void deckInit(game *game)
 {
+    static const card CARD_01 = {1, 1, APPALOOSA};
+    static const card CARD_02 = {1, 1, BANG};
+    static const card CARD_03 = {1, 2, MANCATO};
+    static const card CARD_04 = {1, 3, MANCATO};
+    static const card CARD_05 = {1, 4, MANCATO};
+    static const card CARD_06 = {1, 5, MANCATO};
+    static const card CARD_07 = {1, 6, MANCATO};
+    static const card CARD_08 = {1, 7, MANCATO};
+    static const card CARD_09 = {1, 8, MANCATO};
+    static const card CARD_10 = {1, 8, WINCHESTER};
+    static const card CARD_11 = {1, 9, DILIGENZA};
+    static const card CARD_12 = {1, 9, DILIGENZA};
+    static const card CARD_13 = {1, 10, VOLCANIC};    
     // static const card CARD_01 = {1, 1, EMPORIO};
     // static const card CARD_02 = {1, 1, EMPORIO};
     // static const card CARD_03 = {1, 2, EMPORIO};
@@ -22,21 +35,7 @@ void deckInit(game *game)
     // static const card CARD_11 = {1, 9, EMPORIO};
     // static const card CARD_12 = {1, 9, EMPORIO};
     // static const card CARD_13 = {1, 10, EMPORIO};
-    // static const card CARD_14 = {1, 10, EMPORIO};
-    // static const card CARD_15 = {1, 11, EMPORIO};
-    static const card CARD_01 = {1, 1, APPALOOSA};
-    static const card CARD_02 = {1, 1, BANG};
-    static const card CARD_03 = {1, 2, MANCATO};
-    static const card CARD_04 = {1, 3, MANCATO};
-    static const card CARD_05 = {1, 4, MANCATO};
-    static const card CARD_06 = {1, 5, MANCATO};
-    static const card CARD_07 = {1, 6, MANCATO};
-    static const card CARD_08 = {1, 7, MANCATO};
-    static const card CARD_09 = {1, 8, MANCATO};
-    static const card CARD_10 = {1, 8, WINCHESTER};
-    static const card CARD_11 = {1, 9, DILIGENZA};
-    static const card CARD_12 = {1, 9, DILIGENZA};
-    static const card CARD_13 = {1, 10, VOLCANIC};
+
     static const card CARD_14 = {1, 10, PRIGIONE};
     static const card CARD_15 = {1, 11, DUELLO};
     static const card CARD_16 = {1, 11, PRIGIONE};
@@ -105,7 +104,7 @@ void deckInit(game *game)
     static const card CARD_79 = {4, 13, MANCATO};
     static const card CARD_80 = {4, 13, REMINGTON};
 
-    static const card *const CARD[81] = {NULL,
+    static const card *const CARD[MAX_CARD_CNT+1] = {NULL,
                                          &CARD_01, &CARD_02, &CARD_03, &CARD_04, &CARD_05,
                                          &CARD_06, &CARD_07, &CARD_08, &CARD_09, &CARD_10,
                                          &CARD_11, &CARD_12, &CARD_13, &CARD_14, &CARD_15,
@@ -113,7 +112,7 @@ void deckInit(game *game)
                                          &CARD_21, &CARD_22, &CARD_23, &CARD_24, &CARD_25,
                                          &CARD_26, &CARD_27, &CARD_28, &CARD_29, &CARD_30,
                                          &CARD_31, &CARD_32, &CARD_33, &CARD_34, &CARD_35,
-                                         &CARD_36, &CARD_37, &CARD_38, &CARD_39, &CARD_40,
+                                         &CARD_36, &CARD_37, &CARD_38, &CARD_39, &CARD_40, 
                                          &CARD_41, &CARD_42, &CARD_43, &CARD_44, &CARD_45,
                                          &CARD_46, &CARD_47, &CARD_48, &CARD_49, &CARD_50,
                                          &CARD_51, &CARD_52, &CARD_53, &CARD_54, &CARD_55,
@@ -122,23 +121,23 @@ void deckInit(game *game)
                                          &CARD_66, &CARD_67, &CARD_68, &CARD_69, &CARD_70,
                                          &CARD_71, &CARD_72, &CARD_73, &CARD_74, &CARD_75,
                                          &CARD_76, &CARD_77, &CARD_78, &CARD_79, &CARD_80};
-
+    
     srand(time(NULL));
-    int32_t shuff[80] = {0};
+    int32_t shuff[MAX_CARD_CNT] = {0};
     int32_t x = 0;
-    game->_discard = calloc(80, sizeof(card *));
-    game->_deck = calloc(80, sizeof(card *));
+    game->_discard = calloc(MAX_CARD_CNT, sizeof(card *));
+    game->_deck = calloc(MAX_CARD_CNT, sizeof(card *));
     game->_discard_cnt = 0;
-    game->_deck_cnt = 80;
+    game->_deck_cnt = game->_total_card_cnt;
 
-    for (int32_t i = 0; i < 80; i++)
+    for (int32_t i = 0; i < MAX_CARD_CNT; i++)
     {
         // game->_discard[i] = calloc(1, sizeof(card));
         // game->_deck[i] = calloc(1, sizeof(card));
         shuff[i] = i + 1;
     }
-    // shuffle
-    for (int32_t i = 79; i >= 1; i--)
+    // shuffle 
+    for (int32_t i = MAX_CARD_CNT - 1; i >= 1; i--)
     {
         int32_t tempt = 0;
         // printf("%d\n", i);
@@ -169,7 +168,6 @@ int8_t checkiden[7] = {0};
 
 bool playerInit(player *p, char *name, char *identity, game *game, const role **ROLE)
 {
-    // printf("Hi!\n");
     // printf("In place: %p\n", p);
     // uint8_t *pid = &player_id;
     p->_id = player_id;
@@ -197,18 +195,18 @@ bool playerInit(player *p, char *name, char *identity, game *game, const role **
             break;
         }
     }
-
     p->_hand = calloc(20, sizeof(card *));
     for (int32_t i = 0; i < 20; i++)
     {
         p->_hand[i] = calloc(1, sizeof(card));
     }
+    // printf("player init calloc hand\n");
     p->_gun = NULL;
     p->_horse = NULL;
     p->_jail = NULL;
     p->_dinamite = NULL;
     p->_barrel = NULL;
-    // printf("%p\n", p->_gun->_name);
+    // printf("player init equip\n");
     // p->_role = calloc(1, sizeof(role *));
     p->_role = (role *)(ROLE[x]);
     p->_identity = identity;
@@ -216,12 +214,11 @@ bool playerInit(player *p, char *name, char *identity, game *game, const role **
     p->_max_hp = p->_role->_lvalue + (strncmp(p->_identity, "Sceriffo", 4) == 0 ? 1 : 0);
     p->_hp = p->_max_hp;
     // p->_hand_cnt = role->_lvalue
-
-    for (int32_t i = 0; i < p->_max_hp; i++)
-    {
+    // printf("player init identity\n");
+    for (int32_t i = 0; i < p->_max_hp; i++){
         draw(p, game);
     }
-
+    printf("Init player %s completed.\n", p->_name);
     return true;
 }
 
@@ -249,23 +246,15 @@ void gameInit(game *bang, int32_t pcnt, char *pname, char *fname)
         &ROLE_05, &ROLE_06, &ROLE_07, &ROLE_08,
         &ROLE_09, &ROLE_10, &ROLE_11, &ROLE_12,
         &ROLE_13, &ROLE_14, &ROLE_15, &ROLE_16};
-    // printf("deckInit success\n");
-    deckInit(bang);
-    // printf("%d\n", bang->_deck_cnt);
-    // printf("%d\n", bang->_discard_cnt);
-    // for(int32_t i = 0; i<80; i++)
-    // {
-    //     printf("%d: \n", i+1);
-    //     // printf("%p\n", bang->_deck[i]);
-    //     printf("%s\n", bang->_deck[i]->_name);
-    //     printf("%s\n", bang->_deck[i]->_skill);
-    // }
-    // printf("deckInit success\n");
-    bang->_total_card_cnt = 80; // = 80
+
+    bang->_total_card_cnt = MAX_CARD_CNT;
     bang->_total_player_cnt = pcnt;
     bang->_alive_player_cnt = pcnt;
     bang->_turn = 0;
     bang->_logfile_name = fname;
+
+    deckInit(bang);
+    // printf("deckInit success\n");
 
     char *namelist[] = {
         pname, "Akira", "Bob", "Cloud", "Dora", "Eren", "Freya", "Genious", "Haiya"};
@@ -295,4 +284,5 @@ void gameInit(game *bang, int32_t pcnt, char *pname, char *fname)
         bang->_player[i] = calloc(1, sizeof(player));
         playerInit(bang->_player[i], namelist[i], iden[x], bang, ROLE);
     }
+    printf("Game init complete.\n");
 }

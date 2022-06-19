@@ -80,7 +80,7 @@ char *equip(player *me, card *c, player *target, game *game)
         }
         target->_gun = c;
     }
-    else if ((strncmp("MUSTANG", c->_name, 7) == 0 || strncmp("APPALOOSA", c->_name, 9) == 0) && target->_horse == NULL)
+    else if ((strncmp("MUSTANG", c->_name, 7) == 0 || strncmp("APPALOOSA", c->_name, 9) == 0) )
     {
         if (target->_horse != NULL)
         {
@@ -96,7 +96,7 @@ char *equip(player *me, card *c, player *target, game *game)
         }
         target->_jail = c;
     }
-    else if ((strncmp("DINAMITE", c->_name, 8) == 0) && target->_dinamite == NULL)
+    else if ((strncmp("DINAMITE", c->_name, 8) == 0))
     {
         if (target->_dinamite != NULL)
         {
@@ -114,11 +114,11 @@ char *equip(player *me, card *c, player *target, game *game)
     }
     else
     {
-        return displayAction(me, c, 2);
-        ;
+        return displayAction(me, c, 4);
     }
+    // printf("equip success\n");
     discard(me, c, 2, game);
-    return displayAction(me, c, 1);
+    return displayAction(me, c, 3);
 }
 char *draw(player *p, game *game)
 {
@@ -127,7 +127,7 @@ char *draw(player *p, game *game)
         return displayAction(p, NULL, 6);
     }
     p->_hand_cnt += 1;
-    // printf("plus card\n");
+    // printf("Deck cnt: %d\n", game->_deck_cnt);
     p->_hand[p->_hand_cnt - 1] = game->_deck[game->_deck_cnt - 1];
     // printf("draw one\n");
     game->_deck_cnt -= 1;
@@ -140,7 +140,7 @@ char *draw(player *p, game *game)
     {
         return displayAction(p, NULL, 9);
     }
-    // printf("return\n");
+    // printf("return draw card\n");
     return displayAction(p, NULL, 5);
 }
 //  equip: 1 or hand: 2
@@ -154,8 +154,11 @@ char *discard(player *p, card *c, int8_t type, game *game)
     }
     if (type == 1)
     {
+        // printf("in discard\n");
         game->_discard[game->_discard_cnt] = c;
-        // c = NULL;
+        // static card* tempt1 = NULL;
+        // c = tempt1;
+        // printf("c: %p\n", c);
     }
     else if (type == 2)
     {
@@ -188,7 +191,14 @@ char *discard(player *p, card *c, int8_t type, game *game)
         }
     }
     game->_discard_cnt += 1;
-    return displayAction(p, c, 7);
+    // printf("discard card name\n");
+    // for(int32_t i = 0; i<game->_discard_cnt; i++)
+    // {
+    //     printf("%s\n", game->_discard[i]->_name);
+    // }
+    // printf("already return\n");
+    // printf("c adress: %p\n", game->_discard[game->_discard_cnt - 1]);
+    return displayAction(p, game->_discard[game->_discard_cnt - 1], 7);
 }
 bool changeHP(player *p, int8_t hp, game *game)
 {
