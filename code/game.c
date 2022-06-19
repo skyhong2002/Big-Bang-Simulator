@@ -116,11 +116,11 @@ char *isGameEnd(game *bang)
                     if(dead->_gun != NULL) discard(dead, dead->_gun, 1, bang);
                     if(dead->_horse != NULL) discard(dead, dead->_horse, 1, bang);
                     if(dead->_jail != NULL) discard(dead, dead->_jail, 1, bang);
-                    dead->_dinamite == NULL;
-                    dead->_barrel == NULL;
-                    dead->_gun == NULL;
-                    dead->_horse == NULL;
-                    dead->_jail == NULL;
+                    dead->_dinamite = NULL;
+                    dead->_barrel = NULL;
+                    dead->_gun = NULL;
+                    dead->_horse = NULL;
+                    dead->_jail = NULL;
                 }
                 else{
                     printf("ROLE effect: VultureSam (plunder dead man's body)\n");
