@@ -72,6 +72,12 @@ int main(int32_t argc, char *argv[])
     gameInit(&bang, playercnt, yourname, logfile_name);
     printf("GAME START\n");
     char *winner = gameloop(&bang);
-    printf("Winner: %s\n", winner);
+    char *yourid = bang._player[0]->_identity;
+
+    printf("==========================\n");
+    printf("You are: %s\n", yourid);
+    printf("Winner:  %s\n", winner);
+    printf("==========================\n");
+    
     return 0;
 }
