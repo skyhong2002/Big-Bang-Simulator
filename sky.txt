@@ -1,0 +1,348 @@
+Game Player: 7
+
+Sky (ID: 0, MAXHP: 4)
+identity: Vice
+role:     SlabTheKiller
+Handcard:
+	0: BANG
+	1: BANG
+	2: DILIGENZA
+	3: PANICOI
+
+Akira (ID: 1, MAXHP: 4)
+identity: Vice
+role:     Jourdonnais
+Handcard:
+	0: PRIGIONE
+	1: BANG
+	2: BANG
+	3: BANG
+
+Bob (ID: 2, MAXHP: 3)
+identity: Fuorilecce
+role:     ElGringo
+Handcard:
+	0: SCHOFIELD
+	1: BANG
+	2: BANG
+
+Cloud (ID: 3, MAXHP: 5)
+identity: Sceriffo
+role:     PedroRamirez
+Handcard:
+	0: CATBALOU
+	1: SALOON
+	2: APPALOOSA
+	3: VOLCANIC
+	4: BIRRA
+
+Dora (ID: 4, MAXHP: 4)
+identity: Rinnecato
+role:     KitCarlson
+Handcard:
+	0: BIRRA
+	1: VOLCANIC
+	2: PANICOI
+	3: PANICOI
+
+Eren (ID: 5, MAXHP: 4)
+identity: Fuorilecce
+role:     LuckyDuke
+Handcard:
+	0: MANCATO
+	1: DUELLO
+	2: MUSTANG
+	3: INDIANI
+
+Freya (ID: 6, MAXHP: 4)
+identity: Fuorilecce
+role:     CalamityJanet
+Handcard:
+	0: BANG
+	1: MANCATO
+	2: INDIANI
+	3: PANICOI
+
+BANG! Game start
+---------------------
+Action: Sky draw a card ξ( ✿＞◡❛)!
+Action: Sky draw a card ξ( ✿＞◡❛)!
+Action: Sky draw a card ξ( ✿＞◡❛)!
+Action: Sky draw a card ξ( ✿＞◡❛)!
+Action: Sky discard DILIGENZA 🃏 ξ( ✿＞◡❛)!
+Action: Sky used DILIGENZA successed
+Action: Sky discard PANICOI 🃏 ξ( ✿＞◡❛)!
+Action: Sky used PANICOI successed
+Action: Akira discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Bob discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Cloud HP change -1��Player Cloud HP change . Now HP: 4
+Player Dora HP change -14. Now HP: 3
+Player Eren HP change -13. Now HP: 3
+Action: Freya discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Sky discard INDIANI 🃏 ξ( ✿＞◡❛)!
+Action: Sky used INDIANI successed
+Action: Sky discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Akira HP change -1��Player Akira HP change . Now HP: 3
+Action: Sky used BANG successed
+Action: Sky discard BANG 🃏 ξ( ✿＞◡❛)!
+---------------------
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Bob HP change -1��Player Bob HP change . Now HP: 2
+Action: Akira used BANG successed
+Action: Akira discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Akira discard PRIGIONE 🃏 ξ( ✿＞◡❛)!
+Action: Akira used PRIGIONE successed
+---------------------
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Player Sky HP change -1��Player Sky HP change . Now HP: 3
+Player Akira HP change -13. Now HP: 2
+Player Cloud HP change -12. Now HP: 3
+Player Dora HP change -13. Now HP: 2
+Player Eren HP change -12. Now HP: 2
+Player Freya HP change -12. Now HP: 3
+Action: Bob discard GATLING 🃏 ξ( ✿＞◡❛)!
+Action: Bob used GATLING successed
+Action: Bob discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Cloud HP change -1��Player Cloud HP change . Now HP: 2
+Action: Bob used BANG successed
+Action: Bob discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Bob discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Bob discard SCHOFIELD 🃏 ξ( ✿＞◡❛)!
+Action: Bob used SCHOFIELD successed
+---------------------
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud discard APPALOOSA 🃏 ξ( ✿＞◡❛)!
+Action: Cloud used APPALOOSA successed
+Action: Akira discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Cloud discard CATBALOU 🃏 ξ( ✿＞◡❛)!
+Action: Cloud used CATBALOU successed
+Action: Cloud discard VOLCANIC 🃏 ξ( ✿＞◡❛)!
+Action: Cloud discard BIRRA 🃏 ξ( ✿＞◡❛)!
+Action: Cloud discard SCHOFIELD 🃏 ξ( ✿＞◡❛)!
+Action: Cloud used SCHOFIELD successed
+Action: Cloud discard MUSTANG 🃏 ξ( ✿＞◡❛)!
+---------------------
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Player Dora HP change 1. Now HP: 3
+Action: Dora discard BIRRA 🃏 ξ( ✿＞◡❛)!
+Action: Dora used BIRRA successed
+Action: Dora discard REMINGTON 🃏 ξ( ✿＞◡❛)!
+Action: Dora used REMINGTON successed
+Action: Dora discard PANICOI 🃏 ξ( ✿＞◡❛)!
+Action: Dora discard PANICOI 🃏 ξ( ✿＞◡❛)!
+Action: Dora used PANICOI successed
+Action: Dora discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Eren HP change -1��Player Eren HP change . Now HP: 1
+Action: Dora used BANG successed
+Action: Eren discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Player Eren HP change 1. Now HP: 2
+Action: Eren used MANCATO successed
+---------------------
+Action: Eren draw a card ξ( ✿＞◡❛)!
+Action: Eren draw a card ξ( ✿＞◡❛)!
+Action: Eren discard MUSTANG 🃏 ξ( ✿＞◡❛)!
+Action: Eren used MUSTANG successed
+Action: Eren discard DUELLO 🃏 ξ( ✿＞◡❛)!
+---------------------
+Action: Freya draw a card ξ( ✿＞◡❛)!
+MANCATO: ♠04
+Action: Freya discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Action: Freya discard PRIGIONE 🃏 ξ( ✿＞◡❛)!
+FAILED: Freya judged PRIGIONE failed
+---------------------
+Action: Sky draw a card ξ( ✿＞◡❛)!
+Action: Sky draw a card ξ( ✿＞◡❛)!
+Player Sky HP change 1. Now HP: 4
+Action: Sky discard BIRRA 🃏 ξ( ✿＞◡❛)!
+Action: Sky used BIRRA successed
+Action: Sky discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Akira HP change -1��Player Akira HP change . Now HP: 1
+Action: Sky used BANG successed
+---------------------
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+Action: Akira discard EMPORIO 🃏 ξ( ✿＞◡❛)!
+Action: Akira used EMPORIO successed
+Warning: Akira used BANG failed
+Warning: Akira used BANG failed
+Warning: Akira used BANG failed
+Warning: Akira used BANG failed
+Action: Akira discard BANG 🃏 ξ( ✿＞◡❛)!
+---------------------
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob discard BIRRA 🃏 ξ( ✿＞◡❛)!
+Action: Bob discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Akira HP change -1��Player Akira HP change . Now HP: 0
+Action: Bob used BANG successed
+Action: Akira discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Player Akira HP change 1. Now HP: 1
+Action: Akira used MANCATO successed
+Action: Bob discard BANG 🃏 ξ( ✿＞◡❛)!
+---------------------
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Eren HP change -1��Player Eren HP change . Now HP: 1
+Action: Cloud used BANG successed
+Player Sky HP change 1. Now HP: 4
+Player Akira HP change 1. Now HP: 2
+Player Bob HP change 1. Now HP: 3
+Player Cloud HP change 1. Now HP: 3
+Player Dora HP change 1. Now HP: 4
+Player Eren HP change 1. Now HP: 2
+Player Freya HP change 1. Now HP: 4
+Action: Cloud discard SALOON 🃏 ξ( ✿＞◡❛)!
+Action: Cloud used SALOON successed
+---------------------
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Dora discard VOLCANIC 🃏 ξ( ✿＞◡❛)!
+Action: Dora discard INDIANI 🃏 ξ( ✿＞◡❛)!
+---------------------
+Action: Eren draw a card ξ( ✿＞◡❛)!
+Action: Eren draw a card ξ( ✿＞◡❛)!
+Action: Eren discard WINCHESTER 🃏 ξ( ✿＞◡❛)!
+Action: Eren used WINCHESTER successed
+Action: Cloud discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Eren discard CATBALOU 🃏 ξ( ✿＞◡❛)!
+Action: Eren used CATBALOU successed
+Player Eren HP change 1. Now HP: 3
+Action: Eren discard BIRRA 🃏 ξ( ✿＞◡❛)!
+Action: Eren used BIRRA successed
+ draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+ draw a card ξ( ✿＞◡❛)!
+Action: Eren discard EMPORIO 🃏 ξ( ✿＞◡❛)!
+Action: Eren used EMPORIO successed
+Action: Eren discard CATBALOU 🃏 ξ( ✿＞◡❛)!
+Action: Eren discard MANCATO 🃏 ξ( ✿＞◡❛)!
+---------------------
+Action: Freya draw a card ξ( ✿＞◡❛)!
+Action: Freya draw a card ξ( ✿＞◡❛)!
+Warning: Freya used MANCATO failed
+Warning: Freya used BANG failed
+Warning: Freya used BANG failed
+Warning: Freya used BANG failed
+Warning: Freya used PANICOI failed
+Player Akira HP change -1. Now HP: 1
+Action: Freya discard DUELLO 🃏 ξ( ✿＞◡❛)!
+Action: Freya used DUELLO successed
+Warning: Freya used BANG failed
+Action: Freya discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Player Freya HP change -1��Player Freya HP change . Now HP: 3
+Action: Freya used MANCATO successed
+Action: Freya discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Freya HP change 1. Now HP: 4
+Action: Freya used BANG successed
+---------------------
+Action: Sky draw a card ξ( ✿＞◡❛)!
+Action: Sky draw a card ξ( ✿＞◡❛)!
+Action: Sky discard DINAMITE 🃏 ξ( ✿＞◡❛)!
+Action: Sky used DINAMITE successed
+Action: Sky discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Akira HP change -1��Player Akira HP change . Now HP: 0
+Action: Sky used BANG successed
+Action: Akira discard SCHOFIELD 🃏 ξ( ✿＞◡❛)!
+Action: Sky discard PRIGIONE 🃏 ξ( ✿＞◡❛)!
+Action: Sky used PRIGIONE successed
+Action: Sky discard MANCATO 🃏 ξ( ✿＞◡❛)!
+---------------------
+Action: Bob draw a card ξ( ✿＞◡❛)!
+DILIGENZA: ♠09
+Action: Bob discard DILIGENZA 🃏 ξ( ✿＞◡❛)!
+Action: Bob discard PRIGIONE 🃏 ξ( ✿＞◡❛)!
+FAILED: Bob judged PRIGIONE failed
+---------------------
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud discard MANCATO 🃏 ξ( ✿＞◡❛)!
+---------------------
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Dora discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Eren HP change -1��Player Eren HP change . Now HP: 2
+Action: Dora used BANG successed
+Action: Dora discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Action: Dora discard REMINGTON 🃏 ξ( ✿＞◡❛)!
+Action: Dora discard REV. CARABINE 🃏 ξ( ✿＞◡❛)!
+Action: Dora used REV. CARABINE successed
+---------------------
+Action: Eren draw a card ξ( ✿＞◡❛)!
+Action: Eren draw a card ξ( ✿＞◡❛)!
+---------------------
+Action: Freya draw a card ξ( ✿＞◡❛)!
+Action: Freya draw a card ξ( ✿＞◡❛)!
+Action: Freya discard SCHOFIELD 🃏 ξ( ✿＞◡❛)!
+Action: Freya used SCHOFIELD successed
+---------------------
+Action: Sky draw a card ξ( ✿＞◡❛)!
+CATBALOU: ♦09
+Action: Sky discard CATBALOU 🃏 ξ( ✿＞◡❛)!
+FAILED: Sky judged DINAMITE failed
+Action: Sky draw a card ξ( ✿＞◡❛)!
+Action: Sky draw a card ξ( ✿＞◡❛)!
+Action: Bob discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Cloud discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Dora discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Eren HP change -1��Player Eren HP change . Now HP: 1
+Player Freya HP change -11. Now HP: 3
+Action: Sky discard INDIANI 🃏 ξ( ✿＞◡❛)!
+Action: Sky used INDIANI successed
+Action: Sky discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Action: Sky discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Bob HP change -1��Player Bob HP change . Now HP: 2
+Action: Sky used BANG successed
+---------------------
+Action: Bob draw a card ξ( ✿＞◡❛)!
+SCHOFIELD: ♣12
+Action: Bob discard SCHOFIELD 🃏 ξ( ✿＞◡❛)!
+FAILED: Bob judged DINAMITE failed
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Sky HP change -1��Player Sky HP change . Now HP: 3
+Action: Bob used BANG successed
+Action: Sky discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Player Sky HP change 1. Now HP: 4
+Action: Sky used MANCATO successed
+---------------------
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+PANICOI: ♥12
+Action: Cloud discard PANICOI 🃏 ξ( ✿＞◡❛)!
+FAILED: Cloud judged DINAMITE failed
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud discard PANICOI 🃏 ξ( ✿＞◡❛)!
+Player Cloud HP change -1. Now HP: 2
+Action: Cloud discard DUELLO 🃏 ξ( ✿＞◡❛)!
+Action: Cloud used DUELLO successed
+---------------------
+Action: Dora draw a card ξ( ✿＞◡❛)!
+DINAMITE: ♥02
+Action: Dora discard DINAMITE 🃏 ξ( ✿＞◡❛)!
+FAILED: Dora judged DINAMITE failed
+Action: Dora draw a card ξ( ✿＞◡❛)!
+Action: Dora draw a card ξ( ✿＞◡❛)!
+---------------------
+Action: Eren draw a card ξ( ✿＞◡❛)!
+REMINGTON: ♣13
+Action: Eren discard REMINGTON 🃏 ξ( ✿＞◡❛)!
+FAILED: Eren judged DINAMITE failed
+Player Eren HP change 3. Now HP: 4

@@ -199,8 +199,6 @@ char *gameloop(game *bang)
             char *m = {0};
             m = judge(cplayer, cplayer->_dinamite, bang);
             cplayer->_dinamite = NULL;
-            if(bang->_discard[bang->_discard_cnt-1] == NULL)
-                printf("Warning: dinamite card disappear.\n");
             if (strncmp(cplayer->_role->_name, "LuckyDuke", 9) == 0 && m[0] == 'F')
             {
                 // hp +3
@@ -415,7 +413,7 @@ char *gameloop(game *bang)
             {
                 if (cplayer->_hand_cnt > cplayer->_hp)
                 {
-                    printf("Warning: Your cards are more than your hp. Please keep used your cards.\n");
+                    printf("Warning: Your cards are more than your hp. Please keep using your cards.\n");
                     continue;
                 }
                 else
@@ -443,6 +441,7 @@ char *gameloop(game *bang)
             {
                 char *msg = "Warning: No valid action.";
                 // Action
+                printf("%s plays %s:\n", cplayer->_name, targetcard->_name);
                 if (strncmp(targetcard->_name, "BANG", 4) == 0 ||
                     (strncmp(targetcard->_name, "MANCATO", 4) == 0 &&
                     strncmp(cplayer->_role->_name, "CalamityJanet", 11) == 0))
@@ -1026,7 +1025,7 @@ char *displayAction(const player *p, card *c, int32_t type)
 }
 char *judge(player *p, card *c, game *game) //判定
 {
-    // printf("Judge in\n");
+    printf("%s judge %s...\n", p->_name, c->_name);
     draw(p, game);
     // printf("draw\n");
     char msg[200] = {0};

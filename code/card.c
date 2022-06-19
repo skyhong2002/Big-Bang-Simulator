@@ -58,7 +58,7 @@ char *bangAction(player *me, card *c, player *target, game *game)
             changeHP(target, -1, game);
             if (strncmp(target->_role->_name, "ElGringo", 8) == 0)
             {
-                printf("Because Player %s is ElGringo, so he can draw your card\n", target->_name);
+                printf("Since Player %s is ElGringo, he can draw your card\n", target->_name);
                 drawplayer(target, me, 2);
             }
             return displayAction(me, c, 3);
@@ -234,7 +234,7 @@ char *catBalou(player *me, card *c, player *target, game *game)
             {
                 // printf("discard\n");
                 discard(target, target->_hand[target->_hand_cnt - 1], 2, game);
-                printf("discard success\n");
+                // printf("discard success\n");
             }
             else
             {
@@ -266,6 +266,7 @@ char *catBalou(player *me, card *c, player *target, game *game)
             }
         }
         discard(me, c, 2, game);
+        // printf("discard me\n");
         return displayAction(me, c, 3);
     }
     else
@@ -375,7 +376,7 @@ char *duel(player *me, card *c, player *target, game *game)
     changeHP(temptplayer, -1, game);
     if (strncmp(temptplayer->_role->_name, "ElGringo", 8) == 0)
     {
-        printf("Because Player %s is ElGringo, so ElGringo can draw a card\n", target->_name);
+        printf("Player %s is ElGringo, so %s can draw a card\n", target->_name, target->_name);
         if (temptplayer == me)
         {
             drawplayer(temptplayer, target, 2);
@@ -595,7 +596,7 @@ char *gatling(player *me, card *c, game *game)
                 changeHP(game->_player[i], -1, game);
                 if (strncmp(game->_player[i]->_role->_name, "ElGringo", 8) == 0)
                 {
-                    printf("Because Player %s is ElGringo, so ElGringo can draw a card\n", game->_player[i]->_name);
+                    printf("Player %s is ElGringo, so %s can draw a card\n", game->_player[i]->_name, game->_player[i]->_name);
                     drawplayer(game->_player[i], me, 2);
                 }
             }
@@ -626,6 +627,15 @@ char *indians(player *me, card *c, game *game)
             }
             else
             {
+                if(game->_player[i]->_hand_cnt == 0)
+                {
+                    changeHP(game->_player[i], -1, game);
+                    if (strncmp(game->_player[i]->_role->_name, "ElGringo", 8) == 0)
+                    {
+                        printf("Because Player %s is ElGringo, so ElGringo can draw a card\n", game->_player[i]->_name);
+                        drawplayer(game->_player[i], me, 2);
+                    }                    
+                }
                 for (int32_t j = 0; j < game->_player[i]->_hand_cnt; j++)
                 {
                     if (strncmp("CalamityJanet", game->_player[i]->_role->_name, 13) == 0)
@@ -665,6 +675,10 @@ char *indians(player *me, card *c, game *game)
                         }
                     }
                 }
+            }
+            if( i+1 == game->_total_player_cnt)
+            {
+                break;
             }
         }
         discard(me, c, 2, game);
