@@ -72,7 +72,6 @@ int main(int32_t argc, char *argv[])
     printf("Game log will be stored in %s\n",logfile_name);
     printf("More option see \"./main -h\"\n\n");
     gameInit(&bang, playercnt, yourname, logfile_name);
-    printf("\nGAME START\n\n");
 
     char *winner = gameloop(&bang);
     char *yourid = bang._player[0]->_identity;

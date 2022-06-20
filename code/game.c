@@ -45,14 +45,27 @@ void saveLogInit(game *bang) {
         for (int j = 0; j < p->_hand_cnt; ++j)
             fprintf(f, "\t%d: %s\n", j, p->_hand[j]->_name);
     }
-    fprintf(f, "\nBANG! Game start\n[PRESS ENTER TO PRECEED]");
+    fprintf(f, "\nBANG! Game start\n");
+
+    fclose(f);
+
+    printf("\033[H\033[J");
+    printf("Game Player Info:\n", bang->_total_player_cnt);
+    for (int i = 0; i < bang->_total_player_cnt; ++i) {
+        player *p = bang->_player[i];
+        printf("\n%s (ID: %d, MAXHP: %d)\n", p->_name, p->_id, p->_max_hp);
+        if(p->_identity[0] == 'S' || p->_id == 0)
+            printf("\tidentity: %s\n", p->_identity);
+        else
+            printf("\tidentity: TOP SECRET\n");
+        printf("\trole:     %s\n\t%s\n", p->_role->_name, p->_role->_skill);
+    }
+    printf("\nBANG! GAME START\n\n");
 
     printf("Next player: %s\n[PRESS ENTER TO PROCEED]", bang->_player[bang->_turn]->_name);
     char order[256] = {0};
     fgets(order, sizeof(order), stdin);
     fflush(stdin);
-
-    fclose(f);
 }
 
 void saveLog(char *message) {
