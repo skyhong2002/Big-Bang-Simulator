@@ -14,5 +14,5 @@ cd Big-Bang-Simulator
 
 ```
 make
-./main // -p to show help message
+./main # -p to show help message
 ```
