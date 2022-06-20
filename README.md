@@ -31,5 +31,5 @@ make
 
 ## Known issue
 
-segmentation fault when bot trying to play a certain card, very rarely occurs.
+segmentation fault when bot trying to play a certain card, very rarely occurs.  
 Gatlings and Indians could be the problem, but we still can't find it.
