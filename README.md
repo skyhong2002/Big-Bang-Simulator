@@ -16,3 +16,16 @@ cd Big-Bang-Simulator
 make
 ./main # -p to show help message
 ```
+
+
+## Support OS
+
+### Operational
+
+- Ubuntu 20.04 LTS
+- Ubuntu 22.04 LTS
+
+### Not supported
+
+- MacOS
+`rand()` issue, see [this](https://stackoverflow.com/questions/64680033/rand-behaves-differently-between-macos-and-linux)
