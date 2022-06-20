@@ -17,7 +17,6 @@ make
 ./main # -p to show help message
 ```
 
-
 ## Support OS
 
 ### Operational
@@ -29,3 +28,8 @@ make
 
 - MacOS
 `rand()` issue, see [this](https://stackoverflow.com/questions/64680033/rand-behaves-differently-between-macos-and-linux)
+
+## Known issue
+
+segmentation fault when bot trying to play a certain card, very rarely occurs.
+Gatlings and Indians could be the problem, but we still can't find it.
