@@ -298,7 +298,7 @@ char *duel(player *me, card *c, player *target, game *game)
         if (temptplayer->_id == 0)
         {
             int32_t choose = 0;
-            printf("Do you want to throw bang?\n");
+            printf("Do you want to play BANG? You have %d BANG card(s)\n", temptplayer->_hand_cnt);
             printf("1: Yes\n2: No\nChoice: ");
             scanf("%d", &choose);
             fflush(stdin);

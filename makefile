@@ -3,4 +3,4 @@ all:
 
 clean:
 	rm -rf main
-	rm -rf a.out
+	rm -rf *.txt

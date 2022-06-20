@@ -280,6 +280,8 @@ void gameInit(game *bang, int32_t pcnt, char *pname, char *fname) {
         }
         bang->_player[i] = calloc(1, sizeof(player));
         playerInit(bang->_player[i], namelist[i], iden[x], bang, ROLE);
+        if(iden[x][0] == 'S') // "Sceriffo"
+            bang->_turn = i;
     }
     printf("Game init complete.\n");
 }
