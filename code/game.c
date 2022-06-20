@@ -742,6 +742,7 @@ int32_t getAction(game *bang, card *c) {
     {
         srand(time(NULL));
         want = (rand() % (bang->_total_player_cnt + 3)) - 2;
+        if(want > 0 && rand() % 100 < 30) want = 0;
         if ((strncmp("Action:", c->_skill, 7) != 0 &&
              strncmp("PRIGIONE", c->_name, 8) != 0)){
             if(want > 0) want = 0;
