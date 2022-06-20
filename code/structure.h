@@ -37,7 +37,7 @@ typedef struct _player
     char *_name;
     uint8_t _position; // 角色位置
     role *_role;
-    char *_identity; // Sceriffo, Vice, Fuorilegge, Rinnegato
+    char *_identity; // Sceriffo, Vice, Fuorilecce, Rinnegato
     int8_t _max_hp;  // after checking the role is Sceriffo or not
     int8_t _hp;
     int8_t _hand_cnt; // must not higher than _hp at the end of round

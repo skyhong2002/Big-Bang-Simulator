@@ -78,7 +78,7 @@ void saveLog(char *message) {
         printf("File could not be opened!\n");
         return;
     }
-    if(message[0] != 'W' || strncmp(message, "FAILED:", 7) != 0)
+    if(message[0] != 'W')
         fprintf(f, "%s\n", message);
     msleep(500);
     fclose(f);
@@ -129,11 +129,6 @@ char *isGameEnd(game *bang) {
                     if(dead->_gun != NULL) discard(dead, dead->_gun, 1, bang);
                     if(dead->_horse != NULL) discard(dead, dead->_horse, 1, bang);
                     if(dead->_jail != NULL) discard(dead, dead->_jail, 1, bang);
-                    dead->_dinamite = NULL;
-                    dead->_barrel = NULL;
-                    dead->_gun = NULL;
-                    dead->_horse = NULL;
-                    dead->_jail = NULL;
                 }
                 else{
                     printf("ROLE effect: VultureSam (plunder dead man's body)\n");
@@ -145,6 +140,11 @@ char *isGameEnd(game *bang) {
                     for(int32_t i = 0; i < 5; i++) {
                         drawplayer(sam, dead, 1);
                     }
+                    dead->_dinamite = NULL;
+                    dead->_barrel = NULL;
+                    dead->_gun = NULL;
+                    dead->_horse = NULL;
+                    dead->_jail = NULL;
                 }
             }
         }
@@ -524,6 +524,10 @@ char *gameloop(game *bang) {
                                 }
                             }
                         }
+                        if(target->_hp <= 0){
+                            SceriffoKilledVice(cplayer, target, bang);
+                            KilledFuorilecce(cplayer, target, bang);
+                        }
                     }
                     else{
                         printf("Warning: You can use BANG only once.\n");
@@ -877,7 +881,7 @@ char *displayAction(const player *p, card *c, int32_t type) {
         strcat(strmessage, "FAILED: ");
         strcat(printmessage, "FAILED: ");
     }
-    else if (type == 3 || type == 5 || type == 7) {
+    else if (type == 3 || type == 5 || type == 7 || type == 10) {
         strcat(strmessage, "Action: ");
         strcat(printmessage, "Action: ");
     }
@@ -891,7 +895,7 @@ char *displayAction(const player *p, card *c, int32_t type) {
         strcat(strmessage, p->_name);
         strcat(printmessage, p->_name);
     }
-    if (type != 5 && type != 6 && type != 7 && type != 8 && type != 9 && type != 0) {
+    if (type != 5 && type != 6 && type != 7 && type != 8 && type != 9 && type != 0 && type != 10) {
         if (type == 3 || type == 4) {
             strcat(strmessage, " used ");
             strcat(printmessage, " used ");
@@ -952,11 +956,16 @@ char *displayAction(const player *p, card *c, int32_t type) {
             strcat(printmessage, "💣"); // dinamite
         }
     }
-    if(type == 0) {
+    if(type == 10)
+    {
+        strcat(strmessage, "Draw a card from other player.");
+        strcat(printmessage, "Draw a card from other player.");             
+    }
+    else if(type == 0) {
         strcat(strmessage, "judged");
         strcat(printmessage, "judged");        
     }
-    if (type == 1 || type == 3) {
+    else if (type == 1 || type == 3) {
         strcat(strmessage, " successed");
         strcat(printmessage, " successed");
     }
@@ -1075,4 +1084,65 @@ char *judge(player *p, card *c, game *game) //判定
     }
     // printf("return 0\n");
     return displayAction(p, c, 0);
+}
+
+bool SceriffoKilledVice(player *p, player *dead, game* game)
+{
+    if( p->_identity[0] == 'S' && dead->_identity[0] == 'V')
+    {
+        printf("So sad Sceriffo. You killed your vice.(;´༎ຶД༎ຶ`)\n");
+        saveLog("So sad Sceriffo. You killed your vice.(;´༎ຶД༎ຶ`)\n");
+        printf("You will lose your all hand cards and equipment.\n");
+        saveLog("You will lose your all hand cards and equipment.\n");
+        for(int32_t i = 0; i<p->_hand_cnt; i++)
+        {
+            discard(p, p->_hand[i], 2, game);
+            i = 0;
+        }
+        if(p->_gun!=NULL)
+        {
+            discard(p, p->_gun, 1, game);
+            p->_gun = NULL;
+        }
+        if(p->_horse!=NULL)
+        {
+            discard(p, p->_horse, 1, game);
+            p->_horse = NULL;
+        }
+        if(p->_dinamite!=NULL)
+        {
+            discard(p, p->_dinamite, 1, game);
+            p->_dinamite = NULL;
+        }
+        if(p->_barrel!=NULL)
+        {
+            discard(p, p->_barrel, 1, game);
+            p->_barrel = NULL;
+        }
+        return true;
+    }
+    else 
+    {
+        return false;
+    }
+    return true;
+}
+
+bool KilledFuorilecce(player *p, player *dead, game* game)
+{
+    if(dead->_identity[0] == 'F')
+    {
+        printf("Congratulations! You killed the Fuorilecceヽ(・∀・)ﾉ\n");
+        saveLog("Congratulations! You killed the Fuorilecceヽ(・∀・)ﾉ\n");
+        printf("The one who kills Fuorilecce can draw three cards.\n");
+        draw(p, game);
+        draw(p, game);
+        draw(p, game);
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+    return false;
 }

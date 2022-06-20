@@ -1,0 +1,58 @@
+Game Player: 5
+
+Joker (ID: 0, MAXHP: 4)
+identity: Fuorilecce
+role:     KitCarlson
+Handcard:
+	0: BANG
+	1: BIRRA
+	2: DILIGENZA
+	3: MANCATO
+
+Akira (ID: 1, MAXHP: 4)
+identity: Fuorilecce
+role:     SlabTheKiller
+Handcard:
+	0: WELLSFARGO
+	1: INDIANI
+	2: BANG
+	3: BANG
+
+Bob (ID: 2, MAXHP: 4)
+identity: Rinnecato
+role:     PedroRamirez
+Handcard:
+	0: CATBALOU
+	1: BIRRA
+	2: BIRRA
+	3: CATBALOU
+
+Cloud (ID: 3, MAXHP: 5)
+identity: Sceriffo
+role:     SuzyLafayette
+Handcard:
+	0: CATBALOU
+	1: BANG
+	2: MANCATO
+	3: BARREL
+	4: BANG
+
+Dora (ID: 4, MAXHP: 3)
+identity: Vice
+role:     PaulRegret
+Handcard:
+	0: MANCATO
+	1: SCHOFIELD
+	2: BANG
+
+BANG! Game start
+---------------------
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Bob HP change -1. Now HP: 3
+Action: Cloud used BANG successed
+Action: Cloud discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Cloud discard BARREL 🃏 ξ( ✿＞◡❛)!
+Action: Cloud used BARREL successed
+Action: Cloud discard MANCATO 🃏 ξ( ✿＞◡❛)!

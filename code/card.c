@@ -618,6 +618,7 @@ char *gatling(player *me, card *c, game *game)
                 }
             }
         }
+        // printf("End loop\n");
         discard(me, c, 2, game);
         return displayAction(me, c, 3);
     }
@@ -747,7 +748,7 @@ void checkDistance(int32_t *between, int32_t *cD, player *me, player *target, ga
 // get info printf information? vv 1: equip 2: hand
 bool drawplayer(player *me, player *target, int8_t choice)
 {
-    if (me->_id == 0)
+    if (me->_id == 0 && target->_hp>0)
     {
         if (choice == 1)
         {
@@ -904,6 +905,7 @@ bool drawplayer(player *me, player *target, int8_t choice)
                     printf("Your input is wrong. Please try again.\n");
                 }
             }
+            displayAction(me, NULL, 10);
             return true;
         }
     }
@@ -927,52 +929,62 @@ bool drawplayer(player *me, player *target, int8_t choice)
             target->_hand_cnt -= 1;
         }
         else if(choice == 1)
-        {
-            me->_hand_cnt += 1;
-            int32_t cnt = me->_hand_cnt;   
+        { 
             if (target->_gun != NULL)
             {
+                me->_hand_cnt += 1;
+                int32_t cnt = me->_hand_cnt;  
                 card *c = target->_gun;
                 me->_hand[cnt - 1] = c;  
-                card* tempt = calloc(1,sizeof(card*));            
-                target->_gun = tempt;
-                target->_gun = NULL;
+                // card* tempt = calloc(1,sizeof(card*));            
+                // target->_gun = tempt;
+                // target->_gun = NULL;
             }
-            if (target->_horse!= NULL)
+            else if (target->_horse!= NULL)
             {
+                me->_hand_cnt += 1;
+                int32_t cnt = me->_hand_cnt;  
                 card *c = target->_horse;
                 me->_hand[cnt - 1] = c;  
-                card* tempt = calloc(1,sizeof(card*));            
-                target->_horse = tempt;
-                target->_horse = NULL;
+                // card* tempt = calloc(1,sizeof(card*));            
+                // target->_horse = tempt;
+                // target->_horse = NULL;
             }  
-            if (target->_dinamite!= NULL)
+            else if (target->_dinamite!= NULL)
             {
+                me->_hand_cnt += 1;
+                int32_t cnt = me->_hand_cnt;  
                 card *c = target->_dinamite;
                 me->_hand[cnt - 1] = c;  
-                card* tempt = calloc(1,sizeof(card*));            
-                target->_dinamite= tempt;
-                target->_dinamite = NULL;
+                // card* tempt = calloc(1,sizeof(card*));            
+                // target->_dinamite= tempt;
+                // target->_dinamite = NULL;
             }   
-            if (target->_jail!= NULL)
+            else if (target->_jail!= NULL)
             {
+                me->_hand_cnt += 1;
+                int32_t cnt = me->_hand_cnt;  
                 card *c = target->_jail;
                 me->_hand[cnt - 1] = c;  
-                card* tempt = calloc(1,sizeof(card*));            
-                target->_jail = tempt;
-                target->_jail = NULL;
+                // card* tempt = calloc(1,sizeof(card*));            
+                // target->_jail = tempt;
+                // target->_jail = NULL;
             } 
-            if (target->_barrel!= NULL)
+            else if (target->_barrel!= NULL)
             {
+                me->_hand_cnt += 1;
+                int32_t cnt = me->_hand_cnt;  
                 card *c = target->_barrel;
                 me->_hand[cnt - 1] = c;  
-                card* tempt = calloc(1,sizeof(card*));            
-                target->_barrel = tempt;
-                target->_barrel = NULL;
+                // card* tempt = calloc(1,sizeof(card*));            
+                // target->_barrel = tempt;
+                // target->_barrel = NULL;
             }                          
         }
+        displayAction(me, NULL, 10);
         return true;
     }
+    displayAction(me, NULL, 10);
     return true;
 }
 
