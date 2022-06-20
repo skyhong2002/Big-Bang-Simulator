@@ -34,84 +34,59 @@ Handcard:
 BANG! Game start
 ---------------------
 Action: Joker draw a card 
-
 Action: Joker draw a card 
-
 Action: Joker discard BANG 
-
 Player Akira HP change -1�Player Akira HP change . Now HP: 3
 Action: Joker used BANG successed
 Action: Akira discard MANCATO 
-
 Player Akira HP change 1. Now HP: 4
 Action: Akira used MANCATO successed
 
 Action: Joker discard VOLCANIC 
-
 Action: Joker used VOLCANIC successed
 Action: Joker discard BANG 
-
 Player Akira HP change -1�Player Akira HP change . Now HP: 3
 Action: Joker used BANG successed
 Action: Akira discard MANCATO 
-
 Player Akira HP change 1. Now HP: 4
 Action: Akira used MANCATO successed
 
 ---------------------
 Action: Akira draw a card 
-
 Action: Akira draw a card 
-
 Action: Akira discard MANCATO 
-
 Action: Akira discard PANICOI 
-
 
 ---------------------
 Action: Bob draw a card 
-
 Action: Bob draw a card 
 
-
 Action: Bob discard REMINGTON 
-
 Action: Bob used REMINGTON successed
 Action: Bob discard BANG 
-
 Player Joker HP change -1�Player Joker HP change . Now HP: 3
 Player Akira HP change -13. Now HP: 3
 Action: Cloud draw a card 
-
 Player Cloud HP change -13. Now HP: 4
 Action: Bob discard GATLING 
-
 Action: Bob used GATLING successed
 
 ---------------------
 Action: Cloud draw a card 
-
 Action: Cloud draw a card 
-
 Action: Cloud discard BANG 
-
 Action: Cloud draw a card 
-
 Player Cloud HP change -1�Â¸Player Cloud HP change . Now HP: 3
 Action: Cloud used BANG successed
 Action: Cloud discard BANG 
-
 Player Bob HP change -1. Now HP: 2
 Action: Cloud discard DUELLO 
-
 Action: Cloud used DUELLO successed
 
 Player Cloud HP change 1. Now HP: 4
 Action: Cloud discard BIRRA 
-
 Action: Cloud used BIRRA successed
 Action: Cloud discard APPALOOSA 
-
 Action: Cloud used APPALOOSA successed
 
 Player Joker HP change 1. Now HP: 4
@@ -119,202 +94,136 @@ Player Akira HP change 1. Now HP: 4
 Player Bob HP change 1. Now HP: 3
 Player Cloud HP change 1. Now HP: 5
 Action: Cloud discard SALOON 
-
 Action: Cloud used SALOON successed
 
 
 ---------------------
 Action: Joker draw a card 
-
 Action: Joker draw a card 
-
 Action: Joker discard BANG 
-
 Player Akira HP change -1�Player Akira HP change . Now HP: 3
 Action: Joker used BANG successed
 Action: Akira discard MANCATO 
-
 Player Akira HP change 1. Now HP: 4
 Action: Akira used MANCATO successed
 
 ---------------------
 Action: Akira draw a card 
-
 Action: Akira draw a card 
-
 Action: Cloud discard BANG 
-
 Player Akira HP change -1�Player Akira HP change . Now HP: 3
 Action: Akira discard DUELLO 
-
 Action: Akira used DUELLO successed
 Player Joker HP change -1. Now HP: 3
 Action: Akira discard DUELLO 
-
 Action: Akira used DUELLO successed
  draw a card 
-
  draw a card 
-
  draw a card 
-
  draw a card 
-
 Action: Akira discard EMPORIO 
-
 Action: Akira used EMPORIO successed
 
 ---------------------
 Action: Bob draw a card 
-
 Action: Bob draw a card 
-
 Action: Bob discard BANG 
-
 Player Bob HP change -1�Player Bob HP change . Now HP: 2
 Action: Bob used BANG successed
 Action: Bob discard MANCATO 
-
 Player Bob HP change 1. Now HP: 3
 Action: Bob used MANCATO successed
 Action: Bob discard MUSTANG 
-
 Action: Bob used MUSTANG successed
 
 ---------------------
 Action: Cloud draw a card 
-
 Action: Cloud draw a card 
-
 
 ---------------------
 Action: Joker draw a card 
-
 Action: Joker draw a card 
 
-
 Action: Joker discard BANG 
-
 Player Akira HP change -1�Player Akira HP change . Now HP: 2
 Action: Joker used BANG successed
  draw a card 
-
  draw a card 
-
  draw a card 
-
  draw a card 
-
 Action: Joker discard EMPORIO 
-
 Action: Joker used EMPORIO successed
 
 Player Joker HP change 1. Now HP: 4
 Action: Joker discard BIRRA 
-
 Action: Joker used BIRRA successed
 Action: Joker discard BANG 
-
 Player Akira HP change -1�Player Akira HP change . Now HP: 1
 Action: Joker used BANG successed
 
 ---------------------
 Action: Akira draw a card 
-
 Action: Akira draw a card 
-
 Warning: Akira used PANICOI failed
 Action: Akira discard VOLCANIC 
-
 Action: Akira used VOLCANIC successed
 Warning: Akira used PANICOI failed
 Action: Akira discard PANICOI 
-
 Action: Akira used PANICOI successed
 
 Action: Akira discard VOLCANIC 
-
 Action: Akira discard WINCHESTER 
-
 Action: Akira used WINCHESTER successed
 
 ---------------------
 Action: Bob draw a card 
-
 Action: Bob draw a card 
-
 
 Action: Bob discard PRIGIONE 
-
 Action: Bob used PRIGIONE successed
 Action: Bob discard PANICOI 
-
 Action: Bob used PANICOI successed
 Action: Bob draw a card 
-
 Action: Bob draw a card 
-
 Action: Bob discard DILIGENZA 
-
 Action: Bob used DILIGENZA successed
 Action: Bob discard BANG 
-
 Player Akira HP change -1�Player Akira HP change . Now HP: 0
 Action: Bob used BANG successed
 Action: Akira discard BANG 
-
 Action: Akira discard WINCHESTER 
-
 Action: Akira discard PRIGIONE 
-
 Action: Bob discard REMINGTON 
-
 Action: Bob discard SCHOFIELD 
-
 Action: Bob used SCHOFIELD successed
 
 
 Action: Bob discard SCHOFIELD 
-
 Action: Bob discard SCHOFIELD 
-
 Action: Bob used SCHOFIELD successed
 Action: Bob discard MANCATO 
 
-
 ---------------------
 Action: Cloud draw a card 
-
 Action: Cloud draw a card 
-
 Action: Cloud discard SCHOFIELD 
-
 Action: Cloud used SCHOFIELD successed
 Action: Cloud discard CATBALOU 
-
 Action: Cloud discard PRIGIONE 
-
 Action: Cloud used PRIGIONE successed
 
 Action: Cloud discard MANCATO 
 
-
 Action: Cloud discard MANCATO 
-
 
 ---------------------
 Action: Joker draw a card 
-
-DINAMITE: ĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂÄšÄĂĹĄĂÂĂÂĂÂĂĹĄĂÂĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂ´ĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂÄšÄĂĹĄĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂ02
+DINAMITE: �02
 Action: Joker discard DINAMITE 
-
 Action: Joker discard PRIGIONE 
-
 SUCCESS: Joker judged PRIGIONE successed
 Action: Joker draw a card 
-
 Action: Joker draw a card 
-
 Warning: Joker used BANG failed
 Warning: Joker used BANG failed
 Warning: Joker used BANG failed
@@ -322,367 +231,248 @@ Warning: Joker used BANG failed
 Warning: Joker used BANG failed
 
 Action: Joker discard BANG 
-
 Action: Cloud draw a card 
-
 Player Cloud HP change -1�Player Cloud HP change . Now HP: 4
 Action: Joker used BANG successed
 Action: Bob discard BANG 
-
 Action: Cloud discard BANG 
-
 Action: Joker discard INDIANI 
-
 Action: Joker used INDIANI successed
 
 ---------------------
 Action: Bob draw a card 
-
 Action: Bob draw a card 
-
 Action: Bob discard BANG 
 
-
 ---------------------
 Action: Cloud draw a card 
-
 Action: Cloud draw a card 
-
 
 ---------------------
 Action: Joker draw a card 
-
 Action: Joker draw a card 
-
 Warning: Joker used BANG failed
 Action: Joker discard BANG 
-
 Action: Cloud draw a card 
-
 Player Cloud HP change -1�Player Cloud HP change . Now HP: 3
 Action: Joker used BANG successed
 
 
 Action: Joker discard MUSTANG 
-
 Action: Joker used MUSTANG successed
 
 ---------------------
 Action: Bob draw a card 
-
 Action: Bob draw a card 
-
 
 ---------------------
 Action: Cloud draw a card 
-
 Action: Cloud draw a card 
-
 Action: Cloud discard SCHOFIELD 
-
 Action: Cloud discard REV. CARABINE 
-
 Action: Cloud used REV. CARABINE successed
 
 Action: Cloud draw a card 
-
 Action: Cloud draw a card 
-
 Action: Cloud discard DILIGENZA 
-
 Action: Cloud used DILIGENZA successed
 Action: Cloud discard WELLSFARGO 
 
 
-
 Player Cloud HP change 1. Now HP: 4
 Action: Cloud discard BIRRA 
-
 Action: Cloud used BIRRA successed
 Action: Cloud discard BANG 
-
 Player Joker HP change -1�Player Joker HP change . Now HP: 3
 Action: Cloud used BANG successed
 Action: Joker discard MANCATO 
-
 Player Joker HP change 1. Now HP: 4
 Action: Joker used MANCATO successed
 
 Action: Cloud discard PRIGIONE 
-
 Action: Cloud used PRIGIONE successed
 Action: Cloud discard BARREL 
-
 Action: Cloud used BARREL successed
 
 ---------------------
 Action: Joker draw a card 
-
 Action: Joker draw a card 
-
 Warning: Joker used BANG failed
 Action: Joker discard BANG 
-
 Action: Cloud draw a card 
-
 Player Cloud HP change -1�Player Cloud HP change . Now HP: 3
 Action: Joker used BANG successed
 Action: Cloud draw a card 
-
-BIRRA: ĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂÄšÄĂĹĄĂÂĂÂĂÂĂĹĄĂÂĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂ´ĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂÄšÄĂĹĄĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂ10
+BIRRA: �10
 Action: Cloud discard BIRRA 
-
 Player Cloud HP change 1. Now HP: 4
 SUCCESS: Cloud judged BARREL successed
 
 Action: Joker discard BANG 
-
 Action: Cloud draw a card 
-
 Player Cloud HP change -1�Player Cloud HP change . Now HP: 3
 Action: Joker used BANG successed
 Action: Cloud draw a card 
-
-CATBALOU: ĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂÄšÄĂĹĄĂÂĂÂĂÂĂĹĄĂÂĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂ´ĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂ11
+CATBALOU: 11
 Action: Cloud discard CATBALOU 
-
 FAILED: Cloud judged BARREL failed
 Action: Cloud discard MANCATO 
-
 Player Cloud HP change 1. Now HP: 4
 Action: Cloud used MANCATO successed
 
 ---------------------
 Action: Bob draw a card 
-
-INDIANI: ĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂÄšÄĂĹĄĂÂĂÂĂÂĂĹĄĂÂĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂ´ĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂ02
+INDIANI: 02
 Action: Bob discard INDIANI 
-
 Action: Bob discard PRIGIONE 
-
 FAILED: Bob judged PRIGIONE failed
 ---------------------
 Action: Cloud draw a card 
-
 Action: Cloud draw a card 
-
 Warning: Cloud used BARREL failed
 Warning: Cloud used BARREL failed
 
 Action: Cloud discard BANG 
-
 Player Joker HP change -1�Player Joker HP change . Now HP: 3
 Action: Cloud used BANG successed
 Action: Joker discard MANCATO 
-
 Player Joker HP change 1. Now HP: 4
 Action: Joker used MANCATO successed
 
 ---------------------
 Action: Joker draw a card 
-
 Action: Joker draw a card 
-
 Action: Joker discard BANG 
-
 Action: Cloud draw a card 
-
 Player Cloud HP change -1�Player Cloud HP change . Now HP: 3
 Action: Joker used BANG successed
 Action: Cloud draw a card 
-
-BARREL: ĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂÄšÄĂĹĄĂÂĂÂĂÂĂĹĄĂÂĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂ´ĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂÄšÄĂĹĄĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂ 12
+BARREL:  12
 Action: Cloud discard BARREL 
-
 FAILED: Cloud judged BARREL failed
 
 Action: Joker discard BANG 
-
 Action: Cloud draw a card 
-
 Player Cloud HP change -1�Player Cloud HP change . Now HP: 2
 Action: Joker used BANG successed
 Action: Cloud draw a card 
-
-REMINGTON: ĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂÄšÄĂĹĄĂÂĂÂĂÂĂĹĄĂÂĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂ´ĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂ13
+REMINGTON: 13
 Action: Cloud discard REMINGTON 
-
 FAILED: Cloud judged BARREL failed
 
 ---------------------
 Action: Bob draw a card 
-
 Action: Bob draw a card 
-
 Action: Joker discard BIRRA 
-
 Action: Bob discard CATBALOU 
-
 Action: Bob used CATBALOU successed
 Action: Bob discard SCHOFIELD 
-
 Action: Bob discard WINCHESTER 
-
 Action: Bob used WINCHESTER successed
 
 Action: Bob discard WINCHESTER 
-
 Action: Bob discard REMINGTON 
-
 Action: Bob used REMINGTON successed
 
 ---------------------
 Action: Cloud draw a card 
-
 Action: Cloud draw a card 
-
 Action: Cloud discard PANICOI 
-
 Action: Cloud used PANICOI successed
 Action: Cloud discard BANG 
-
 Action: Cloud draw a card 
-
 Player Cloud HP change -1�Player Cloud HP change . Now HP: 1
 Action: Cloud used BANG successed
 Action: Cloud draw a card 
-
-SCHOFIELD: ĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂÄšÄĂĹĄĂÂĂÂĂÂĂĹĄĂÂĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂ´ĂÂĂÂÄÂĂÂĂÂĂÂÄÂĂÂÄÂĂÂÄÂĂÂÄÂÄšÄÄÂĂÂ11
+SCHOFIELD: 11
 Action: Cloud discard SCHOFIELD 
-
 FAILED: Cloud judged BARREL failed
 Action: Cloud discard MANCATO 
-
 Player Cloud HP change 1. Now HP: 2
 Action: Cloud used MANCATO successed
 
 Action: Cloud discard SALOON 
-
 Action: Cloud discard DUELLO 
-
 Action: Cloud discard BANG 
-
 Action: Cloud discard VOLCANIC 
-
 Action: Cloud discard BARREL 
-
 
 ---------------------
 Action: Joker draw a card 
-
 Action: Joker draw a card 
-
 Action: Joker discard VOLCANIC 
-
 Action: Joker discard SCHOFIELD 
-
 Action: Joker used SCHOFIELD successed
 
 ---------------------
 Action: Bob draw a card 
-
 Action: Bob draw a card 
 
-
 Action: Bob discard BIRRA 
-
 Action: Bob discard MANCATO 
-
 Action: Joker draw a card 
-
 Action: Joker discard BIRRA 
-
 Action: Bob discard CATBALOU 
-
 Action: Bob used CATBALOU successed
 
 ---------------------
 Action: Cloud draw a card 
-
 Action: Cloud draw a card 
 
-
 Action: Cloud discard BANG 
-
 Player Joker HP change -1�Player Joker HP change . Now HP: 3
 Action: Cloud used BANG successed
 Action: Cloud discard BANG 
 
-
 ---------------------
 Action: Joker draw a card 
-
 Action: Joker draw a card 
-
 Player Bob HP change -1�Player Bob HP change . Now HP: 2
 Action: Cloud discard BANG 
-
 Action: Joker discard INDIANI 
-
 Action: Joker used INDIANI successed
 Warning: Joker used PRIGIONE failed
 
 ---------------------
 Action: Bob draw a card 
-
 Action: Bob draw a card 
-
 Action: Bob discard REMINGTON 
-
 Action: Bob discard WINCHESTER 
-
 Action: Bob used WINCHESTER successed
 Action: Bob discard BANG 
-
 Player Bob HP change -1�Player Bob HP change . Now HP: 1
 Action: Bob used BANG successed
 
 ---------------------
 Action: Cloud draw a card 
-
 Action: Cloud draw a card 
-
 
 Action: Cloud discard EMPORIO 
 
-
 ---------------------
 Action: Joker draw a card 
-
 Action: Joker draw a card 
-
 Action: Joker discard PANICOI 
-
 Action: Joker used PANICOI successed
 Player Joker HP change 1. Now HP: 4
 Action: Joker discard BIRRA 
-
 Action: Joker used BIRRA successed
 
 ---------------------
 Action: Bob draw a card 
-
 Action: Bob draw a card 
-
 
 Player Joker HP change -1�Player Joker HP change . Now HP: 3
 Action: Cloud draw a card 
-
 Player Cloud HP change -13. Now HP: 1
 Action: Cloud draw a card 
-
 Player Cloud HP change -11. Now HP: 0
 Action: Bob discard INDIANI 
-
 Action: Bob used INDIANI successed
 Action: Cloud discard MUSTANG 
-
 Action: Cloud discard BARREL 
-
 Action: Cloud discard REV. CARABINE 
-
 Action: Cloud discard APPALOOSA 
-
 
 BANG! Game end
 ---------------------

@@ -18,7 +18,9 @@ char *isGameEnd(game *bang);
 void saveLog(char *message);
 void displayPlayer(const player *p);
 void displayHandCard(const player *p);
-char *displayAction(const player *p, card *c, int32_t type); // 1: Success 2: Fail 3: Action: 4: Warning 5: Drawok 6: Drawnotok 7: Discardok 8: Discardnotok 9: drawnoplayer 0: Nocards
+// 1: Success 2: Fail 3: Action: 4: Warning 5: Drawok 6: Drawnotok 
+// 7: Discardok 8: Discardnotok 9: drawnoplayer 0: Nocards
+char *displayAction(const player *p, card *c, int32_t type); 
 char *judge(player *p, card *c, game *game);
 
 #endif

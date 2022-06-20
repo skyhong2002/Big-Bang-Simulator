@@ -1,0 +1,239 @@
+Game Player: 6
+
+NeoKent (ID: 0, MAXHP: 4)
+identity: Fuorilecce
+role:     SuzyLafayette
+Handcard:
+	0: DILIGENZA
+	1: BANG
+	2: VOLCANIC
+	3: BANG
+
+Akira (ID: 1, MAXHP: 4)
+identity: Rinnecato
+role:     CalamityJanet
+Handcard:
+	0: PRIGIONE
+	1: INDIANI
+	2: VOLCANIC
+	3: DUELLO
+
+Bob (ID: 2, MAXHP: 4)
+identity: Vice
+role:     SlabTheKiller
+Handcard:
+	0: BANG
+	1: DUELLO
+	2: BIRRA
+	3: BIRRA
+
+Cloud (ID: 3, MAXHP: 4)
+identity: Fuorilecce
+role:     SidKetchum
+Handcard:
+	0: EMPORIO
+	1: BANG
+	2: BANG
+	3: CATBALOU
+
+Dora (ID: 4, MAXHP: 5)
+identity: Sceriffo
+role:     WillyTheKid
+Handcard:
+	0: MUSTANG
+	1: DINAMITE
+	2: BANG
+	3: MANCATO
+	4: SCHOFIELD
+
+Eren (ID: 5, MAXHP: 4)
+identity: Fuorilecce
+role:     PedroRamirez
+Handcard:
+	0: WELLSFARGO
+	1: DUELLO
+	2: BANG
+	3: BANG
+
+BANG! Game start
+---------------------
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard DILIGENZA 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent used DILIGENZA successed
+Action: NeoKent discard VOLCANIC 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent used VOLCANIC successed
+Action: NeoKent discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Akira HP change -1. Now HP: 3
+Action: NeoKent used BANG successed
+Action: NeoKent discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Akira HP change -1. Now HP: 2
+Action: NeoKent used BANG successed
+Action: NeoKent discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent discard PANICOI 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent used PANICOI successed
+Action: NeoKent discard VOLCANIC 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent discard APPALOOSA 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard BIRRA 🃏 ξ( ✿＞◡❛)!
+Action: Akira discard DUELLO 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard CATBALOU 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent used CATBALOU successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Akira HP change -1. Now HP: 1
+Action: NeoKent used BANG successed
+Action: NeoKent discard PANICOI 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent used PANICOI successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard PRIGIONE 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent used PRIGIONE successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard BIRRA 🃏 ξ( ✿＞◡❛)!
+Player Akira HP change -1. Now HP: 0
+Player Bob HP change -1. Now HP: 3
+Player Cloud HP change -1. Now HP: 3
+Player Dora HP change -1. Now HP: 4
+Player Eren HP change -1. Now HP: 3
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard GATLING 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent used GATLING successed
+Action: Akira discard INDIANI 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard WINCHESTER 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent discard PANICOI 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent used PANICOI successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard DUELLO 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Bob HP change -1. Now HP: 2
+Action: NeoKent used BANG successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Bob HP change -1. Now HP: 1
+Action: NeoKent used BANG successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard DILIGENZA 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent used DILIGENZA successed
+Action: NeoKent discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Bob HP change -1. Now HP: 0
+Action: NeoKent used BANG successed
+Action: Bob discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Bob discard BIRRA 🃏 ξ( ✿＞◡❛)!
+Player NeoKent HP change 1. Now HP: 4
+Player Cloud HP change 1. Now HP: 4
+Player Dora HP change 1. Now HP: 5
+Player Eren HP change 1. Now HP: 4
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard SALOON 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent used SALOON successed
+Action: NeoKent discard PANICOI 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent used PANICOI successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Cloud HP change -1. Now HP: 3
+Action: NeoKent used BANG successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Cloud HP change -1. Now HP: 2
+Action: NeoKent used BANG successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard SCHOFIELD 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Cloud HP change -1. Now HP: 1
+Action: NeoKent used BANG successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Cloud HP change -1. Now HP: 0
+Action: NeoKent used BANG successed
+Action: Bob discard BIRRA 🃏 ξ( ✿＞◡❛)!
+Action: Cloud discard EMPORIO 🃏 ξ( ✿＞◡❛)!
+Action: Cloud discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Cloud discard PRIGIONE 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard BARREL 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent used BARREL successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Action: Dora discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Eren discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard INDIANI 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent used INDIANI successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Dora HP change -1. Now HP: 4
+Action: NeoKent used BANG successed
+Action: Dora discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Player Dora HP change 1. Now HP: 5
+Action: Dora used MANCATO successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard BARREL 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Dora HP change -1. Now HP: 4
+Action: NeoKent used BANG successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard PRIGIONE 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent used PRIGIONE successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Dora HP change -1. Now HP: 3
+Action: NeoKent used BANG successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard SCHOFIELD 🃏 ξ( ✿＞◡❛)!
+Action: Dora discard SCHOFIELD 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard CATBALOU 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent used CATBALOU successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Dora HP change -1. Now HP: 2
+Action: NeoKent used BANG successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard REMINGTON 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard BIRRA 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard PRIGIONE 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Dora HP change -1. Now HP: 1
+Action: NeoKent used BANG successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard MUSTANG 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent used MUSTANG successed
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard BIRRA 🃏 ξ( ✿＞◡❛)!
+Action: NeoKent draw a card ξ( ✿＞◡❛)!
+Action: NeoKent discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Dora HP change -1. Now HP: 0
+Action: NeoKent used BANG successed
+Action: Cloud discard CATBALOU 🃏 ξ( ✿＞◡❛)!
+Action: Dora discard MUSTANG 🃏 ξ( ✿＞◡❛)!
+BANG! Game end
+---------------------
+
+Winner: 
+Fuorilecce camp
+BANG! Game end
+---------------------
+
+Winner: 
+Fuorilecce camp

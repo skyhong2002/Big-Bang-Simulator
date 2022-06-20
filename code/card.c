@@ -861,6 +861,7 @@ bool drawplayer(player *me, player *target, int8_t choice)
         {
             if (target->_hand_cnt == 0)
             {
+                printf("Target player doesn't have cards\n");
                 return false;
             }
             while (1)

@@ -53,15 +53,20 @@ SUCCESS: Joker equiped REV. CARABINE successed
 Action: Akira discard BANG 🃏 ξ( ✿＞◡❛)!
 Action: Bob discard BANG 🃏 ξ( ✿＞◡❛)!
 Action: Cloud discard BANG 🃏 ξ( ✿＞◡❛)!
-Player Dora HP change -1D(Player Dora HP change . Now HP: 3
+Player Dora HP change -1. Now HP: 3
 Action: Joker discard INDIANI 🃏 ξ( ✿＞◡❛)!
 Action: Joker used INDIANI successed
 Action: Joker discard BANG 🃏 ξ( ✿＞◡❛)!
-Player Dora HP change -1D(Player Dora HP change . Now HP: 2
+Player Dora HP change -1. Now HP: 2
 Action: Joker used BANG successed
 Action: Joker discard BANG 🃏 ξ( ✿＞◡❛)!
-Player Dora HP change -1D(Player Dora HP change . Now HP: 1
+Player Dora HP change -1. Now HP: 1
 Action: Joker used BANG successed
 Action: Joker discard BANG 🃏 ξ( ✿＞◡❛)!
-Player Dora HP change -1D(Player Dora HP change . Now HP: 0
+Player Dora HP change -1. Now HP: 0
 Action: Joker used BANG successed
+BANG! Game end
+---------------------
+
+Winner: 
+Fuorilecce camp

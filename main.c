@@ -61,6 +61,7 @@ int main(int32_t argc, char *argv[])
         }
     }
     // option
+    printf("\033[H\033[J");
     printf("==========================\n"
            "    Big Bang Simulator    \n"
            MAG "(う-`)づ" YEL "︻╦̵̵̿╤──" BLU "   \\(˚☐˚」)/\n" RESET
@@ -69,8 +70,10 @@ int main(int32_t argc, char *argv[])
     game bang;
     
     printf("Game log will be stored in %s\n",logfile_name);
+    printf("More option see \"./main -h\"\n\n");
     gameInit(&bang, playercnt, yourname, logfile_name);
-    printf("GAME START\n");
+    printf("\nGAME START\n\n");
+
     char *winner = gameloop(&bang);
     char *yourid = bang._player[0]->_identity;
 

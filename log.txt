@@ -1,0 +1,42 @@
+Game Player: 4
+
+Joker (ID: 0, MAXHP: 5)
+identity: Sceriffo
+role:     JesseJones
+Handcard:
+	0: BANG
+	1: BANG
+	2: BANG
+	3: WINCHESTER
+	4: BIRRA
+
+Akira (ID: 1, MAXHP: 4)
+identity: Fuorilecce
+role:     KitCarlson
+Handcard:
+	0: CATBALOU
+	1: PRIGIONE
+	2: BARREL
+	3: BANG
+
+Bob (ID: 2, MAXHP: 4)
+identity: Fuorilecce
+role:     RoseDoolan
+Handcard:
+	0: BARREL
+	1: MANCATO
+	2: BANG
+	3: BANG
+
+Cloud (ID: 3, MAXHP: 4)
+identity: Rinnecato
+role:     CalamityJanet
+Handcard:
+	0: BANG
+	1: REV. CARABINE
+	2: MANCATO
+	3: EMPORIO
+
+BANG! Game start
+[PRESS ENTER TO PRECEED]---------------------
+Action: Joker draw a card ξ( ✿＞◡❛)!

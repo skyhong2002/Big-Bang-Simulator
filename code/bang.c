@@ -7,8 +7,7 @@
 #include "player.h"
 #include "game.h"
 
-void deckInit(game *game)
-{
+void deckInit(game *game) {
     static const card CARD_01 = {1, 1, APPALOOSA};
     static const card CARD_02 = {1, 1, BANG};
     static const card CARD_03 = {1, 2, MANCATO};
@@ -137,15 +136,13 @@ void deckInit(game *game)
     game->_discard_cnt = 0;
     game->_deck_cnt = game->_total_card_cnt;
 
-    for (int32_t i = 0; i < MAX_CARD_CNT; i++)
-    {
+    for (int32_t i = 0; i < MAX_CARD_CNT; i++) {
         // game->_discard[i] = calloc(1, sizeof(card));
         // game->_deck[i] = calloc(1, sizeof(card));
         shuff[i] = i + 1;
     }
     // shuffle 
-    for (int32_t i = MAX_CARD_CNT - 1; i >= 1; i--)
-    {
+    for (int32_t i = MAX_CARD_CNT - 1; i >= 1; i--) {
         int32_t tempt = 0;
         // printf("%d\n", i);
         x = rand() % (i);
@@ -173,8 +170,7 @@ int32_t player_position = 1;
 int8_t checkrole[16] = {0};
 int8_t checkiden[7] = {0};
 
-bool playerInit(player *p, char *name, char *identity, game *game, const role **ROLE)
-{
+bool playerInit(player *p, char *name, char *identity, game *game, const role **ROLE) {
     // printf("In place: %p\n", p);
     // uint8_t *pid = &player_id;
     p->_id = player_id;
@@ -188,12 +184,10 @@ bool playerInit(player *p, char *name, char *identity, game *game, const role **
     p->_position = player_position;
     player_position = player_position + 1;
     int32_t x = 0;
-    while (1)
-    {
+    while (1) {
         srand(time(NULL));
         x = rand() % 16;
-        if (checkrole[x] == 1)
-        {
+        if (checkrole[x] == 1) {
             continue;
         }
         else
@@ -203,8 +197,7 @@ bool playerInit(player *p, char *name, char *identity, game *game, const role **
         }
     }
     p->_hand = calloc(20, sizeof(card *));
-    for (int32_t i = 0; i < 20; i++)
-    {
+    for (int32_t i = 0; i < 20; i++) {
         p->_hand[i] = calloc(1, sizeof(card));
     }
     // printf("player init calloc hand\n");
@@ -229,8 +222,7 @@ bool playerInit(player *p, char *name, char *identity, game *game, const role **
     return true;
 }
 
-void gameInit(game *bang, int32_t pcnt, char *pname, char *fname)
-{
+void gameInit(game *bang, int32_t pcnt, char *pname, char *fname) {
     static const role ROLE_01 = {WillyTheKid, 4};
     static const role ROLE_02 = {Jourdonnais, 4};
     static const role ROLE_03 = {SlabTheKiller, 4};
@@ -271,11 +263,9 @@ void gameInit(game *bang, int32_t pcnt, char *pname, char *fname)
     // printf("Start player init.\n");
     bang->_player = calloc(bang->_total_player_cnt, sizeof(player *));
     // printf("Start loop\n");
-    for (int i = 0; i < bang->_total_player_cnt; ++i)
-    {
+    for (int i = 0; i < bang->_total_player_cnt; ++i) {
         int32_t x = 0;
-        while (1)
-        {
+        while (1) {
             srand(time(NULL));
             x = rand() % pcnt;
             if (checkiden[x] == 1)
