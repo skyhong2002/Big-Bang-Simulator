@@ -50,7 +50,7 @@ void saveLogInit(game *bang) {
     fclose(f);
 
     printf("\033[H\033[J");
-    printf("Game Player Info:\n", bang->_total_player_cnt);
+    printf("Game Player Info:\n");
     for (int i = 0; i < bang->_total_player_cnt; ++i) {
         player *p = bang->_player[i];
         printf("\n%s (ID: %d, MAXHP: %d)\n", p->_name, p->_id, p->_max_hp);
@@ -59,11 +59,14 @@ void saveLogInit(game *bang) {
         else
             printf("\tidentity: TOP SECRET\n");
         printf("\trole:     %s\n\t%s\n", p->_role->_name, p->_role->_skill);
+        msleep(1000);
     }
     printf("\nBANG! GAME START\n\n");
 
+    printOneLineStatus(bang, bang->_player[bang->_turn]);
     printf("Next player: %s\n[PRESS ENTER TO PROCEED]", bang->_player[bang->_turn]->_name);
     char order[256] = {0};
+    setbuf(stdin, NULL);
     fgets(order, sizeof(order), stdin);
     fflush(stdin);
 }
@@ -273,6 +276,7 @@ char *gameloop(game *bang) {
                     }
                     printf("---------------------\n");
                     printf("Choice: ");
+                    setbuf(stdin, NULL);
                     scanf("%d", &Jessechoice);
                     fflush(stdin);
                     if(drawplayer(cplayer, bang->_player[Jessechoice], 2)==false) {
@@ -310,6 +314,7 @@ char *gameloop(game *bang) {
             printf("3: %s\n", bang->_deck[bang->_deck_cnt - 3]->_name);
             printf("---------------------\n");
             printf("Choice(input 2 numbers, ex. 1 2): ");
+            setbuf(stdin, NULL);
             scanf("%d %d", &Kitchoice1, &Kitchoice2);
             fflush(stdin);
             if(Kitchoice2 < Kitchoice1){
@@ -341,7 +346,7 @@ char *gameloop(game *bang) {
             }
         }
         else if (strncmp(cplayer->_role->_name, "PedroRamirez", 12) == 0) {
-            printf("PedroRamirez first card from discard cards!\n");
+            printf("ROLE effect: PedroRamirez first card from discard cards!\n");
             if(bang->_discard_cnt == 0) {
                 printf("But there is no cards in discard area.\nJust draw card from desk.\n");
                 draw(cplayer, bang);
@@ -366,6 +371,7 @@ char *gameloop(game *bang) {
                 printf("You are BlackJack. Do you want to display your second card?\n");
                 printf("1: Yes\n2: No\nYour choice: ");
                 scanf("%d", &choiceblack);
+                setbuf(stdin, NULL);
                 fflush(stdin);
                 if (choiceblack == 1) {
                     printf("Card %s suit is %d.\n", cplayer->_hand[cplayer->_hand_cnt - 1]->_name, cplayer->_hand[cplayer->_hand_cnt - 1]->_suit);
@@ -399,9 +405,18 @@ char *gameloop(game *bang) {
         {
             int32_t opt = 0;
             int32_t action = -2;
+            int32_t tries = 0;
+            printOneLineStatus(bang, cplayer);
             while (opt == 0 || action == -2) {
+                if(cplayer->_id != 0 && tries){
+                    printf(".");
+                    fflush(stdout);
+                }
+                ++tries;
                 opt = getOption(bang, cplayer);
                 if (opt == -1){
+                    if(cplayer->_id != 0 && cplayer->_hp < cplayer->_hand_cnt)
+                        continue;
                     break;
                 }
                 if (opt > cplayer->_hand_cnt || opt == 0) {
@@ -409,6 +424,12 @@ char *gameloop(game *bang) {
                     continue;
                 }
                 action = getAction(bang, cplayer->_hand[opt - 1]);
+                if(cplayer->_id != 0)
+                    if(action > 0){
+                        if(bang->_player[action]->_hp <= 0){
+                            continue;
+                        }
+                    }
             }
             if (opt == -1) {
                 if (cplayer->_hand_cnt > cplayer->_hp) {
@@ -509,9 +530,17 @@ char *gameloop(game *bang) {
                     }
                 }
                 else if (strncmp(targetcard->_name, "DUELLO", 4) == 0) {
+                    if (target->_id == cplayer->_id){
+                        printf("Warning: Target cannot be yourself.\n");
+                        continue;
+                    }
                     msg = duel(cplayer, targetcard, target, bang);
                 }
                 else if (strncmp(targetcard->_name, "PANICOI", 4) == 0) {
+                    if (target->_id == cplayer->_id){
+                        printf("Warning: Target cannot be yourself.\n");
+                        continue;
+                    }
                     msg = panic(cplayer, targetcard, target, bang);
                 }
                 else if (strncmp(targetcard->_name, "CATBALOU", 4) == 0) {
@@ -575,6 +604,7 @@ char *gameloop(game *bang) {
 
         printf("Next player: %s\n[PRESS ENTER TO PROCEED]", bang->_player[bang->_turn]->_name);
         char order[256] = {0};
+        setbuf(stdin, NULL);
         fgets(order, sizeof(order), stdin);
         fflush(stdin);
 
@@ -643,7 +673,6 @@ void printOneLineStatus(game *bang, player *p){
 }
 
 int32_t getOption(game *bang, player *p) {
-    printOneLineStatus(bang, p);
     int32_t want = -2;
     while (want < -1 || want > p->_hand_cnt || want == 0){
         if (p->_id == 0) {
@@ -654,6 +683,7 @@ int32_t getOption(game *bang, player *p) {
             char order[256] = {0};
             char *tmp;
             tmp = calloc(4100, sizeof(char));
+            setbuf(stdin, NULL);
             fgets(order, sizeof(order), stdin);
             fflush(stdin);
             want = strtol(order, &tmp, 10);
@@ -698,7 +728,7 @@ int32_t getAction(game *bang, card *c) {
         char order[256] = {0};
         char *tmp;
         tmp = calloc(4100, sizeof(char));
-        fflush(stdin);
+        setbuf(stdin, NULL);
         fgets(order, sizeof(order), stdin);
         fflush(stdin);
         want = strtol(order, &tmp, 10);
@@ -727,12 +757,14 @@ int32_t getAction(game *bang, card *c) {
     if ((strncmp("Action:", c->_skill, 7) == 0 ||
          strncmp("PRIGIONE", c->_name, 8) == 0)) {
         if (want < -2 || want >= bang->_total_player_cnt) {
-            printf("Warning: Your action is illegal. Try again.\n");
+            if(bang->_turn == 0)
+                printf("Warning: Your action is illegal. Try again.\n");
             return -2;
         }
         if (want >= 0) {
             if (isDead(bang->_player[want])) {
-                printf("Warning: This player is dead. Try again.\n");
+                if(bang->_turn == 0)
+                    printf("Warning: This player is dead. Try again.\n");
                 return -2;
             }
         }
@@ -741,7 +773,8 @@ int32_t getAction(game *bang, card *c) {
     else
     {
         if (want < -2 || want > 0) {
-            printf("Warning: Your action is illegal. Try again.\n");
+            if(bang->_turn == 0)
+                printf("Warning: Your action is illegal. Try again.\n");
             return -2;
         }
         if (want == 0)
@@ -800,7 +833,6 @@ void shuffle(game *bang) {
 }
 void displayPlayer(const player *p) {
     printf("Health    : %d/%d\n", p->_hp, p->_max_hp);
-    printf("position  : %d\n", p->_position);
     printf("identity  : %s\n", (p->_id == 0 || strncmp(p->_identity, "Sceriffo", 4) == 0 ? p->_identity : "TOP SECRET"));
     printf("role name : %s\n", p->_role->_name);
     printf("role skill: %s\n", p->_role->_skill);

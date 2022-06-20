@@ -1,0 +1,220 @@
+Game Player: 4
+
+Joker (ID: 0, MAXHP: 4)
+identity: Fuorilecce
+role:     SlabTheKiller
+Handcard:
+	0: PRIGIONE
+	1: BIRRA
+	2: BIRRA
+	3: MANCATO
+
+Akira (ID: 1, MAXHP: 4)
+identity: Fuorilecce
+role:     Jourdonnais
+Handcard:
+	0: BIRRA
+	1: MANCATO
+	2: BANG
+	3: VOLCANIC
+
+Bob (ID: 2, MAXHP: 4)
+identity: Rinnecato
+role:     VultureSam
+Handcard:
+	0: DINAMITE
+	1: BARREL
+	2: BIRRA
+	3: BANG
+
+Cloud (ID: 3, MAXHP: 5)
+identity: Sceriffo
+role:     JesseJones
+Handcard:
+	0: BANG
+	1: MANCATO
+	2: MANCATO
+	3: BANG
+	4: PRIGIONE
+
+BANG! Game start
+---------------------
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud discard WINCHESTER 🃏 ξ( ✿＞◡❛)!
+Action: Cloud used WINCHESTER successed
+Action: Cloud discard PRIGIONE 🃏 ξ( ✿＞◡❛)!
+Action: Cloud used PRIGIONE successed
+Action: Cloud discard WINCHESTER 🃏 ξ( ✿＞◡❛)!
+Action: Cloud discard VOLCANIC 🃏 ξ( ✿＞◡❛)!
+Action: Cloud used VOLCANIC successed
+Action: Cloud discard BANG 🃏 ξ( ✿＞◡❛)!
+---------------------
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker discard PRIGIONE 🃏 ξ( ✿＞◡❛)!
+Action: Joker used PRIGIONE successed
+Action: Joker discard SCHOFIELD 🃏 ξ( ✿＞◡❛)!
+Action: Joker used SCHOFIELD successed
+---------------------
+Action: Akira draw a card ξ( ✿＞◡❛)!
+REMINGTON: ♣13
+Action: Akira discard REMINGTON 🃏 ξ( ✿＞◡❛)!
+Action: Akira discard PRIGIONE 🃏 ξ( ✿＞◡❛)!
+FAILED: Akira judged PRIGIONE failed
+---------------------
+Action: Bob draw a card ξ( ✿＞◡❛)!
+BARREL: ♠13
+Action: Bob discard BARREL 🃏 ξ( ✿＞◡❛)!
+Action: Bob discard PRIGIONE 🃏 ξ( ✿＞◡❛)!
+FAILED: Bob judged PRIGIONE failed
+---------------------
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud discard MANCATO 🃏 ξ( ✿＞◡❛)!
+---------------------
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Akira HP change -1. Now HP: 3
+Action: Joker used BANG successed
+Action: Akira discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Player Akira HP change 1. Now HP: 4
+Action: Akira used MANCATO successed
+Player Akira HP change -1. Now HP: 3
+Action: Joker discard DUELLO 🃏 ξ( ✿＞◡❛)!
+Action: Joker used DUELLO successed
+Action: Joker discard PRIGIONE 🃏 ξ( ✿＞◡❛)!
+Action: Joker used PRIGIONE successed
+---------------------
+Action: Akira draw a card ξ( ✿＞◡❛)!
+BANG: ♥01
+Action: Akira discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Akira discard PRIGIONE 🃏 ξ( ✿＞◡❛)!
+SUCCESS: Akira judged PRIGIONE successed
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+---------------------
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Cloud HP change -1. Now HP: 4
+Action: Bob used BANG successed
+Action: Cloud discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Player Cloud HP change 1. Now HP: 5
+Action: Cloud used MANCATO successed
+Action: Bob discard SCHOFIELD 🃏 ξ( ✿＞◡❛)!
+Action: Bob used SCHOFIELD successed
+Action: Bob discard DINAMITE 🃏 ξ( ✿＞◡❛)!
+Action: Bob used DINAMITE successed
+---------------------
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+---------------------
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Akira HP change -1. Now HP: 2
+Action: Joker used BANG successed
+---------------------
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Player Akira HP change 1. Now HP: 3
+Action: Akira discard BIRRA 🃏 ξ( ✿＞◡❛)!
+Action: Akira used BIRRA successed
+---------------------
+Action: Bob draw a card ξ( ✿＞◡❛)!
+VOLCANIC: ♣10
+Action: Bob discard VOLCANIC 🃏 ξ( ✿＞◡❛)!
+FAILED: Bob judged DINAMITE failed
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Cloud HP change -1. Now HP: 4
+Action: Bob used BANG successed
+Action: Cloud discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Player Cloud HP change 1. Now HP: 5
+Action: Cloud used MANCATO successed
+---------------------
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+CATBALOU: ♦10
+Action: Cloud discard CATBALOU 🃏 ξ( ✿＞◡❛)!
+FAILED: Cloud judged DINAMITE failed
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Cloud discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Joker HP change -1. Now HP: 3
+Action: Cloud used BANG successed
+Action: Joker discard MANCATO 🃏 ξ( ✿＞◡❛)!
+Player Joker HP change 1. Now HP: 4
+Action: Joker used MANCATO successed
+Action: Joker discard BIRRA 🃏 ξ( ✿＞◡❛)!
+Action: Cloud discard CATBALOU 🃏 ξ( ✿＞◡❛)!
+Action: Cloud used CATBALOU successed
+---------------------
+Action: Joker draw a card ξ( ✿＞◡❛)!
+PANICOI: ♥11
+Action: Joker discard PANICOI 🃏 ξ( ✿＞◡❛)!
+FAILED: Joker judged DINAMITE failed
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker discard APPALOOSA 🃏 ξ( ✿＞◡❛)!
+---------------------
+Action: Akira draw a card ξ( ✿＞◡❛)!
+MUSTANG: ♥08
+Action: Akira discard MUSTANG 🃏 ξ( ✿＞◡❛)!
+FAILED: Akira judged DINAMITE failed
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira discard BIRRA 🃏 ξ( ✿＞◡❛)!
+---------------------
+Action: Bob draw a card ξ( ✿＞◡❛)!
+EMPORIO: ♣09
+Action: Bob discard EMPORIO 🃏 ξ( ✿＞◡❛)!
+FAILED: Bob judged DINAMITE failed
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob discard MUSTANG 🃏 ξ( ✿＞◡❛)!
+Action: Bob used MUSTANG successed
+Action: Bob discard BARREL 🃏 ξ( ✿＞◡❛)!
+Action: Bob discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Bob discard MANCATO 🃏 ξ( ✿＞◡❛)!
+---------------------
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+CATBALOU: ♥13
+Action: Cloud discard CATBALOU 🃏 ξ( ✿＞◡❛)!
+FAILED: Cloud judged DINAMITE failed
+Action: Cloud draw a card ξ( ✿＞◡❛)!
+Action: Cloud discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Joker HP change -1. Now HP: 3
+Action: Cloud used BANG successed
+Warning: Cloud used BANG failed
+Action: Cloud discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Joker HP change -1. Now HP: 2
+Action: Cloud used BANG successed
+Warning: Cloud used BANG failed
+---------------------
+Action: Joker draw a card ξ( ✿＞◡❛)!
+DILIGENZA: ♠09
+Action: Joker discard DILIGENZA 🃏 ξ( ✿＞◡❛)!
+Player Joker HP change -3. Now HP: -1
+SUCCESS: Joker judged DINAMITE successed
+Action: Joker draw a card ξ( ✿＞◡❛)!
+Action: Joker draw a card ξ( ✿＞◡❛)!
+---------------------
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Action: Akira draw a card ξ( ✿＞◡❛)!
+Player Akira HP change 1. Now HP: 4
+Player Bob HP change 1. Now HP: 4
+Player Cloud HP change 1. Now HP: 5
+Action: Akira discard SALOON 🃏 ξ( ✿＞◡❛)!
+Action: Akira used SALOON successed
+Action: Akira discard BANG 🃏 ξ( ✿＞◡❛)!
+Action: Akira discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Cloud HP change -1. Now HP: 4
+Action: Akira used BANG successed
+---------------------
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob draw a card ξ( ✿＞◡❛)!
+Action: Bob discard BANG 🃏 ξ( ✿＞◡❛)!
+Player Cloud HP change -1. Now HP: 3
+Action: Bob used BANG successed
+Action: Bob discard BIRRA 🃏 ξ( ✿＞◡❛)!
+Action: Bob discard MANCATO 🃏 ξ( ✿＞◡❛)!

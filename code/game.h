@@ -10,6 +10,7 @@
 #include "player.h"
 #include "card.h"
 
+void printOneLineStatus(game *bang, player *p);
 void saveLogInit(game *bang);
 int32_t getOption(game *bang, player *p);
 int32_t getAction(game *bang, card *c);
