@@ -33,3 +33,7 @@ make
 
 segmentation fault when bot trying to play a certain card, very rarely occurs.  
 Gatlings and Indians could be the problem, but we still can't find it.
+
+## Special Thanks
+
+- [@JacobLinCool](https://github.com/JacobLinCool) for tech support and assistants
